@@ -1580,7 +1580,7 @@ del build_details.exe
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <IncludePath>$(DXSDK_DIR)Include;..\..\src\dep\vc\include;$(IncludePath)</IncludePath>
-    <IntDir>$(SolutionDir)$(Configuration)\</IntDir>
+    <IntDir>C:\bin\jieji</IntDir>
     <LibraryPath>$(LibraryPath)</LibraryPath>
     <TargetName>fcadefbneod</TargetName>
     <CustomBuildBeforeTargets />
