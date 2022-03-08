@@ -961,6 +961,9 @@
     <ClInclude Include="..\..\src\burn\drv\midway\midwunit.h">
       <Filter>Burn\drv\midway</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\logic\NetCode.h">
+      <Filter>logic</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\burn\burn.cpp">
@@ -4239,6 +4242,9 @@
     <ClCompile Include="..\..\src\burn\drv\midway\midwunit.cpp">
       <Filter>Burn\drv\midway</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\logic\NetCode.cpp">
+      <Filter>logic</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Burn">
@@ -4480,6 +4486,9 @@
     </Filter>
     <Filter Include="libs\lua">
       <UniqueIdentifier>{45ea9120-65df-47c5-aa36-164f90d67e56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="logic">
+      <UniqueIdentifier>{495cc051-98c3-4978-adcc-8f244f27269f}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
