@@ -11,5 +11,5 @@ NetCode::~NetCode()
 
 bool NetCode::connectServer()
 {
-
+	return true;
 }
