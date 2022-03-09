@@ -964,6 +964,9 @@
     <ClInclude Include="..\..\src\logic\NetCode.h">
       <Filter>logic</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\logic\Singleton.h">
+      <Filter>logic</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\burn\burn.cpp">

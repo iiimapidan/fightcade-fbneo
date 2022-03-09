@@ -19,6 +19,7 @@
  #endif
 #endif
 
+#include "../logic/NetCode.h"
 #include <wininet.h>
 #include <winsock.h>
 
@@ -1094,6 +1095,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE, LPSTR lpCmdLine, int nShowCmd
 {
 	WSADATA wsaData;
 	WSAStartup(MAKEWORD(2, 2), &wsaData);
+
+	NetCodeManager::GetInstance()->init();
 
 	DSCore_Init();
 	DDCore_Init();
