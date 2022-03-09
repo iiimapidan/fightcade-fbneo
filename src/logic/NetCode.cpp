@@ -27,7 +27,8 @@ bool NetCode::connectServer()
 	};
 
 	_client.onMessage = [](const SocketChannelPtr& channel, Buffer* buf) {
-
+		int i = 0;
+		++i;
 	};
 
 	_client.start();
