@@ -4,11 +4,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "fcadefbneo", "fbneo_vs2015.vcxproj", "{86D06C32-A849-4988-A176-A38D014C36C1}"
-	ProjectSection(ProjectDependencies) = postProject
-		{9AC06092-9436-36B0-8080-0417C1C0A2F1} = {9AC06092-9436-36B0-8080-0417C1C0A2F1}
-	EndProjectSection
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "hv_static", "..\..\libs\libhv-1.2.5\build\hv_static.vcxproj", "{9AC06092-9436-36B0-8080-0417C1C0A2F1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,22 +33,6 @@ Global
 		{86D06C32-A849-4988-A176-A38D014C36C1}.RelWithDebInfo|x64.Build.0 = Release|x64
 		{86D06C32-A849-4988-A176-A38D014C36C1}.RelWithDebInfo|x86.ActiveCfg = Release|Win32
 		{86D06C32-A849-4988-A176-A38D014C36C1}.RelWithDebInfo|x86.Build.0 = Release|Win32
-		{9AC06092-9436-36B0-8080-0417C1C0A2F1}.Debug|x64.ActiveCfg = Debug|Win32
-		{9AC06092-9436-36B0-8080-0417C1C0A2F1}.Debug|x64.Build.0 = Debug|Win32
-		{9AC06092-9436-36B0-8080-0417C1C0A2F1}.Debug|x86.ActiveCfg = Debug|Win32
-		{9AC06092-9436-36B0-8080-0417C1C0A2F1}.Debug|x86.Build.0 = Debug|Win32
-		{9AC06092-9436-36B0-8080-0417C1C0A2F1}.MinSizeRel|x64.ActiveCfg = MinSizeRel|Win32
-		{9AC06092-9436-36B0-8080-0417C1C0A2F1}.MinSizeRel|x64.Build.0 = MinSizeRel|Win32
-		{9AC06092-9436-36B0-8080-0417C1C0A2F1}.MinSizeRel|x86.ActiveCfg = MinSizeRel|Win32
-		{9AC06092-9436-36B0-8080-0417C1C0A2F1}.MinSizeRel|x86.Build.0 = MinSizeRel|Win32
-		{9AC06092-9436-36B0-8080-0417C1C0A2F1}.Release|x64.ActiveCfg = Release|Win32
-		{9AC06092-9436-36B0-8080-0417C1C0A2F1}.Release|x64.Build.0 = Release|Win32
-		{9AC06092-9436-36B0-8080-0417C1C0A2F1}.Release|x86.ActiveCfg = Release|Win32
-		{9AC06092-9436-36B0-8080-0417C1C0A2F1}.Release|x86.Build.0 = Release|Win32
-		{9AC06092-9436-36B0-8080-0417C1C0A2F1}.RelWithDebInfo|x64.ActiveCfg = RelWithDebInfo|Win32
-		{9AC06092-9436-36B0-8080-0417C1C0A2F1}.RelWithDebInfo|x64.Build.0 = RelWithDebInfo|Win32
-		{9AC06092-9436-36B0-8080-0417C1C0A2F1}.RelWithDebInfo|x86.ActiveCfg = RelWithDebInfo|Win32
-		{9AC06092-9436-36B0-8080-0417C1C0A2F1}.RelWithDebInfo|x86.Build.0 = RelWithDebInfo|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

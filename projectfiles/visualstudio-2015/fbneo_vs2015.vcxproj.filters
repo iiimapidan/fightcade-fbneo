@@ -967,6 +967,9 @@
     <ClInclude Include="..\..\src\logic\Singleton.h">
       <Filter>logic</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\logic\pb\Message.pb.h">
+      <Filter>logic\pb</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\burn\burn.cpp">
@@ -4248,6 +4251,9 @@
     <ClCompile Include="..\..\src\logic\NetCode.cpp">
       <Filter>logic</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\logic\pb\Message.pb.cc">
+      <Filter>logic\pb</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Burn">
@@ -4493,6 +4499,9 @@
     <Filter Include="logic">
       <UniqueIdentifier>{495cc051-98c3-4978-adcc-8f244f27269f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="logic\pb">
+      <UniqueIdentifier>{6ce02d0c-df7b-4e12-98ff-dfbe9d20c692}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\src\burn\burn_sound_a.asm">
@@ -4526,6 +4535,7 @@
       <Filter>cpus\e132xs</Filter>
     </None>
     <None Include="..\..\src\burner\win32\app.rc" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="..\..\src\dep\libs\lib7z\7zVersion.rc">

@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\vcpkg.E.vcpkg.1.0.0\build\native\vcpkg.E.vcpkg.props" Condition="Exists('packages\vcpkg.E.vcpkg.1.0.0\build\native\vcpkg.E.vcpkg.props')" />
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -340,6 +341,7 @@
     <ClInclude Include="..\..\src\intf\video\win32\vid_memorybuffer.h" />
     <ClInclude Include="..\..\src\intf\video\win32\vid_overlay.h" />
     <ClInclude Include="..\..\src\logic\NetCode.h" />
+    <ClInclude Include="..\..\src\logic\pb\Message.pb.h" />
     <ClInclude Include="..\..\src\logic\Singleton.h" />
   </ItemGroup>
   <ItemGroup>
@@ -591,20 +593,8 @@
     <ClCompile Include="..\..\src\intf\video\win32\vid_memorybuffer.cpp" />
     <ClCompile Include="..\..\src\intf\video\win32\vid_overlay.cpp" />
     <ClCompile Include="..\..\src\logic\NetCode.cpp" />
+    <ClCompile Include="..\..\src\logic\pb\Message.pb.cc" />
     <ClCompile Include="generated\m68kops.c" />
-    <CustomBuild Include="..\..\src\burn\drv\capcom\ctv_make.cpp">
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">cl ..\..\src\burn\drv\capcom\%(Filename).cpp 
-%(Filename).exe &gt; generated\ctv.h 
-del %(Filename).obj
-del %(Filename).exe</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\generated\ctv.h</Outputs>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DeploymentContent>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">cl ..\..\src\burn\drv\capcom\%(Filename).cpp 
-%(Filename).exe &gt; generated\ctv.h 
-del %(Filename).obj
-del %(Filename).exe</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\generated\ctv.h</Outputs>
-    </CustomBuild>
     <ClCompile Include="..\..\src\burn\drv\capcom\d_cps1.cpp" />
     <ClCompile Include="..\..\src\burn\drv\capcom\d_cps2.cpp" />
     <ClCompile Include="..\..\src\burn\drv\capcom\fcrash_snd.cpp" />
@@ -801,18 +791,6 @@ del %(Filename).exe</Command>
     <ClCompile Include="..\..\src\burn\drv\pgm\pgm_crypt.cpp" />
     <ClCompile Include="..\..\src\burn\drv\pgm\pgm_draw.cpp" />
     <ClCompile Include="..\..\src\burn\drv\pgm\pgm_run.cpp" />
-    <CustomBuild Include="..\..\src\burn\drv\pgm\pgm_sprite_create.cpp">
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">cl ..\..\src\burn\drv\pgm\%(Filename).cpp 
-%(Filename).exe &gt; generated\pgm_sprite.h 
-del %(Filename).obj
-del %(Filename).exe</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pgm_sprite.h</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">cl ..\..\src\burn\drv\pgm\%(Filename).cpp 
-%(Filename).exe &gt; generated\pgm_sprite.h 
-del %(Filename).obj
-del %(Filename).exe</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">pgm_sprite.h</Outputs>
-    </CustomBuild>
     <ClCompile Include="..\..\src\burn\drv\pre90s\d_1942.cpp" />
     <ClCompile Include="..\..\src\burn\drv\pre90s\d_1943.cpp" />
     <ClCompile Include="..\..\src\burn\drv\pre90s\d_4enraya.cpp" />
@@ -1343,25 +1321,6 @@ del %(Filename).exe</Command>
     <ClCompile Include="..\..\src\cpu\m68k\m68kdasm.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <CustomBuild Include="..\..\src\cpu\m68k\m68kmake.c">
-      <FileType>CppCode</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">cl /DINLINE="__inline static" ..\..\src\cpu\m68k\%(Filename).c
-
-%(Filename).exe generated/ ..\..\src\cpu\m68k\m68k_in.c
-del %(Filename).obj
-del %(Filename).exe
-
-</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">m68kmake.exe</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">cl /DINLINE="__inline static" ..\..\src\cpu\m68k\%(Filename).c
-
-%(Filename).exe generated/ ..\..\src\cpu\m68k\m68k_in.c
-del %(Filename).obj
-del %(Filename).exe
-
-</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">m68kmake.exe</Outputs>
-    </CustomBuild>
     <ClCompile Include="..\..\src\cpu\mips3\cop0.cpp" />
     <ClCompile Include="..\..\src\cpu\mips3\cop1.cpp" />
     <ClCompile Include="..\..\src\cpu\mips3\mips3.cpp" />
@@ -1456,31 +1415,6 @@ del %(Filename).exe
     <ClCompile Include="..\..\src\dep\libs\zlib\trees.c" />
     <ClCompile Include="..\..\src\dep\libs\zlib\uncompr.c" />
     <ClCompile Include="..\..\src\dep\libs\zlib\zutil.c" />
-    <CustomBuild Include="..\..\src\dep\scripts\build_details.cpp">
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DeploymentContent>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">cd ..
-cd ..
-cd src
-cd dep
-cd scripts
-"cl" build_details.cpp
-build_details &gt;../../../projectfiles/visualstudio-2015/generated/build_details.h
-del build_details.obj
-del build_details.exe
-</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">build_details.h</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">cd ..
-cd ..
-cd src
-cd dep
-cd scripts
-"cl" build_details.cpp
-build_details &gt;../../../projectfiles/visualstudio-2015/generated/build_details.h
-del build_details.obj
-del build_details.exe
-</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">build_details.h</Outputs>
-    </CustomBuild>
     <ClCompile Include="..\..\src\intf\audio\aud_dsp.cpp" />
     <ClCompile Include="..\..\src\intf\audio\aud_interface.cpp" />
     <ClCompile Include="..\..\src\intf\audio\lowpass2.cpp" />
@@ -1523,6 +1457,7 @@ del build_details.exe
     <None Include="..\..\src\intf\video\scalers\hq4x32.asm" />
     <None Include="..\..\src\intf\video\scalers\superscale.asm" />
     <None Include="..\..\src\intf\video\win32\resource\bicubic.fx" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\src\burner\win32\app.rc" />
@@ -1531,11 +1466,6 @@ del build_details.exe
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\src\burn;..\..\src\burner;..\..\src\dep\generated;..\..\src\intf\video\win32;generated</AdditionalIncludeDirectories>
     </ResourceCompile>
     <ResourceCompile Include="..\..\src\dep\libs\lib7z\7zVersion.rc" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\libs\libhv-1.2.5\build\hv_static.vcxproj">
-      <Project>{9ac06092-9436-36b0-8080-0417c1c0a2f1}</Project>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{86D06C32-A849-4988-A176-A38D014C36C1}</ProjectGuid>
@@ -1548,7 +1478,7 @@ del build_details.exe
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>Unicode</CharacterSet>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -1610,14 +1540,14 @@ del build_details.exe
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>generated;..\..\src\dep\libs\zlib;..\..\src\dep\libs\lib7z;..\..\src\dep\libs\libpng;..\..\src\dep\libs\lua;..\..\src\dep\generated;..\..\src\dep\ggpo\include;..\..\src\burner\win32\resource;..\..\src\burn\drv\taito;..\..\src\burn\drv\misc_post90s;..\..\src\burn\devices;..\..\src\intf\audio\win32;..\..\src\intf\audio;..\..\src\intf\;..\..\src\intf\video\scalers;..\..\src\intf\video\win32;..\..\src\intf\video;..\..\src\intf\perfcount\win32;..\..\src\intf\perfcount;..\..\src\intf\input\win32;..\..\src\intf\input;..\..\src\intf\cd\win32;..\..\src\intf\cd;..\..\src\intf;..\..\src\burner\win32;..\..\src\burn\snd;..\..\src\cpu;..\..\src\burner;..\..\src\burn;..\..\src\cpu\z80;..\..\src\cpu\sh2;..\..\src\cpu\s2650;..\..\src\cpu\nec;..\..\src\cpu\m6809;..\..\src\cpu\m6805;..\..\src\cpu\m6800;..\..\src\cpu\m6502;..\..\src\cpu\m68k;..\..\src\cpu\i8039;..\..\src\cpu\konami;..\..\src\cpu\hd6309;..\..\src\cpu\h6280;..\..\src\cpu\arm7;..\..\src\cpu\arm;..\..\src\cpu\g65816;..\..\src\cpu\spc700;..\..\src\cpu\i8051;..\..\src\cpu\tms32010;..\..\src\cpu\tms34;..\..\src\cpu\i8x41;..\..\src\burn\drv\sega;..\..\src\burn\drv\dataeast;..\..\src\burn\drv\konami;..\..\src\cpu\z180;..\..\src\burn\drv\irem;..\..\src\cpu\upd7810;..\..\src\cpu\v60;..\..\src\cpu\upd7725;..\..\libs\libhv-1.2.5\build\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>generated;..\..\src\dep\libs\zlib;..\..\src\dep\libs\lib7z;..\..\src\dep\libs\libpng;..\..\src\dep\libs\lua;..\..\src\dep\generated;..\..\src\dep\ggpo\include;..\..\src\burner\win32\resource;..\..\src\burn\drv\taito;..\..\src\burn\drv\misc_post90s;..\..\src\burn\devices;..\..\src\intf\audio\win32;..\..\src\intf\audio;..\..\src\intf\;..\..\src\intf\video\scalers;..\..\src\intf\video\win32;..\..\src\intf\video;..\..\src\intf\perfcount\win32;..\..\src\intf\perfcount;..\..\src\intf\input\win32;..\..\src\intf\input;..\..\src\intf\cd\win32;..\..\src\intf\cd;..\..\src\intf;..\..\src\burner\win32;..\..\src\burn\snd;..\..\src\cpu;..\..\src\burner;..\..\src\burn;..\..\src\cpu\z80;..\..\src\cpu\sh2;..\..\src\cpu\s2650;..\..\src\cpu\nec;..\..\src\cpu\m6809;..\..\src\cpu\m6805;..\..\src\cpu\m6800;..\..\src\cpu\m6502;..\..\src\cpu\m68k;..\..\src\cpu\i8039;..\..\src\cpu\konami;..\..\src\cpu\hd6309;..\..\src\cpu\h6280;..\..\src\cpu\arm7;..\..\src\cpu\arm;..\..\src\cpu\g65816;..\..\src\cpu\spc700;..\..\src\cpu\i8051;..\..\src\cpu\tms32010;..\..\src\cpu\tms34;..\..\src\cpu\i8x41;..\..\src\burn\drv\sega;..\..\src\burn\drv\dataeast;..\..\src\burn\drv\konami;..\..\src\cpu\z180;..\..\src\burn\drv\irem;..\..\src\cpu\upd7810;..\..\src\cpu\v60;..\..\src\cpu\upd7725;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <CompileAs>Default</CompileAs>
       <PreprocessorDefinitions>BUILD_WIN32;FASTCALL;_DEBUG;FBNEO_DEBUG;LSB_FIRST;INLINE=__inline static;INCLUDE_AVI_RECORDING;INCLUDE_LIB_PNGH;C_INLINE=__inline;MAME_INLINE=__inline static;_CRT_SECURE_NO_WARNINGS;WINAPI_FAMILY=WINAPI_FAMILY_DESKTOP_APP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(DXSDK_DIR)Lib\x86;..\..\src\dep\ggpo\lib;..\..\libs\libhv-1.2.5\build\lib\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(DXSDK_DIR)Lib\x86;..\..\src\dep\ggpo\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ShowProgress>NotSet</ShowProgress>
       <AdditionalDependencies>user32.lib;gdi32.lib;comdlg32.lib;comctl32.lib;shell32.lib;winmm.lib;advapi32.lib;setupapi.lib;vfw32.lib;wininet.lib;ggponet.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
@@ -1635,6 +1565,9 @@ del build_details.exe
     <Xdcmake>
       <DocumentLibraryDependencies>false</DocumentLibraryDependencies>
     </Xdcmake>
+    <CustomBuild>
+      <LinkObjects>true</LinkObjects>
+    </CustomBuild>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -1704,5 +1637,13 @@ del build_details.exe
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
+    <Import Project="packages\vcpkg.E.vcpkg.1.0.0\build\native\vcpkg.E.vcpkg.targets" Condition="Exists('packages\vcpkg.E.vcpkg.1.0.0\build\native\vcpkg.E.vcpkg.targets')" />
   </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\vcpkg.E.vcpkg.1.0.0\build\native\vcpkg.E.vcpkg.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\vcpkg.E.vcpkg.1.0.0\build\native\vcpkg.E.vcpkg.props'))" />
+    <Error Condition="!Exists('packages\vcpkg.E.vcpkg.1.0.0\build\native\vcpkg.E.vcpkg.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\vcpkg.E.vcpkg.1.0.0\build\native\vcpkg.E.vcpkg.targets'))" />
+  </Target>
 </Project>
