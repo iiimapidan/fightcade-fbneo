@@ -64,7 +64,10 @@ private:
 
 	void createRoom();
 	void joinRoom(::google::protobuf::uint32 roomId);
+
 	void sendLocalInput(const InputData& input);
+	void fetchFrame(int id);
+	InputData addLocalInput(char* values, int size, int players);
 
 private:
 	hv::TcpClient _client;

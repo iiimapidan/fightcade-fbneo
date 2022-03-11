@@ -127,7 +127,7 @@ int NetworkGetInput()
 		//	return 1;
 		//}
 
-		if (NetCodeManager::GetInstance()->getNetInput(nControls, k, MAXPLAYER) == false)
+		if (NetCodeManager::GetInstance()->getNetInput(nControls, k, 2) == false)
 		{
 			return 1;
 		}

@@ -75,32 +75,14 @@ void NetCode::increaseFrame() {
 }
 
 bool NetCode::getNetInput(void* values, int size, int players) {
-	InputData local;
-	local.frameId = _frameId;
-	local.data.resize(size);
-	memcpy(local.data.data(), values, size);
+	auto local = addLocalInput((char*)values, size, players);
 
-	// 将当前帧添加到本地
-	_localInputMap[_frameId] = local;
-
-	// 发送本地帧到远端
 	sendLocalInput(local);
 
-	// 获取远端帧
-	bool remoteFrameAvailable = (_remoteInputMap.find(_frameId) != _remoteInputMap.end());
+	fetchFrame(_frameId);
 
-	InputData remote;
-	remote.frameId = _frameId;
-
-	// 远端帧存在则获取
-	if (remoteFrameAvailable) {
-		remote = _remoteInputMap[_frameId];
-	}
-	// 不存在则预测
-	else {
-		_predictFrame.frameId = _frameId;
-		remote.data = _predictFrame.data;
-	}
+	// 自增id
+	_frameId++;
 
 	return false;
 }
@@ -355,7 +337,7 @@ void NetCode::sendLocalInput(const InputData& input) {
 	body.set_frameid(input.frameId);
 	body.set_playerid(_playId);
 	body.set_roomid(_roomId);
-	//body.set_input(input.data);
+	body.set_input(input.data.data());
 
 	MessageHead head;
 	head.id = pb::ID::ID_InputFrame;
@@ -370,4 +352,47 @@ void NetCode::sendLocalInput(const InputData& input) {
 	buffer.Cat(body_buffer, body_buffer.Size());
 
 	_client.send(buffer.Ptr(), buffer.Size());
+}
+
+void NetCode::fetchFrame(int id) {
+	// 获取本地帧
+	InputData local = _localInputMap[id];
+
+	// 获取远端帧
+	bool remoteFrameAvailable = (_remoteInputMap.find(id) != _remoteInputMap.end());
+
+	InputData remote;
+	remote.frameId = id;
+
+	// 远端帧存在则获取
+	if (remoteFrameAvailable) {
+		remote = _remoteInputMap[_frameId];
+	}
+	// 不存在则预测
+	else {
+		_predictFrame.frameId = id;
+
+		if (_remoteInputMap.size() <= 0) {
+			remote.data = _predictFrame.data;
+		} else {
+			auto itEnd = _remoteInputMap.end();
+			InputData lastRemoteFrame = itEnd->second;
+
+			_predictFrame.data.resize(lastRemoteFrame.data.size());
+			_predictFrame.data.assign(lastRemoteFrame.data.begin(), lastRemoteFrame.data.end());
+		}
+
+		remote = _predictFrame;
+	}
+}
+
+InputData NetCode::addLocalInput(char* values, int size, int players) {
+	InputData local;
+	local.frameId = _frameId;
+	local.data.resize(size);
+	memcpy(local.data.data(), values, size);
+
+	_localInputMap[_frameId] = local;
+
+	return local;
 }
