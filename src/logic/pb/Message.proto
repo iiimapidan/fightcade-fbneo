@@ -19,6 +19,8 @@ enum ID {
 	ID_EndInput = 11;
     ID_C2S_InputFrame = 12;
     ID_S2C_InputFrame = 13;
+    ID_S2C_WaitGameStart = 14;
+    ID_InputFrame = 15;
 }
 
 // 错误码
@@ -44,18 +46,21 @@ message C2S_CreateRoom {
 message S2C_CreateRoom {
     Code code = 1;
     uint32 roomId = 2;
+    uint32 playerId = 3;
 }
 
 
 // 客户端加入房间请求
 message C2S_JoinRoom {
     uint32 roomId = 1;
+    uint32 playerId = 2;
 }
 
 // 服务端返回加入房间结果
 message S2C_JoinRoom {
     Code code = 1;
     uint32 playerId = 2;
+    uint32 roomId = 3;
 }
 
 
@@ -69,6 +74,11 @@ message C2S_Ready {
 // 服务端回复开始
 message S2C_Start {
     Code code = 1;
+}
+
+// 服务的通知等待游戏开始
+message S2C_WaitGameStart {
+    uint32 roomId = 1;
 }
 
 
@@ -118,4 +128,12 @@ message S2C_InputFrame {
     int32 frameIndex = 1;
     repeated C2S_InputFrame players_input_frame = 2;
     bool isEmptyFrame = 3;
+}
+
+
+message InputFrame {
+    uint32 frameId = 1;
+    uint32 playerId = 2;
+    uint32 roomId = 3;
+    bytes input = 4;
 }

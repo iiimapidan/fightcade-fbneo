@@ -2,6 +2,7 @@
 #include "burner.h"
 #include "luaengine.h"
 #include <shlobj.h>
+#include "../logic/NetCode.h"
 
 #define		HORIZONTAL_ORIENTED_RES		0
 #define		VERTICAL_ORIENTED_RES			1
@@ -290,6 +291,53 @@ static void RefreshWindow(bool bInitialise)
 	}
 }
 
+
+
+static int OnRunNetGame(HWND, UINT, int w, int l) {
+	bool bFound = false;
+	HWND hActive;
+
+	kNetGame = 1;
+	hActive = GetActiveWindow();
+
+	bCheatsAllowed = false;								// Disable cheats during netplay
+	AudSoundStop();										// Stop while we load roms
+
+	for (nBurnDrvActive = 0; nBurnDrvActive < nBurnDrvCount; nBurnDrvActive++) {
+
+		char* szDecoratedName = DecorateGameName(nBurnDrvActive);
+
+		if (!strcmp(szDecoratedName, "The King of Fighters '97 (NGM-2320)")) {
+			break;
+		}
+	}
+
+	DrvInit(nBurnDrvActive, false);								// Init the game driver
+
+	ScrnInit();
+	AudSoundPlay();										// Restart sound
+	VidInit();
+	SetFocus(hScrnWnd);
+
+	NetCodeManager::GetInstance()->sendGameReady();
+	//NetCodeManager::GetInstance()->waitGameStarted();
+
+	RunMessageLoop();
+
+	DrvExit();
+	if (kNetGame) {
+		kNetGame = 0;
+		//Kaillera_End_Game();
+	}
+	DeActivateChat();
+
+	bCheatsAllowed = true;								// reenable cheats netplay has ended
+
+	SetFocus(hActive);
+
+	return 0;
+}
+
 static LRESULT CALLBACK ScrnProc(HWND hWnd, UINT Msg, WPARAM wParam, LPARAM lParam)
 {
 	switch (Msg) {
@@ -313,6 +361,22 @@ static LRESULT CALLBACK ScrnProc(HWND hWnd, UINT Msg, WPARAM wParam, LPARAM lPar
 			if (wParam == PBT_APMRESUMESUSPEND || wParam == PBT_APMSUSPEND) {
 				bBackFromHibernation = 1;
 			}
+			break;
+		}
+
+		case WM_RUN_NET_GAME:
+		{
+			OnRunNetGame(hWnd, Msg, wParam, lParam);
+			break;
+		}
+
+		case WM_RECEIVE_REMOTE_FRAME:
+		{
+			InputData* data = (InputData*)wParam;
+			InputData frame = *data;
+
+			NetCodeManager::GetInstance()->receiveRemoteFrame(frame);
+
 			break;
 		}
 

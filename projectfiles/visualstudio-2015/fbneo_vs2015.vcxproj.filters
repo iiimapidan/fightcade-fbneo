@@ -970,6 +970,24 @@
     <ClInclude Include="..\..\src\logic\pb\Message.pb.h">
       <Filter>logic\pb</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\logic\bufferptr.h">
+      <Filter>logic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\logic\InstanceWindow.h">
+      <Filter>logic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\logic\utils\fmt\format.h">
+      <Filter>logic\utils\fmt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\logic\utils\fmt\ostream.h">
+      <Filter>logic\utils\fmt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\logic\utils\fmt\posix.h">
+      <Filter>logic\utils\fmt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\logic\utils\fmt\time.h">
+      <Filter>logic\utils\fmt</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\burn\burn.cpp">
@@ -4254,6 +4272,21 @@
     <ClCompile Include="..\..\src\logic\pb\Message.pb.cc">
       <Filter>logic\pb</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\logic\bufferptr.cpp">
+      <Filter>logic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\logic\InstanceWindow.cpp">
+      <Filter>logic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\logic\utils\fmt\format.cc">
+      <Filter>logic\utils\fmt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\logic\utils\fmt\ostream.cc">
+      <Filter>logic\utils\fmt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\logic\utils\fmt\posix.cc">
+      <Filter>logic\utils\fmt</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Burn">
@@ -4502,6 +4535,12 @@
     <Filter Include="logic\pb">
       <UniqueIdentifier>{6ce02d0c-df7b-4e12-98ff-dfbe9d20c692}</UniqueIdentifier>
     </Filter>
+    <Filter Include="logic\utils">
+      <UniqueIdentifier>{6633cf2c-85d3-4139-aeae-d27074c536f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="logic\utils\fmt">
+      <UniqueIdentifier>{bb9708de-73fd-4bcd-983f-130f64fc50c0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\src\burn\burn_sound_a.asm">
@@ -4544,17 +4583,5 @@
     <ResourceCompile Include="..\..\src\burner\win32\resource.rc">
       <Filter>burner\win32</Filter>
     </ResourceCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <CustomBuild Include="..\..\src\burn\drv\capcom\ctv_make.cpp">
-      <Filter>Burn\drv\capcom</Filter>
-    </CustomBuild>
-    <CustomBuild Include="..\..\src\cpu\m68k\m68kmake.c">
-      <Filter>cpus\m68k</Filter>
-    </CustomBuild>
-    <CustomBuild Include="..\..\src\dep\scripts\build_details.cpp" />
-    <CustomBuild Include="..\..\src\burn\drv\pgm\pgm_sprite_create.cpp">
-      <Filter>Burn\drv\pgm</Filter>
-    </CustomBuild>
   </ItemGroup>
 </Project>

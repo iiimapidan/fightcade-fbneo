@@ -1,4 +1,5 @@
 #include "burner.h"
+#include "../logic/NetCode.h"
 
 const int MAXPLAYER = 4;
 static int nPlayerInputs[MAXPLAYER], nCommonInputs, nDIPInputs;
@@ -122,7 +123,12 @@ int NetworkGetInput()
 
 	// Send the control block to the Network DLL & retrieve all controls
 	if (kNetGame) {
-		if (!QuarkGetInput(nControls, k, MAXPLAYER)) {
+		//if (!QuarkGetInput(nControls, k, MAXPLAYER)) {
+		//	return 1;
+		//}
+
+		if (NetCodeManager::GetInstance()->getNetInput(nControls, k, MAXPLAYER) == false)
+		{
 			return 1;
 		}
 	}

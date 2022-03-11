@@ -28,6 +28,7 @@
 #endif
 
 #include "version.h"
+#include <stdio.h>
 
 HINSTANCE hAppInst = NULL;			// Application Instance
 HANDLE hMainThread;
@@ -1090,13 +1091,26 @@ static void CreateSupportFolders()
 	}
 }
 
+class CPlayEvent : public IPlayEvent {
+public:
+	void onStartGame() {
+		::PostMessage(hScrnWnd, WM_RUN_NET_GAME, 0, 0);
+	}
+
+	void onReceiveRemoteFrame(const InputData& input) {
+		::SendMessage(hScrnWnd, WM_RECEIVE_REMOTE_FRAME, (WPARAM)&input, 0);
+	}
+};
+
 // Main program entry point
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE, LPSTR lpCmdLine, int nShowCmd)
 {
+	NetCodeManager::GetInstance()->init();
+	NetCodeManager::GetInstance()->setPlayEvent(new CPlayEvent());
+
 	WSADATA wsaData;
 	WSAStartup(MAKEWORD(2, 2), &wsaData);
 
-	NetCodeManager::GetInstance()->init();
 
 	DSCore_Init();
 	DDCore_Init();
@@ -1170,6 +1184,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE, LPSTR lpCmdLine, int nShowCmd
 	ConfigAppSave();							// Save config for the application
 
 	AppExit();									// Exit the application
+
 
 	return 0;
 }

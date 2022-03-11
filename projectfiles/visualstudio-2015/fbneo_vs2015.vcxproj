@@ -340,9 +340,15 @@
     <ClInclude Include="..\..\src\intf\video\win32\vid_font.h" />
     <ClInclude Include="..\..\src\intf\video\win32\vid_memorybuffer.h" />
     <ClInclude Include="..\..\src\intf\video\win32\vid_overlay.h" />
+    <ClInclude Include="..\..\src\logic\bufferptr.h" />
+    <ClInclude Include="..\..\src\logic\InstanceWindow.h" />
     <ClInclude Include="..\..\src\logic\NetCode.h" />
     <ClInclude Include="..\..\src\logic\pb\Message.pb.h" />
     <ClInclude Include="..\..\src\logic\Singleton.h" />
+    <ClInclude Include="..\..\src\logic\utils\fmt\format.h" />
+    <ClInclude Include="..\..\src\logic\utils\fmt\ostream.h" />
+    <ClInclude Include="..\..\src\logic\utils\fmt\posix.h" />
+    <ClInclude Include="..\..\src\logic\utils\fmt\time.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\burner\conc.cpp" />
@@ -592,8 +598,13 @@
     <ClCompile Include="..\..\src\intf\video\win32\vid_font.cpp" />
     <ClCompile Include="..\..\src\intf\video\win32\vid_memorybuffer.cpp" />
     <ClCompile Include="..\..\src\intf\video\win32\vid_overlay.cpp" />
+    <ClCompile Include="..\..\src\logic\bufferptr.cpp" />
+    <ClCompile Include="..\..\src\logic\InstanceWindow.cpp" />
     <ClCompile Include="..\..\src\logic\NetCode.cpp" />
     <ClCompile Include="..\..\src\logic\pb\Message.pb.cc" />
+    <ClCompile Include="..\..\src\logic\utils\fmt\format.cc" />
+    <ClCompile Include="..\..\src\logic\utils\fmt\ostream.cc" />
+    <ClCompile Include="..\..\src\logic\utils\fmt\posix.cc" />
     <ClCompile Include="generated\m68kops.c" />
     <ClCompile Include="..\..\src\burn\drv\capcom\d_cps1.cpp" />
     <ClCompile Include="..\..\src\burn\drv\capcom\d_cps2.cpp" />
