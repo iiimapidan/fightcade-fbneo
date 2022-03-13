@@ -88,6 +88,7 @@ private:
 	std::map<int, InputData> _remoteInputMap;
 
 	InputData _predictFrame;
+	int _firstPredictFrameId = -1;
 };
 
 typedef SingletonClass<NetCode> NetCodeManager;

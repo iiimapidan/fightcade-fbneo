@@ -88,7 +88,10 @@ bool NetCode::getNetInput(void* values, int size, int players) {
 }
 
 void NetCode::receiveRemoteFrame(const InputData& remoteFrame) {
+	// ±£¥Ê‘∂∂À÷°
 	_remoteInputMap[remoteFrame.frameId] = remoteFrame;
+
+	// ≈–∂œ‘∂∂À÷°∫Õ‘§≤‚÷°
 
 	printLog(fmt::format(L" ’µΩ‘∂∂À÷° id:{}", remoteFrame.frameId));
 }
@@ -337,7 +340,11 @@ void NetCode::sendLocalInput(const InputData& input) {
 	body.set_frameid(input.frameId);
 	body.set_playerid(_playId);
 	body.set_roomid(_roomId);
-	body.set_input(input.data.data());
+
+	std::string data;
+	data.resize(input.data.size());
+	data.assign(input.data.begin(), input.data.end());
+	body.set_input(data);
 
 	MessageHead head;
 	head.id = pb::ID::ID_InputFrame;
@@ -372,10 +379,11 @@ void NetCode::fetchFrame(int id) {
 	else {
 		_predictFrame.frameId = id;
 
-		if (_remoteInputMap.size() <= 0) {
-			remote.data = _predictFrame.data;
-		} else {
+		if (_remoteInputMap.size() > 0)
+		{
 			auto itEnd = _remoteInputMap.end();
+			--itEnd;
+
 			InputData lastRemoteFrame = itEnd->second;
 
 			_predictFrame.data.resize(lastRemoteFrame.data.size());
