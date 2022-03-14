@@ -32,11 +32,32 @@ typedef struct _InputData {
 	std::vector<char> data;
 }InputData;
 
+
+typedef struct _SavedFrame {
+	unsigned char* buf;
+	int bufCounts;
+	int frameId; 
+	int checksum;
+public:
+	_SavedFrame() {
+		buf = NULL;
+		bufCounts = 0;
+		frameId = -1;
+		checksum = 0;
+	}
+}SavedFrame;
+
 class IPlayEvent {
 public:
 	virtual void onStartGame() = 0;
 	virtual void onReceiveRemoteFrame(const InputData& input) = 0;
 };
+
+typedef struct _IGameCallback {
+	void(__cdecl* free_buffer)(void* buffer);
+	bool(__cdecl* load_game_state)(unsigned char* buffer, int len);
+	bool(__cdecl* save_game_state)(unsigned char** buffer, int* len, int* checksum, int frame);
+}IGameCallback;
 
 class NetCode {
 public:
@@ -45,6 +66,7 @@ public:
 
 	bool init();
 	void setPlayEvent(IPlayEvent *event);
+	void setGameCallback(IGameCallback* gameCallback);
 
 	void sendGameReady();
 	void waitGameStarted();
@@ -66,8 +88,12 @@ private:
 	void joinRoom(::google::protobuf::uint32 roomId);
 
 	void sendLocalInput(const InputData& input);
-	void fetchFrame(int id);
+	void fetchFrame(int id, void* values);
 	InputData addLocalInput(char* values, int size, int players);
+	void checkRollback();
+	void saveCurrentFrameState();
+
+	int cmpInputData(const InputData& input1, const InputData& input2);
 
 private:
 	hv::TcpClient _client;
@@ -87,8 +113,18 @@ private:
 	std::map<int, InputData> _localInputMap;
 	std::map<int, InputData> _remoteInputMap;
 
+	std::map<int, SavedFrame> _savedFrame;
+
 	InputData _predictFrame;
 	int _firstPredictFrameId = -1;
+	bool _need_rollback = false;
+
+	IGameCallback* _gameCallback = NULL;
 };
 
 typedef SingletonClass<NetCode> NetCodeManager;
+
+
+void __cdecl netcode_free_buffer_callback(void* buffer);
+bool __cdecl netcode_load_game_state_callback(unsigned char* buffer, int len);
+bool __cdecl netcode_save_game_state_callback(unsigned char** buffer, int* len, int* checksum, int frame);

@@ -7,6 +7,8 @@
 #include "bufferptr.h"
 #include "InstanceWindow.h"
 #include "utils/fmt/format.h"
+#include "state.h"
+#include "burn.h"
 
 #pragma pack(1)
 typedef struct _MsgHead {
@@ -16,9 +18,86 @@ typedef struct _MsgHead {
 	BYTE* body[0];
 }MessageHead;
 
+
 #pragma pack()
 
 
+static char gAcbBuffer[16 * 1024 * 1024];
+static char* gAcbScanPointer;
+static int gAcbChecksum;
+const int ggpo_state_header_size = 6 * sizeof(int);
+
+extern int nAcbVersion;
+extern int bMediaExit;
+extern int nAcbLoadState;
+
+static int QuarkReadAcb(struct BurnArea* pba) {
+	memcpy(gAcbScanPointer, pba->Data, pba->nLen);
+	gAcbScanPointer += pba->nLen;
+	return 0;
+}
+static int QuarkWriteAcb(struct BurnArea* pba) {
+	memcpy(pba->Data, gAcbScanPointer, pba->nLen);
+	gAcbScanPointer += pba->nLen;
+	return 0;
+}
+
+void __cdecl netcode_free_buffer_callback(void* buffer) {
+	free(buffer);
+}
+
+bool __cdecl netcode_load_game_state_callback(unsigned char* buffer, int len) {
+	int* data = (int*)buffer;
+	if (data[0] == 'GGPO') {
+		int headersize = data[1];
+		int num = headersize / sizeof(int);
+		// version
+		nAcbVersion = data[2];
+		int state = (data[3]) & 0xff;
+		int score1 = (data[3] >> 8) & 0xff;
+		int score2 = (data[3] >> 16) & 0xff;
+		int ranked = (data[3] >> 24) & 0xff;
+		int start1 = 0;
+		int start2 = 0;
+		if (num > 4) {
+			start1 = (data[4]) & 0xff;
+			start2 = (data[4] >> 8) & 0xff;
+		}
+		buffer += headersize;
+	}
+	gAcbScanPointer = (char*)buffer;
+	BurnAcb = QuarkWriteAcb;
+	nAcbLoadState = false;
+	BurnAreaScan(ACB_FULLSCANL | ACB_WRITE, NULL);
+	nAcbLoadState = 0;
+	nAcbVersion = nBurnVer;
+	return true;
+}
+
+bool __cdecl netcode_save_game_state_callback(unsigned char** buffer, int* len, int* checksum, int frame) {
+	int payloadsize;
+
+	gAcbChecksum = 0;
+	gAcbScanPointer = gAcbBuffer;
+	BurnAcb = QuarkReadAcb;
+	BurnAreaScan(ACB_FULLSCANL | ACB_READ, NULL);
+	payloadsize = gAcbScanPointer - gAcbBuffer;
+
+	*checksum = gAcbChecksum;
+	*len = payloadsize + ggpo_state_header_size;
+	*buffer = (unsigned char*)malloc(*len);
+
+	int* data = (int*)*buffer;
+	data[0] = 'GGPO';
+	data[1] = ggpo_state_header_size;
+	data[2] = nBurnVer;
+	data[3] = 0;
+	data[4] = 0;
+	data[5] = 0;
+
+	memcpy((*buffer) + ggpo_state_header_size, gAcbBuffer, payloadsize);
+	return false;
+}
 
 NetCode::NetCode()
 {
@@ -31,8 +110,6 @@ NetCode::~NetCode()
 
 bool NetCode::init()
 {
-	_frameId = 0;
-
 	_predictFrame.frameId = -1;
 	_predictFrame.data.resize(9);
 	memset(_predictFrame.data.data(), 0, 9);
@@ -43,6 +120,10 @@ bool NetCode::init()
 
 void NetCode::setPlayEvent(IPlayEvent* event) {
 	_playEvent = event;
+}
+
+void NetCode::setGameCallback(IGameCallback* gameCallback) {
+	_gameCallback = gameCallback;
 }
 
 void NetCode::sendGameReady() {
@@ -75,26 +156,27 @@ void NetCode::increaseFrame() {
 }
 
 bool NetCode::getNetInput(void* values, int size, int players) {
+	if (_frameId == 0)
+	{
+		saveCurrentFrameState();
+	}
+
 	auto local = addLocalInput((char*)values, size, players);
 
 	sendLocalInput(local);
 
-	fetchFrame(_frameId);
+	fetchFrame(_frameId, values);
 
 	// ◊‘‘ˆid
 	_frameId++;
+	saveCurrentFrameState();
 
-	return false;
+	// ºÏ≤È «∑Ò–Ë“™ªÿπˆ
+	checkRollback();
+
+	return true;
 }
 
-void NetCode::receiveRemoteFrame(const InputData& remoteFrame) {
-	// ±£¥Ê‘∂∂À÷°
-	_remoteInputMap[remoteFrame.frameId] = remoteFrame;
-
-	// ≈–∂œ‘∂∂À÷°∫Õ‘§≤‚÷°
-
-	printLog(fmt::format(L" ’µΩ‘∂∂À÷° id:{}", remoteFrame.frameId));
-}
 
 void NetCode::printLog(const std::wstring& log) {
 	OutputDebugString(fmt::format(L"NetCode  {}\r\n", log).c_str());
@@ -361,7 +443,7 @@ void NetCode::sendLocalInput(const InputData& input) {
 	_client.send(buffer.Ptr(), buffer.Size());
 }
 
-void NetCode::fetchFrame(int id) {
+void NetCode::fetchFrame(int id, void* values) {
 	// ªÒ»°±æµÿ÷°
 	InputData local = _localInputMap[id];
 
@@ -379,8 +461,7 @@ void NetCode::fetchFrame(int id) {
 	else {
 		_predictFrame.frameId = id;
 
-		if (_remoteInputMap.size() > 0)
-		{
+		if (_remoteInputMap.size() > 0) {
 			auto itEnd = _remoteInputMap.end();
 			--itEnd;
 
@@ -392,6 +473,13 @@ void NetCode::fetchFrame(int id) {
 
 		remote = _predictFrame;
 	}
+
+	CBufferPtr buffer;
+	buffer.Cat((BYTE*)local.data.data(), sizeof(local.data.size()));
+	buffer.Cat((BYTE*)remote.data.data(), sizeof(remote.data.size()));
+
+	memcpy(values, buffer.Ptr(), buffer.Size());
+
 }
 
 InputData NetCode::addLocalInput(char* values, int size, int players) {
@@ -403,4 +491,51 @@ InputData NetCode::addLocalInput(char* values, int size, int players) {
 	_localInputMap[_frameId] = local;
 
 	return local;
+}
+
+
+void NetCode::checkRollback() {
+	if (_need_rollback && _gameCallback) {
+		// º”‘ÿ◊¥Ã¨
+		SavedFrame state = _savedFrame[_firstPredictFrameId];
+
+		_gameCallback->load_game_state(state.buf, state.bufCounts);
+
+
+		_frameId = _firstPredictFrameId;
+		_firstPredictFrameId = -1;
+		_need_rollback = false;
+	}
+}
+
+void NetCode::saveCurrentFrameState() {
+	if (_gameCallback)
+	{
+		SavedFrame frameState;
+		frameState.frameId = _frameId;
+		_gameCallback->save_game_state(&frameState.buf, &frameState.bufCounts, &frameState.checksum, frameState.frameId);
+		_savedFrame[_frameId] = frameState;
+	}
+}
+
+int NetCode::cmpInputData(const InputData& input1, const InputData& input2) {
+	return memcmp(input1.data.data(), input2.data.data(), input1.data.size());
+}
+
+void NetCode::receiveRemoteFrame(const InputData& remoteFrame) {
+	// ±£¥Ê‘∂∂À÷°
+	_remoteInputMap[remoteFrame.frameId] = remoteFrame;
+
+	// ≈–∂œ «∑Ò‘§≤‚ ß∞‹
+	// ‘§≤‚ ß∞‹£¨ªÿπˆ
+	if (_need_rollback == false)
+	{
+		if (cmpInputData(remoteFrame, _predictFrame) != 0) {
+			_firstPredictFrameId = remoteFrame.frameId;
+			_need_rollback = true;
+		}
+	}
+
+
+	printLog(fmt::format(L" ’µΩ‘∂∂À÷° id:{}", remoteFrame.frameId));
 }

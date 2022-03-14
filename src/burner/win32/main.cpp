@@ -1108,6 +1108,12 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE, LPSTR lpCmdLine, int nShowCmd
 	NetCodeManager::GetInstance()->init();
 	NetCodeManager::GetInstance()->setPlayEvent(new CPlayEvent());
 
+	IGameCallback* cb = new IGameCallback;
+	cb->free_buffer = netcode_free_buffer_callback;
+	cb->load_game_state = netcode_load_game_state_callback;
+	cb->save_game_state = netcode_save_game_state_callback;
+	NetCodeManager::GetInstance()->setGameCallback(cb);
+
 	WSADATA wsaData;
 	WSAStartup(MAKEWORD(2, 2), &wsaData);
 
