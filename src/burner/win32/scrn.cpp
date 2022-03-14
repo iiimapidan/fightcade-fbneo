@@ -374,6 +374,7 @@ static LRESULT CALLBACK ScrnProc(HWND hWnd, UINT Msg, WPARAM wParam, LPARAM lPar
 		{
 			InputData* data = (InputData*)wParam;
 			InputData frame = *data;
+			delete data;
 
 			NetCodeManager::GetInstance()->receiveRemoteFrame(frame);
 

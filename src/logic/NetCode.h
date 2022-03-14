@@ -38,13 +38,6 @@ typedef struct _SavedFrame {
 	int bufCounts;
 	int frameId; 
 	int checksum;
-public:
-	_SavedFrame() {
-		buf = NULL;
-		bufCounts = 0;
-		frameId = -1;
-		checksum = 0;
-	}
 }SavedFrame;
 
 class IPlayEvent {
@@ -106,14 +99,17 @@ private:
 	::google::protobuf::uint32 _roomId = 0;
 	::google::protobuf::uint32 _playId = 0;
 
-	unsigned int _frameId = 0;
+	int _frameId = 0;
 
 	HANDLE _eventGameStarted = NULL;
+
+	std::map<int, SavedFrame> _savedFrame;
+
+	std::map<int, int> _savedFrameValue;
 
 	std::map<int, InputData> _localInputMap;
 	std::map<int, InputData> _remoteInputMap;
 
-	std::map<int, SavedFrame> _savedFrame;
 
 	InputData _predictFrame;
 	int _firstPredictFrameId = -1;

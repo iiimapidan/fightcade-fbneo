@@ -156,8 +156,7 @@ void NetCode::increaseFrame() {
 }
 
 bool NetCode::getNetInput(void* values, int size, int players) {
-	if (_frameId == 0)
-	{
+	if (_frameId == 0) {
 		saveCurrentFrameState();
 	}
 
@@ -167,7 +166,7 @@ bool NetCode::getNetInput(void* values, int size, int players) {
 
 	fetchFrame(_frameId, values);
 
-	// 自增id
+	//// 自增id
 	_frameId++;
 	saveCurrentFrameState();
 
@@ -276,6 +275,8 @@ bool NetCode::connectServer()
 
 				_playEvent->onReceiveRemoteFrame(input);
 			}
+
+			break;
 		}
 
 
@@ -475,9 +476,10 @@ void NetCode::fetchFrame(int id, void* values) {
 	}
 
 	CBufferPtr buffer;
-	buffer.Cat((BYTE*)local.data.data(), sizeof(local.data.size()));
-	buffer.Cat((BYTE*)remote.data.data(), sizeof(remote.data.size()));
+	buffer.Cat((BYTE*)local.data.data(), local.data.size());
+	buffer.Cat((BYTE*)remote.data.data(), remote.data.size());
 
+	unsigned char* buf = buffer.Ptr();
 	memcpy(values, buffer.Ptr(), buffer.Size());
 
 }
@@ -497,21 +499,22 @@ InputData NetCode::addLocalInput(char* values, int size, int players) {
 void NetCode::checkRollback() {
 	if (_need_rollback && _gameCallback) {
 		// 加载状态
-		SavedFrame state = _savedFrame[_firstPredictFrameId];
+		auto it = _savedFrame.find(_firstPredictFrameId);
+		if (it != _savedFrame.end()) {
+			SavedFrame state = _savedFrame[_firstPredictFrameId];
+			_gameCallback->load_game_state(state.buf, state.bufCounts);
 
-		_gameCallback->load_game_state(state.buf, state.bufCounts);
-
-
-		_frameId = _firstPredictFrameId;
-		_firstPredictFrameId = -1;
-		_need_rollback = false;
+			_frameId = _firstPredictFrameId;
+			_firstPredictFrameId = -1;
+			_need_rollback = false;
+		}
 	}
 }
 
 void NetCode::saveCurrentFrameState() {
 	if (_gameCallback)
 	{
-		SavedFrame frameState;
+		SavedFrame frameState = {0};
 		frameState.frameId = _frameId;
 		_gameCallback->save_game_state(&frameState.buf, &frameState.bufCounts, &frameState.checksum, frameState.frameId);
 		_savedFrame[_frameId] = frameState;
@@ -535,7 +538,6 @@ void NetCode::receiveRemoteFrame(const InputData& remoteFrame) {
 			_need_rollback = true;
 		}
 	}
-
 
 	printLog(fmt::format(L"收到远端帧 id:{}", remoteFrame.frameId));
 }

@@ -1098,7 +1098,10 @@ public:
 	}
 
 	void onReceiveRemoteFrame(const InputData& input) {
-		::SendMessage(hScrnWnd, WM_RECEIVE_REMOTE_FRAME, (WPARAM)&input, 0);
+		InputData* tmp = new InputData;
+		tmp->frameId = input.frameId;
+		tmp->data = input.data;
+		::PostMessage(hScrnWnd, WM_RECEIVE_REMOTE_FRAME, (WPARAM)tmp, 0);
 	}
 };
 
