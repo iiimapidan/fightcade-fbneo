@@ -84,7 +84,7 @@ private:
 
 	void sendLocalInput(const InputData& input);
 	void fetchFrame(int id, void* values);
-	void addLocalInput(char* values, int size, int players);
+	bool addLocalInput(char* values, int size, int players);
 	void checkRollback();
 	void saveCurrentFrameState();
 

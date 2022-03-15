@@ -22,6 +22,7 @@ typedef struct _MsgHead {
 #pragma pack()
 
 
+
 static char gAcbBuffer[16 * 1024 * 1024];
 static char* gAcbScanPointer;
 static int gAcbChecksum;
@@ -154,21 +155,16 @@ void NetCode::waitGameStarted() {
 void NetCode::increaseFrame() {
 	_frameId++;
 	saveCurrentFrameState();
+	checkRollback();
 }
 
 bool NetCode::getNetInput(void* values, int size, int players) {
-	if (_frameId == 0) {
-		saveCurrentFrameState();
+	if (addLocalInput((char*)values, size, players)) {
+		fetchFrame(_frameId, values);
+		return true;
 	}
 
-
-	addLocalInput((char*)values, size, players);
-
-	checkRollback();
-
-	fetchFrame(_frameId, values);
-
-	return true;
+	return false;
 }
 
 
@@ -506,7 +502,17 @@ void NetCode::fetchFrame(int id, void* values) {
 
 }
 
-void NetCode::addLocalInput(char* values, int size, int players) {
+bool NetCode::addLocalInput(char* values, int size, int players) {
+	if (_need_rollback) {
+		printLog(fmt::format(L"[local]ÕýÔÚ»Ø¹ö£¬Ìí¼ÓÊ§°Ü"));
+		return false;
+	}
+
+
+	if (_frameId == 0) {
+		saveCurrentFrameState();
+	}
+
 	auto it = _localInputMap.find(_frameId);
 	if (it == _localInputMap.end()) {
 		InputData local;
@@ -521,6 +527,8 @@ void NetCode::addLocalInput(char* values, int size, int players) {
 	} else {
 		printLog(fmt::format(L"[local]ÒÑ´æÔÚ£¬Ìí¼Ó±¾µØÖ¡id:{}Ê§°Ü", _frameId));
 	}
+
+	return true;
 }
 
 
@@ -568,13 +576,11 @@ void NetCode::receiveRemoteFrame(const InputData& remoteFrame) {
 
 	// ÅÐ¶ÏÊÇ·ñÔ¤²âÊ§°Ü
 	// Ô¤²âÊ§°Ü£¬»Ø¹ö
-	if (_need_rollback == false && _predictFrame.frameId >= 0)
-	{
+	if (_need_rollback == false && _predictFrame.frameId >= 0) {
 		if (cmpInputData(remoteFrame, _predictFrame) != 0) {
 			printLog(fmt::format(L"[predict]Ô¶¶ËÖ¡id:{}Ô¤²âÊ§°Ü£¬»Ø¹ö±ê¼Ç", remoteFrame.frameId));
 			_firstPredictFrameId = remoteFrame.frameId;
 			_need_rollback = true;
 		}
 	}
-
 }
