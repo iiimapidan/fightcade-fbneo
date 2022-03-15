@@ -1,5 +1,6 @@
 // Run module
 #include "burner.h"
+#include "../logic/NetCode.h"
 
 int bRunPause = 0;
 int bAltPause = 0;
@@ -242,6 +243,8 @@ int RunFrame(int bDraw, int bPause, int bInput)
 		if (nReplayStatus == 1) {
 			RecordInput();					  	// Write input to file
 		}
+
+		NetCodeManager::GetInstance()->increaseFrame();
 
 		// Render frame with video or audio
 		if (bDraw) {

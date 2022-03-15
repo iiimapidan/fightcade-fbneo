@@ -242,7 +242,7 @@ int DrvInit(int nDrvNum, bool bRestore)
 	bSaveRAM = false;
 	if (kNetGame) {
 		NetworkInitInput();
-		NetworkGetInput();
+		//NetworkGetInput();
 	} else {
 		if (bRestore) {
 			StatedAuto(0);

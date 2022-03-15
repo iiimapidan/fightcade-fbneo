@@ -21,20 +21,12 @@ enum ID {
     ID_S2C_InputFrame = 13;
     ID_S2C_WaitGameStart = 14;
     ID_InputFrame = 15;
+    ID_AutoMatch = 16;
 }
 
 // 错误码
 enum Code {
     ERR_Ok = 0;
-}
-
-// 客户端连接请求
-message C2S_Connect {
-}
-
-// 服务端返回连接结果
-message S2C_Connect {
-    Code code = 1;
 }
 
 // 客户端创建房间请求
@@ -81,59 +73,12 @@ message S2C_WaitGameStart {
     uint32 roomId = 1;
 }
 
-
-// 客户端发送输入帧
-message C2S_Input {
-	int32 frameIndex = 1;
-    uint32 roomId = 2;
-	uint32 playerId = 3;
-    bytes input = 4;
-	string name = 5;
-	uint64 timestamp = 6;
-	bool isReleaseFlag = 7;
-	bool isEmptyFrame = 8;
-	bool isDiscard = 9;
-	bool isCalculated = 10;
-}
-
-// 服务端封帧包
-message S2C_Frame {
-	int32 frameIndex = 1;
-	int32 frameCounts = 2;
-	repeated C2S_Input frames = 3;
-	bool isEmptyFrame = 4;
-}
-
-// 服务端返回帧
-message S2C_Input {
-    int32 frameIndex = 1;
-    uint32 roomId = 2;
-    bytes input = 3;
-    uint32 playerId = 4;
-}
-
-/////////////////////////////////////////////////////////////////////
-
-
-// 客户端输入帧
-message C2S_InputFrame {
-    uint32 roomId = 1;
-	uint32 playerId = 2;
-    repeated C2S_Input input_data = 3;
-}
-
-
-// 服务端返回的帧
-message S2C_InputFrame {
-    int32 frameIndex = 1;
-    repeated C2S_InputFrame players_input_frame = 2;
-    bool isEmptyFrame = 3;
-}
-
-
 message InputFrame {
     uint32 frameId = 1;
     uint32 playerId = 2;
     uint32 roomId = 3;
     bytes input = 4;
+}
+
+message AutoMatch {
 }

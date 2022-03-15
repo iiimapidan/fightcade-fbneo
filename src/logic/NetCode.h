@@ -17,6 +17,7 @@
 #define WM_JOINED_ROOM			(WM_USER + 5)
 #define WM_WAIT_GAME_START		(WM_USER + 6)
 #define WM_GAME_STARTED			(WM_USER + 7)
+#define WM_AUTO_MATCH			(WM_USER + 8)
 
 
 
@@ -79,10 +80,11 @@ private:
 
 	void createRoom();
 	void joinRoom(::google::protobuf::uint32 roomId);
+	void autoMatch();
 
 	void sendLocalInput(const InputData& input);
 	void fetchFrame(int id, void* values);
-	InputData addLocalInput(char* values, int size, int players);
+	void addLocalInput(char* values, int size, int players);
 	void checkRollback();
 	void saveCurrentFrameState();
 
