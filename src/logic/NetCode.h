@@ -18,7 +18,7 @@
 #define WM_WAIT_GAME_START		(WM_USER + 6)
 #define WM_GAME_STARTED			(WM_USER + 7)
 #define WM_AUTO_MATCH			(WM_USER + 8)
-
+#define WM_PRINT_LOG			(WM_USER + 9)
 
 
 #define WM_RUN_NET_GAME			(WM_USER + 1000 + 1)
@@ -74,7 +74,7 @@ public:
 	void receiveRemoteFrame(const InputData& remoteFrame);
 	void checkRollback();
 
-	static void printLog(const std::wstring& log);
+	void printLog(const std::wstring& log);
 
 private:
 	bool connectServer();

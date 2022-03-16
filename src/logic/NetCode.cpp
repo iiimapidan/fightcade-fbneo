@@ -204,7 +204,9 @@ bool NetCode::getNetInput(void* values, int size, int players, bool syncOnly) {
 
 
 void NetCode::printLog(const std::wstring& log) {
-	OutputDebugString(fmt::format(L"NetCode  {}\r\n", log).c_str());
+	std::wstring logW = fmt::format(L"NetCode  {}\r\n", log);
+	std::wstring* p = new std::wstring(logW);
+	PostThreadMessage(_threadId, WM_PRINT_LOG, (WPARAM)p, 0);
 }
 
 bool NetCode::connectServer()
@@ -309,6 +311,8 @@ bool NetCode::connectServer()
 
 
 
+
+
 		}
 	};
 
@@ -330,6 +334,18 @@ void NetCode::createConsole()
 
 	WaitForSingleObject(_eventThreadStarted, INFINITE);
 	PostThreadMessage(_threadId, WM_CREATE_CONSOLE, 0, 0);
+}
+
+std::string UnicodeToANSI(const std::wstring& str) {
+	char* pStr;
+	int iwstrLen = WideCharToMultiByte(CP_ACP, 0, str.c_str(), -1, 0, 0, 0, 0);
+	pStr = new char[iwstrLen + 1];
+	memset(pStr, 0, sizeof(char) * (iwstrLen + 1));
+	WideCharToMultiByte(CP_ACP, 0, str.c_str(), -1, pStr, iwstrLen, 0, 0);
+	std::string strText;
+	strText = pStr;
+	delete pStr;
+	return strText;
 }
 
 DWORD WINAPI NetCode::consoleThread(void* pParam) {
@@ -404,6 +420,13 @@ DWORD WINAPI NetCode::consoleThread(void* pParam) {
 		{
 			printf("游戏已经开始 玩家id:%d\r\n", pThis->_playId);
 			break;
+		}
+
+		case WM_PRINT_LOG:
+		{
+			std::wstring* p = (std::wstring*)msg.wParam;
+			printf(UnicodeToANSI(*p).c_str());
+			delete p;
 		}
 
 		}
@@ -582,7 +605,7 @@ void NetCode::checkRollback() {
 
 			saveCurrentFrameState();
 
-			_gameCallback->advance_frame(0);
+			//_gameCallback->advance_frame(0);
 		} else {
 			int i = 0;
 			++i;
@@ -616,6 +639,11 @@ void NetCode::receiveRemoteFrame(const InputData& remoteFrame) {
 
 	// 判断是否预测失败
 	// 预测失败，回滚
+	// 问题出在，正在回滚的时候，远端数据来了怎么处理
+	if (_need_rollback) {
+		checkRollback();
+	} 
+	
 	if (_need_rollback == false && _predictFrame.frameId >= 0) {
 		if (cmpInputData(remoteFrame, _predictFrame) != 0) {
 			printLog(fmt::format(L"[predict]远端帧id:{}预测失败，回滚标记", remoteFrame.frameId));
