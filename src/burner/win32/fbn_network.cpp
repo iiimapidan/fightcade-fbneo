@@ -69,7 +69,7 @@ int NetworkInitInput()
 	return 0;
 }
 
-int NetworkGetInput()
+int NetworkGetInput(bool syncOnly)
 {
 	int i, j, k;
 
@@ -127,7 +127,7 @@ int NetworkGetInput()
 		//	return 1;
 		//}
 
-		if (NetCodeManager::GetInstance()->getNetInput(nControls, k, 2) == false)
+		if (NetCodeManager::GetInstance()->getNetInput(nControls, k, 2, syncOnly) == false)
 		{
 			return 1;
 		}

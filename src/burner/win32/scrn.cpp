@@ -312,6 +312,7 @@ static int OnRunNetGame(HWND, UINT, int w, int l) {
 		}
 	}
 
+	//MediaInit();
 	DrvInit(nBurnDrvActive, false);								// Init the game driver
 
 	ScrnInit();
@@ -338,6 +339,20 @@ static int OnRunNetGame(HWND, UINT, int w, int l) {
 	return 0;
 }
 
+class CPlayEvent : public IPlayEvent {
+public:
+	void onStartGame() {
+		::PostMessage(hScrnWnd, WM_RUN_NET_GAME, 0, 0);
+	}
+
+	void onReceiveRemoteFrame(const InputData& input) {
+		InputData* tmp = new InputData;
+		tmp->frameId = input.frameId;
+		tmp->data = input.data;
+		::PostMessage(hScrnWnd, WM_RECEIVE_REMOTE_FRAME, (WPARAM)tmp, 0);
+	}
+};
+
 static LRESULT CALLBACK ScrnProc(HWND hWnd, UINT Msg, WPARAM wParam, LPARAM lParam)
 {
 	switch (Msg) {
@@ -363,6 +378,7 @@ static LRESULT CALLBACK ScrnProc(HWND hWnd, UINT Msg, WPARAM wParam, LPARAM lPar
 			}
 			break;
 		}
+
 
 		case WM_RUN_NET_GAME:
 		{
@@ -551,8 +567,24 @@ static int OnLButtonDblClk(HWND hwnd, BOOL, int, int, UINT)
 	return 1;
 }
 
+bool g_init = false;
 static int OnCreate(HWND, LPCREATESTRUCT)	// HWND hwnd, LPCREATESTRUCT lpCreateStruct
 {
+	if (g_init == false)
+	{
+		NetCodeManager::GetInstance()->init();
+		NetCodeManager::GetInstance()->setPlayEvent(new CPlayEvent());
+
+		IGameCallback* cb = new IGameCallback;
+		cb->begin_game = netcode_begin_game_callback;
+		cb->free_buffer = netcode_free_buffer_callback;
+		cb->load_game_state = netcode_load_game_state_callback;
+		cb->save_game_state = netcode_save_game_state_callback;
+		cb->advance_frame = netcode_advance_frame_callback;
+		NetCodeManager::GetInstance()->setGameCallback(cb);
+
+		g_init = true;
+	}
 	return 1;
 }
 
@@ -3379,7 +3411,7 @@ int ScrnTitle()
 // Init the screen window (create it)
 int ScrnInit()
 {
-	ScrnExit();
+	//ScrnExit();
 
 	if (ScrnRegister() != 0) {
 		return 1;

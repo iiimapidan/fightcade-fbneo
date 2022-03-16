@@ -8,7 +8,8 @@
 #include "InstanceWindow.h"
 #include "utils/fmt/format.h"
 #include "state.h"
-#include "burn.h"
+#include <tchar.h>
+#include "burner.h"
 
 #pragma pack(1)
 typedef struct _MsgHead {
@@ -40,6 +41,28 @@ static int QuarkReadAcb(struct BurnArea* pba) {
 static int QuarkWriteAcb(struct BurnArea* pba) {
 	memcpy(pba->Data, gAcbScanPointer, pba->nLen);
 	gAcbScanPointer += pba->nLen;
+	return 0;
+}
+
+bool __cdecl netcode_begin_game_callback(char* name) {
+	WIN32_FIND_DATA fd;
+	TCHAR tfilename[MAX_PATH];
+	TCHAR tname[MAX_PATH];
+	ANSIToTCHAR(name, tname, MAX_PATH);
+
+	// no savestate
+	UINT32 i;
+	for (i = 0; i < nBurnDrvCount; i++) {
+		nBurnDrvActive = i;
+		if ((_tcscmp(BurnDrvGetText(DRV_NAME), tname) == 0) && (!(BurnDrvGetFlags() & BDF_BOARDROM))) {
+			MediaInit();
+			DrvInit(i, true);
+			// load game detector
+			DetectorLoad(name, false, time(NULL));
+			return 1;
+		}
+	}
+
 	return 0;
 }
 
@@ -100,6 +123,12 @@ bool __cdecl netcode_save_game_state_callback(unsigned char** buffer, int* len, 
 	return false;
 }
 
+bool __cdecl netcode_advance_frame_callback(int flags) {
+	nFramesEmulated--;
+	RunFrame(0, 0, 0);
+	return true;
+}
+
 NetCode::NetCode()
 {
 	_eventGameStarted = CreateEvent(NULL, FALSE, FALSE, NULL);
@@ -158,11 +187,17 @@ void NetCode::increaseFrame() {
 	checkRollback();
 }
 
-bool NetCode::getNetInput(void* values, int size, int players) {
-	if (addLocalInput((char*)values, size, players)) {
+bool NetCode::getNetInput(void* values, int size, int players, bool syncOnly) {
+	if (syncOnly == false) {
+		if (addLocalInput((char*)values, size, players)) {
+			fetchFrame(_frameId, values);
+			return true;
+		}
+	} else {
 		fetchFrame(_frameId, values);
 		return true;
 	}
+
 
 	return false;
 }
@@ -533,7 +568,7 @@ bool NetCode::addLocalInput(char* values, int size, int players) {
 
 
 void NetCode::checkRollback() {
-	if (_need_rollback && _gameCallback) {
+	if (_need_rollback && _gameCallback && _firstPredictFrameId != -1) {
 		// º”‘ÿ◊¥Ã¨
 		auto it = _savedFrame.find(_firstPredictFrameId);
 		if (it != _savedFrame.end()) {
@@ -546,6 +581,11 @@ void NetCode::checkRollback() {
 			_need_rollback = false;
 
 			saveCurrentFrameState();
+
+			_gameCallback->advance_frame(0);
+		} else {
+			int i = 0;
+			++i;
 		}
 	}
 }
@@ -581,6 +621,8 @@ void NetCode::receiveRemoteFrame(const InputData& remoteFrame) {
 			printLog(fmt::format(L"[predict]‘∂∂À÷°id:{}‘§≤‚ ß∞‹£¨ªÿπˆ±Íº«", remoteFrame.frameId));
 			_firstPredictFrameId = remoteFrame.frameId;
 			_need_rollback = true;
+		} else {
+			printLog(fmt::format(L"[predict]‘∂∂À÷°id:{}‘§≤‚≥…π¶", remoteFrame.frameId));
 		}
 	}
 }

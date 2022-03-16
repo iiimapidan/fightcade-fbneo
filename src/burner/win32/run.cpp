@@ -210,7 +210,7 @@ int RunFrame(int bDraw, int bPause, int bInput)
 				VidDisplayInputs(1, 2);
 			} else {
 				VidDisplayInputs(0, 3);
-				if (NetworkGetInput()) {
+				if (NetworkGetInput(true)) {
 					VidDisplayInputs(1, 1);
 					return 1;
 				}
@@ -317,7 +317,8 @@ int RunIdle()
 		// No need to do anything for a bit
 		if (kNetGame) {
 			if (nAccTime < nFpsIdle || nRunQuark) {
-				QuarkRunIdle(1);
+				//QuarkRunIdle(1);
+				NetCodeManager::GetInstance()->checkRollback();
 				nRunQuark = 0;
 			}
 		}

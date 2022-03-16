@@ -6,6 +6,10 @@
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
     <LocalDebuggerCommandArguments>
     </LocalDebuggerCommandArguments>
+    <RemoteDebuggerCommand>C:\Users\Administrator\Desktop\bin\build\fcadefbneod.exe</RemoteDebuggerCommand>
+    <RemoteDebuggerWorkingDirectory>C:\Users\Administrator\Desktop\bin\build</RemoteDebuggerWorkingDirectory>
+    <RemoteDebuggerServerName>192.168.46.179</RemoteDebuggerServerName>
+    <RemoteDebuggerConnection>RemoteWithoutAuthentication</RemoteDebuggerConnection>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LocalDebuggerCommand>$(SolutionDir)\..\..\build\$(TargetName)$(TargetExt)</LocalDebuggerCommand>

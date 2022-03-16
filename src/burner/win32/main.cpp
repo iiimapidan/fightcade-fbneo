@@ -1091,31 +1091,11 @@ static void CreateSupportFolders()
 	}
 }
 
-class CPlayEvent : public IPlayEvent {
-public:
-	void onStartGame() {
-		::PostMessage(hScrnWnd, WM_RUN_NET_GAME, 0, 0);
-	}
 
-	void onReceiveRemoteFrame(const InputData& input) {
-		InputData* tmp = new InputData;
-		tmp->frameId = input.frameId;
-		tmp->data = input.data;
-		::PostMessage(hScrnWnd, WM_RECEIVE_REMOTE_FRAME, (WPARAM)tmp, 0);
-	}
-};
 
 // Main program entry point
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE, LPSTR lpCmdLine, int nShowCmd)
 {
-	NetCodeManager::GetInstance()->init();
-	NetCodeManager::GetInstance()->setPlayEvent(new CPlayEvent());
-
-	IGameCallback* cb = new IGameCallback;
-	cb->free_buffer = netcode_free_buffer_callback;
-	cb->load_game_state = netcode_load_game_state_callback;
-	cb->save_game_state = netcode_save_game_state_callback;
-	NetCodeManager::GetInstance()->setGameCallback(cb);
 
 	WSADATA wsaData;
 	WSAStartup(MAKEWORD(2, 2), &wsaData);

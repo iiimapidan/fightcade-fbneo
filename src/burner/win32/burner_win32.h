@@ -433,7 +433,7 @@ int ResCreate(int);
 // fba_network.cpp
 int NetworkInitInput();
 int NetworkGetInputSize();
-int NetworkGetInput();
+int NetworkGetInput(bool syncOnly = false);
 
 // fbn_ggpo.cpp
 void QuarkInit(TCHAR *connect);
