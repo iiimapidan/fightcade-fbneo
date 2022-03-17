@@ -555,7 +555,7 @@ void NetCode::fetchFrame(int id, void* values) {
 
 	// 打印预测之后的帧
 	printLog(L"");
-	printLog(fmt::format(L"[fetch]-----获取帧id:{} 远端帧获取方式为:{}", id, logFetchRemoteFrameType));
+	printLog(fmt::format(L"[fetch]-----获取帧id:{} 远端帧获取方式为:{} 预测的id:{}", id, logFetchRemoteFrameType, _predictFrame.frameId));
 	printLog(fmt::format(L"[fetch]-----帧数据 本地帧:{}", formatFrameData(local)));
 	printLog(fmt::format(L"[fetch]-----帧数据 远端帧:{}", formatFrameData(remote)));
 	printLog(L"");
@@ -602,7 +602,7 @@ void NetCode::addRemoteInput() {
 
 		if (remoteFrame.frameId <= _predictFrame.frameId) {
 			printLog(
-				fmt::format(L"[remote]-----本地已经预测过且之前已预测的远端帧id:{}到达, remoteFrame.frameId <= _predictFrame.frameId", 
+				fmt::format(L"[remote]-----本地已经预测过且之前已预测的远端帧id:{}到达, remoteFrame.frameId:{} <= _predictFrame.frameId:{}", 
 					remoteFrame.frameId, remoteFrame.frameId, _predictFrame.frameId));
 
 			_remoteInputMap[remoteFrame.frameId] = remoteFrame;
@@ -625,7 +625,7 @@ void NetCode::addRemoteInput() {
 			_remoteInputNetCacheQueue.pop();
 		} else {
 			printLog(
-				fmt::format(L"[remote]-----新的远端帧 id:{}到达, remoteFrame.frameId > _predictFrame.frameId",
+				fmt::format(L"[remote]-----新的远端帧 id:{}到达, remoteFrame.frameId:{} > _predictFrame.frameId:{}",
 					remoteFrame.frameId, remoteFrame.frameId, _predictFrame.frameId));
 			break;
 		}
