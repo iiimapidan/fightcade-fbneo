@@ -991,6 +991,9 @@
     <ClInclude Include="..\..\src\logic\utils\string\StringConvert.h">
       <Filter>logic\utils\string</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\logic\utils\log\loguru.hpp">
+      <Filter>logic\utils\log</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\burn\burn.cpp">
@@ -4293,6 +4296,9 @@
     <ClCompile Include="..\..\src\logic\utils\string\StringConvert.cpp">
       <Filter>logic\utils\string</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\logic\utils\log\loguru.cpp">
+      <Filter>logic\utils\log</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Burn">
@@ -4549,6 +4555,9 @@
     </Filter>
     <Filter Include="logic\utils\string">
       <UniqueIdentifier>{b79a7b46-9525-42ea-bd90-e7da88b043c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="logic\utils\log">
+      <UniqueIdentifier>{317d900c-8bce-4729-940f-0314c8f1ecee}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

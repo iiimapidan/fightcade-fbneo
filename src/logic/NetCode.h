@@ -31,6 +31,7 @@ typedef std::vector<char> INPUT_DATA;
 typedef struct _InputData {
 	int frameId;
 	std::vector<char> data;
+	std::string uuid;
 }InputData;
 
 
@@ -96,6 +97,8 @@ private:
 
 	std::wstring formatFrameData(const InputData& inputFrame);
 
+	std::string generate();
+
 private:
 	hv::TcpClient _client;
 
@@ -107,7 +110,7 @@ private:
 	::google::protobuf::uint32 _roomId = 0;
 	::google::protobuf::uint32 _playId = 0;
 
-	int _frameId = 0;
+	int _frameId = -1;
 
 	HANDLE _eventGameStarted = NULL;
 

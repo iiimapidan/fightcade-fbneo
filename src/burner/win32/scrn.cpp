@@ -349,6 +349,7 @@ public:
 		InputData* tmp = new InputData;
 		tmp->frameId = input.frameId;
 		tmp->data = input.data;
+		tmp->uuid = input.uuid;
 		::PostMessage(hScrnWnd, WM_RECEIVE_REMOTE_FRAME, (WPARAM)tmp, 0);
 	}
 };

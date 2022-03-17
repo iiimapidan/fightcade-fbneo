@@ -8,9 +8,15 @@
 #include "InstanceWindow.h"
 #include "utils/fmt/format.h"
 #include "utils/string/StringConvert.h"
+#include "utils/log/loguru.hpp"
 #include "state.h"
 #include <tchar.h>
 #include "burner.h"
+
+#include <stdio.h>
+#include <stdint.h>
+#include <string>
+#include <objbase.h>
 
 #pragma pack(1)
 typedef struct _MsgHead {
@@ -141,6 +147,9 @@ NetCode::~NetCode()
 
 bool NetCode::init()
 {
+	// 初始化log
+	loguru::add_file("everything.log", loguru::Append, loguru::Verbosity_INFO);
+
 	_predictFrame.frameId = -1;
 	_predictFrame.data.resize(9);
 	memset(_predictFrame.data.data(), 0, 9);
@@ -183,8 +192,8 @@ void NetCode::waitGameStarted() {
 
 
 void NetCode::increaseFrame() {
-	_frameId++;
 	saveCurrentFrameState();
+	_frameId++;
 
 	if (_is_rollback == false) {
 		addRemoteInput();
@@ -305,7 +314,7 @@ bool NetCode::connectServer()
 				input.frameId = response.frameid();
 				input.data.resize(response.input().size());
 				input.data.assign(response.input().begin(), response.input().end());
-
+				input.uuid = response.uuid();
 				_playEvent->onReceiveRemoteFrame(input);
 			}
 
@@ -418,7 +427,13 @@ DWORD WINAPI NetCode::consoleThread(void* pParam) {
 		case WM_PRINT_LOG:
 		{
 			std::wstring* p = (std::wstring*)msg.wParam;
-			printf(w2a(*p).c_str());
+			std::wstring log = *p;
+			std::string loga = w2a(log);
+			printf(loga.c_str());
+
+			LOG_F(INFO, "%s", loga.c_str());
+
+
 			delete p;
 		}
 
@@ -483,6 +498,7 @@ void NetCode::sendLocalInput(const InputData& input) {
 	body.set_frameid(input.frameId);
 	body.set_playerid(_playId);
 	body.set_roomid(_roomId);
+	body.set_uuid(input.uuid);
 
 	std::string data;
 	data.resize(input.data.size());
@@ -555,9 +571,10 @@ void NetCode::fetchFrame(int id, void* values) {
 
 	// 打印预测之后的帧
 	printLog(L"");
-	printLog(fmt::format(L"[fetch]-----获取帧id:{} 远端帧获取方式为:{} 预测的id:{}", id, logFetchRemoteFrameType, _predictFrame.frameId));
-	printLog(fmt::format(L"[fetch]-----帧数据 本地帧:{}", formatFrameData(local)));
-	printLog(fmt::format(L"[fetch]-----帧数据 远端帧:{}", formatFrameData(remote)));
+	printLog(fmt::format(L"[fetch]-----获取帧id:{} 远端帧获取方式为:{} 预测的id:{}, 远端帧缓存数量为:{}", 
+		id, logFetchRemoteFrameType, _predictFrame.frameId, _remoteInputMap.size()));
+	printLog(fmt::format(L"[fetch]-----帧数据 本地帧:{} uuid:{}", a2w(local.uuid), formatFrameData(local)));
+	printLog(fmt::format(L"[fetch]-----帧数据 远端帧:{} uuid:{}", a2w(local.uuid), formatFrameData(remote)));
 	printLog(L"");
 
 	unsigned char* buf = buffer.Ptr();
@@ -571,8 +588,9 @@ bool NetCode::addLocalInput(char* values, int size, int players) {
 	}
 
 
-	if (_frameId == 0) {
+	if (_frameId == -1) {
 		saveCurrentFrameState();
+		_frameId += 1;
 	}
 
 	auto it = _localInputMap.find(_frameId);
@@ -582,12 +600,13 @@ bool NetCode::addLocalInput(char* values, int size, int players) {
 		local.data.resize(size);
 		memcpy(local.data.data(), values, size);
 		_localInputMap[_frameId] = local;
+		local.uuid = generate();
 
 		sendLocalInput(local);
-		printLog(fmt::format(L"[local]-----添加本地帧id:{}, 数据:{}, 并发送给远端", _frameId, formatFrameData(local)));
+		printLog(fmt::format(L"[local]-----添加本地帧id:{}, uuid:{}, 数据:{}, 并发送给远端", _frameId, a2w(local.uuid), formatFrameData(local)));
 
 	} else {
-		printLog(fmt::format(L"[local]-----添加本地帧id:{}, 数据:{}, 已缓存无需重复添加 ", _frameId, formatFrameData(_localInputMap[_frameId])));
+		printLog(fmt::format(L"[local]-----添加本地帧id:{}, uuid:{}, 数据:{}, 已缓存无需重复添加 ", _frameId, a2w(_localInputMap[_frameId].uuid), formatFrameData(_localInputMap[_frameId])));
 	}
 
 	return true;
@@ -598,7 +617,7 @@ void NetCode::addRemoteInput() {
 	bool isPredOk = true;
 	while (_remoteInputNetCacheQueue.empty() == false) {
 		auto remoteFrame = _remoteInputNetCacheQueue.front();
-		printLog(fmt::format(L"[remote]-----远端帧id:{}到达，准备判断是否预测成功", remoteFrame.frameId));
+		printLog(fmt::format(L"[remote]-----远端帧id:{} uuid:{} 到达，准备判断是否预测成功",  remoteFrame.frameId, a2w(remoteFrame.uuid)));
 
 		if (remoteFrame.frameId <= _predictFrame.frameId) {
 			printLog(
@@ -614,19 +633,26 @@ void NetCode::addRemoteInput() {
 					isPredOk = false;
 					_firstPredictFrameId = remoteFrame.frameId;
 
-					printLog(L"");
-					printLog(fmt::format(L"[remote]-----帧id:{} 预测失败", remoteFrame.frameId));
+					printLog(L"=========================================================================");
+					printLog(fmt::format(L"[remote]-----远端帧id:{} uuid:{} 预测失败, 第{}帧预测错误, 需要回滚", remoteFrame.frameId, a2w(remoteFrame.uuid), _firstPredictFrameId));
 					printLog(fmt::format(L"[remote]-----远端:{}", formatFrameData(remoteFrame)));
 					printLog(fmt::format(L"[remote]-----预测:{}", formatFrameData(_predictFrame)));
-					printLog(L"");
+					printLog(L"=========================================================================");
+				} else {
+					printLog(L"=========================================================================");
+					printLog(fmt::format(L"[remote]-----远端帧id:{} uuid:{} 预测成功", remoteFrame.frameId, a2w(remoteFrame.uuid)));
+					printLog(fmt::format(L"[remote]-----远端:{}", formatFrameData(remoteFrame)));
+					printLog(fmt::format(L"[remote]-----预测:{}", formatFrameData(_predictFrame)));
+					printLog(L"=========================================================================");
 				}
 			}
-
 			_remoteInputNetCacheQueue.pop();
+
+			break;
 		} else {
 			printLog(
-				fmt::format(L"[remote]-----新的远端帧 id:{}到达, remoteFrame.frameId:{} > _predictFrame.frameId:{}",
-					remoteFrame.frameId, remoteFrame.frameId, _predictFrame.frameId));
+				fmt::format(L"[remote]-----新的远端帧 id:{} uuid:{} 到达, 超出范围，忽略 remoteFrame.frameId:{} > _predictFrame.frameId:{}",
+					remoteFrame.frameId, a2w(remoteFrame.uuid), remoteFrame.frameId, _predictFrame.frameId));
 			break;
 		}
 	}
@@ -635,16 +661,18 @@ void NetCode::addRemoteInput() {
 void NetCode::checkRollback() {
 	if (_firstPredictFrameId != -1) {
 
-		// 加载状态
-		auto it = _savedFrame.find(_firstPredictFrameId);
+		// 查找错误帧id的上一帧快照
+		printLog(fmt::format(L"[rollback]-----查询预测错误帧id:{}上一帧的快照(快照对应帧id:{})", _firstPredictFrameId, _firstPredictFrameId - 1));
+		auto it = _savedFrame.find(_firstPredictFrameId - 1);
 		if (it != _savedFrame.end()) {
+			printLog(fmt::format(L"[rollback]-----帧id:{}对应快照存在", _firstPredictFrameId));
 			_is_rollback = true;
 
 			int f = _firstPredictFrameId;
 			printLog(fmt::format(L"[rollback]-----帧id:{}, 需要回滚，正在回滚到第{}帧", 
-				_firstPredictFrameId, _firstPredictFrameId));
+				_firstPredictFrameId, _firstPredictFrameId -1 ));
 
-			SavedFrame state = _savedFrame[_firstPredictFrameId];
+			SavedFrame state = _savedFrame[_firstPredictFrameId - 1];
 			_gameCallback->load_game_state(state.buf, state.bufCounts);
 
 			_frameId = _firstPredictFrameId;
@@ -652,14 +680,13 @@ void NetCode::checkRollback() {
 
 			_predictFrame.frameId = -1;
 
-			saveCurrentFrameState();
 			//_gameCallback->advance_frame(0);
 
 			_is_rollback = false;
 
 			printLog(fmt::format(L"[rollback]-----回滚到第{}帧结束", f));
 		} else {
-			printLog(fmt::format(L"[rollback]-----未找到第{}帧快照", _firstPredictFrameId));
+			printLog(fmt::format(L"[rollback]-----帧id:{}对应快照不存在", _firstPredictFrameId));
 		}
 	}
 }
@@ -693,6 +720,25 @@ std::wstring NetCode::formatFrameData(const InputData& inputFrame) {
 	fmtLog += "]";
 
 	return a2w(fmtLog);
+}
+
+std::string NetCode::generate() {
+#define GUID_LEN 64
+	char buf[GUID_LEN] = { 0 };
+	GUID guid;
+
+	if (CoCreateGuid(&guid)) {
+		return std::move(std::string(""));
+	}
+
+	sprintf(buf,
+		"%08X-%04X-%04x-%02X%02X-%02X%02X%02X%02X%02X%02X",
+		guid.Data1, guid.Data2, guid.Data3,
+		guid.Data4[0], guid.Data4[1], guid.Data4[2],
+		guid.Data4[3], guid.Data4[4], guid.Data4[5],
+		guid.Data4[6], guid.Data4[7]);
+
+	return std::move(std::string(buf));
 }
 
 void NetCode::receiveRemoteFrame(const InputData& remoteFrame) {
