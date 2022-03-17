@@ -3,12 +3,12 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LocalDebuggerCommand>C:\bin\jieji\$(TargetName)$(TargetExt)</LocalDebuggerCommand>
     <LocalDebuggerWorkingDirectory>C:\bin\jieji\</LocalDebuggerWorkingDirectory>
-    <DebuggerFlavor>WindowsRemoteDebugger</DebuggerFlavor>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
     <LocalDebuggerCommandArguments>
     </LocalDebuggerCommandArguments>
-    <RemoteDebuggerCommand>C:\bin\jieji\fcadefbneod.exe</RemoteDebuggerCommand>
-    <RemoteDebuggerWorkingDirectory>C:\bin\jieji</RemoteDebuggerWorkingDirectory>
-    <RemoteDebuggerServerName>192.168.50.67</RemoteDebuggerServerName>
+    <RemoteDebuggerCommand>C:\Users\Administrator\Desktop\bin\build\fcadefbneod.exe</RemoteDebuggerCommand>
+    <RemoteDebuggerWorkingDirectory>C:\Users\Administrator\Desktop\bin\build</RemoteDebuggerWorkingDirectory>
+    <RemoteDebuggerServerName>192.168.46.179</RemoteDebuggerServerName>
     <RemoteDebuggerConnection>RemoteWithoutAuthentication</RemoteDebuggerConnection>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">

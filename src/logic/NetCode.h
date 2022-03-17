@@ -88,9 +88,13 @@ private:
 	void sendLocalInput(const InputData& input);
 	void fetchFrame(int id, void* values);
 	bool addLocalInput(char* values, int size, int players);
+	void addRemoteInput();
+
 	void saveCurrentFrameState();
 
 	int cmpInputData(const InputData& input1, const InputData& input2);
+
+	std::wstring formatFrameData(const InputData& inputFrame);
 
 private:
 	hv::TcpClient _client;
@@ -114,10 +118,11 @@ private:
 	std::map<int, InputData> _localInputMap;
 	std::map<int, InputData> _remoteInputMap;
 
+	std::queue<InputData> _remoteInputNetCacheQueue;
 
 	InputData _predictFrame;
 	int _firstPredictFrameId = -1;
-	bool _need_rollback = false;
+	bool _is_rollback = false;
 
 	IGameCallback* _gameCallback = NULL;
 };

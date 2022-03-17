@@ -1,0 +1,4073 @@
+已连接上服务器......
+自动匹配比赛......
+已加入房间, id:45
+房间已准备就绪，服务端等待游戏开始....
+游戏已经开始 玩家id:1
+NetCode  [save]-----保存第0帧快照
+NetCode  [local]-----添加本地帧id:0, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:0 远端帧获取方式为:使用上一次预测值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 0 0 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第1帧快照
+NetCode  [local]-----添加本地帧id:1, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:1 远端帧获取方式为:使用上一次预测值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 0 0 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第2帧快照
+NetCode  [local]-----添加本地帧id:2, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:2 远端帧获取方式为:使用上一次预测值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 0 0 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第3帧快照
+NetCode  [local]-----添加本地帧id:3, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:3 远端帧获取方式为:使用上一次预测值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 0 0 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第4帧快照
+NetCode  [remote]-----远端帧id:0到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:0到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode
+NetCode  [remote]-----帧id:0 预测失败
+NetCode  [remote]-----远端:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [remote]-----预测:[0 0 0 0 0 0 0 0 0 ]
+NetCode
+NetCode  [remote]-----远端帧id:1到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:1到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:2到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:2到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [rollback]-----帧id:0, 需要回滚，正在回滚到第0帧
+NetCode  [save]-----保存第0帧快照
+NetCode  [rollback]-----回滚到第0帧结束
+NetCode  [save]-----保存第0帧快照
+NetCode  [local]-----添加本地帧id:0, 数据:[0 0 0 0 -128 1 0 0 0 ], 已缓存无需重复添加
+NetCode
+NetCode  [fetch]-----获取帧id:0 远端帧获取方式为:已存在直接获取
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第1帧快照
+NetCode  [remote]-----远端帧id:3到达，准备判断是否预测成功
+NetCode  [remote]-----新的远端帧 id:3到达, remoteFrame.frameId > _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:1, 数据:[0 0 0 0 -128 1 0 0 0 ], 已缓存无需重复添加
+NetCode
+NetCode  [fetch]-----获取帧id:1 远端帧获取方式为:已存在直接获取
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第2帧快照
+NetCode  [remote]-----远端帧id:3到达，准备判断是否预测成功
+NetCode  [remote]-----新的远端帧 id:3到达, remoteFrame.frameId > _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:2, 数据:[0 0 0 0 -128 1 0 0 0 ], 已缓存无需重复添加
+NetCode
+NetCode  [fetch]-----获取帧id:2 远端帧获取方式为:已存在直接获取
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第3帧快照
+NetCode  [remote]-----远端帧id:3到达，准备判断是否预测成功
+NetCode  [remote]-----新的远端帧 id:3到达, remoteFrame.frameId > _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:3, 数据:[0 0 0 0 -128 1 0 0 0 ], 已缓存无需重复添加
+NetCode
+NetCode  [fetch]-----获取帧id:3 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第4帧快照
+NetCode  [remote]-----远端帧id:3到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:3到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:4, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:4 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第5帧快照
+NetCode  [remote]-----远端帧id:4到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:4到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:5, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:5 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第6帧快照
+NetCode  [local]-----添加本地帧id:6, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:6 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第7帧快照
+NetCode  [remote]-----远端帧id:5到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:5到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:7, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:7 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第8帧快照
+NetCode  [remote]-----远端帧id:6到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:6到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:8, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:8 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第9帧快照
+NetCode  [remote]-----远端帧id:7到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:7到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:9, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:9 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第10帧快照
+NetCode  [remote]-----远端帧id:8到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:8到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:10, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:10 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第11帧快照
+NetCode  [local]-----添加本地帧id:11, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:11 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第12帧快照
+NetCode  [remote]-----远端帧id:9到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:9到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:10到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:10到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:12, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:12 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第13帧快照
+NetCode  [local]-----添加本地帧id:13, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:13 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第14帧快照
+NetCode  [remote]-----远端帧id:11到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:11到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:12到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:12到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:14, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:14 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第15帧快照
+NetCode  [local]-----添加本地帧id:15, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:15 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第16帧快照
+NetCode  [remote]-----远端帧id:13到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:13到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:14到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:14到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:16, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:16 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第17帧快照
+NetCode  [local]-----添加本地帧id:17, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:17 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第18帧快照
+NetCode  [remote]-----远端帧id:15到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:15到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:16到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:16到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:18, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:18 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第19帧快照
+NetCode  [local]-----添加本地帧id:19, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:19 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第20帧快照
+NetCode  [remote]-----远端帧id:17到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:17到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:18到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:18到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:20, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:20 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第21帧快照
+NetCode  [remote]-----远端帧id:19到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:19到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:21, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:21 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第22帧快照
+NetCode  [local]-----添加本地帧id:22, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:22 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第23帧快照
+NetCode  [remote]-----远端帧id:20到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:20到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:21到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:21到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:23, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:23 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第24帧快照
+NetCode  [local]-----添加本地帧id:24, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:24 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第25帧快照
+NetCode  [remote]-----远端帧id:22到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:22到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:23到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:23到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:25, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:25 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第26帧快照
+NetCode  [local]-----添加本地帧id:26, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:26 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第27帧快照
+NetCode  [remote]-----远端帧id:24到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:24到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:27, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:27 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第28帧快照
+NetCode  [remote]-----远端帧id:25到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:25到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:26到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:26到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:28, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:28 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第29帧快照
+NetCode  [local]-----添加本地帧id:29, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:29 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第30帧快照
+NetCode  [remote]-----远端帧id:27到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:27到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:28到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:28到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:30, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:30 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第31帧快照
+NetCode  [local]-----添加本地帧id:31, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:31 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第32帧快照
+NetCode  [remote]-----远端帧id:29到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:29到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:30到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:30到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:32, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:32 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第33帧快照
+NetCode  [remote]-----远端帧id:31到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:31到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:33, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:33 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第34帧快照
+NetCode  [local]-----添加本地帧id:34, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:34 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第35帧快照
+NetCode  [remote]-----远端帧id:32到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:32到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:33到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:33到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:35, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:35 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第36帧快照
+NetCode  [local]-----添加本地帧id:36, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:36 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第37帧快照
+NetCode  [remote]-----远端帧id:34到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:34到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:35到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:35到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:37, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:37 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第38帧快照
+NetCode  [local]-----添加本地帧id:38, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:38 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第39帧快照
+NetCode  [local]-----添加本地帧id:39, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:39 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第40帧快照
+NetCode  [remote]-----远端帧id:36到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:36到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:37到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:37到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:40, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:40 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第41帧快照
+NetCode  [remote]-----远端帧id:38到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:38到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:39到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:39到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:41, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:41 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第42帧快照
+NetCode  [local]-----添加本地帧id:42, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:42 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第43帧快照
+NetCode  [remote]-----远端帧id:40到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:40到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:41到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:41到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:43, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:43 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第44帧快照
+NetCode  [local]-----添加本地帧id:44, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:44 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第45帧快照
+NetCode  [remote]-----远端帧id:42到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:42到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:43到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:43到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:45, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:45 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第46帧快照
+NetCode  [local]-----添加本地帧id:46, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:46 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第47帧快照
+NetCode  [remote]-----远端帧id:44到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:44到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:47, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:47 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第48帧快照
+NetCode  [remote]-----远端帧id:45到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:45到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:46到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:46到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:48, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:48 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第49帧快照
+NetCode  [local]-----添加本地帧id:49, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:49 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第50帧快照
+NetCode  [remote]-----远端帧id:47到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:47到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:48到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:48到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:50, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:50 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第51帧快照
+NetCode  [local]-----添加本地帧id:51, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:51 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第52帧快照
+NetCode  [remote]-----远端帧id:49到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:49到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:50到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:50到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:52, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:52 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第53帧快照
+NetCode  [local]-----添加本地帧id:53, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:53 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第54帧快照
+NetCode  [remote]-----远端帧id:51到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:51到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:52到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:52到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:54, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:54 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第55帧快照
+NetCode  [remote]-----远端帧id:53到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:53到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:54到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:54到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:55, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:55 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第56帧快照
+NetCode  [local]-----添加本地帧id:56, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:56 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第57帧快照
+NetCode  [remote]-----远端帧id:55到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:55到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:57, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:57 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第58帧快照
+NetCode  [local]-----添加本地帧id:58, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:58 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第59帧快照
+NetCode  [local]-----添加本地帧id:59, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:59 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第60帧快照
+NetCode  [remote]-----远端帧id:56到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:56到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:57到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:57到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:60, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:60 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第61帧快照
+NetCode  [local]-----添加本地帧id:61, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:61 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第62帧快照
+NetCode  [remote]-----远端帧id:58到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:58到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:59到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:59到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:62, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:62 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第63帧快照
+NetCode  [remote]-----远端帧id:60到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:60到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:61到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:61到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:62到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:62到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:63, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:63 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第64帧快照
+NetCode  [local]-----添加本地帧id:64, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:64 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第65帧快照
+NetCode  [remote]-----远端帧id:63到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:63到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:64到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:64到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:65, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:65 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第66帧快照
+NetCode  [local]-----添加本地帧id:66, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:66 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第67帧快照
+NetCode  [remote]-----远端帧id:65到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:65到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:67, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:67 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第68帧快照
+NetCode  [remote]-----远端帧id:66到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:66到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:68, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:68 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第69帧快照
+NetCode  [remote]-----远端帧id:67到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:67到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:69, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:69 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第70帧快照
+NetCode  [remote]-----远端帧id:68到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:68到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:70, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:70 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第71帧快照
+NetCode  [remote]-----远端帧id:69到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:69到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:71, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:71 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第72帧快照
+NetCode  [remote]-----远端帧id:70到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:70到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:72, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:72 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第73帧快照
+NetCode  [remote]-----远端帧id:71到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:71到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:73, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:73 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第74帧快照
+NetCode  [local]-----添加本地帧id:74, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:74 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第75帧快照
+NetCode  [remote]-----远端帧id:72到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:72到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:73到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:73到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:75, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:75 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第76帧快照
+NetCode  [local]-----添加本地帧id:76, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:76 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第77帧快照
+NetCode  [remote]-----远端帧id:74到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:74到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:75到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:75到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:77, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:77 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第78帧快照
+NetCode  [local]-----添加本地帧id:78, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:78 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第79帧快照
+NetCode  [remote]-----远端帧id:76到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:76到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:77到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:77到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:79, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:79 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第80帧快照
+NetCode  [local]-----添加本地帧id:80, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:80 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第81帧快照
+NetCode  [remote]-----远端帧id:78到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:78到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:79到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:79到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:81, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:81 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第82帧快照
+NetCode  [local]-----添加本地帧id:82, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:82 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第83帧快照
+NetCode  [remote]-----远端帧id:80到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:80到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:83, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:83 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第84帧快照
+NetCode  [remote]-----远端帧id:81到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:81到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:82到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:82到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:84, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:84 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第85帧快照
+NetCode  [local]-----添加本地帧id:85, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:85 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第86帧快照
+NetCode  [remote]-----远端帧id:83到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:83到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:84到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:84到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:86, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:86 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第87帧快照
+NetCode  [local]-----添加本地帧id:87, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:87 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第88帧快照
+NetCode  [remote]-----远端帧id:85到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:85到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:86到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:86到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:88, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:88 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第89帧快照
+NetCode  [local]-----添加本地帧id:89, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:89 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第90帧快照
+NetCode  [remote]-----远端帧id:87到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:87到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:88到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:88到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:90, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:90 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第91帧快照
+NetCode  [local]-----添加本地帧id:91, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:91 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第92帧快照
+NetCode  [remote]-----远端帧id:89到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:89到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:92, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:92 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第93帧快照
+NetCode  [remote]-----远端帧id:90到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:90到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:91到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:91到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:93, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:93 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第94帧快照
+NetCode  [local]-----添加本地帧id:94, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:94 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第95帧快照
+NetCode  [remote]-----远端帧id:92到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:92到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:93到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:93到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:95, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:95 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第96帧快照
+NetCode  [local]-----添加本地帧id:96, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:96 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第97帧快照
+NetCode  [remote]-----远端帧id:94到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:94到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:97, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:97 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第98帧快照
+NetCode  [local]-----添加本地帧id:98, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:98 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第99帧快照
+NetCode  [remote]-----远端帧id:95到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:95到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:96到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:96到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:99, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:99 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第100帧快照
+NetCode  [remote]-----远端帧id:97到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:97到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:98到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:98到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:100, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:100 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第101帧快照
+NetCode  [local]-----添加本地帧id:101, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:101 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第102帧快照
+NetCode  [remote]-----远端帧id:99到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:99到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:100到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:100到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:102, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:102 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第103帧快照
+NetCode  [local]-----添加本地帧id:103, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:103 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第104帧快照
+NetCode  [remote]-----远端帧id:101到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:101到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:102到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:102到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:104, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:104 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第105帧快照
+NetCode  [local]-----添加本地帧id:105, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:105 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第106帧快照
+NetCode  [remote]-----远端帧id:103到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:103到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:104到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:104到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:106, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:106 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第107帧快照
+NetCode  [local]-----添加本地帧id:107, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:107 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第108帧快照
+NetCode  [remote]-----远端帧id:105到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:105到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:108, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:108 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第109帧快照
+NetCode  [local]-----添加本地帧id:109, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:109 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第110帧快照
+NetCode  [remote]-----远端帧id:106到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:106到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:107到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:107到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:110, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:110 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第111帧快照
+NetCode  [remote]-----远端帧id:108到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:108到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:109到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:109到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:111, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:111 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第112帧快照
+NetCode  [local]-----添加本地帧id:112, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:112 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第113帧快照
+NetCode  [remote]-----远端帧id:110到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:110到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:111到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:111到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:113, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:113 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第114帧快照
+NetCode  [local]-----添加本地帧id:114, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:114 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第115帧快照
+NetCode  [remote]-----远端帧id:112到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:112到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:113到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:113到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:115, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:115 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第116帧快照
+NetCode  [local]-----添加本地帧id:116, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:116 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第117帧快照
+NetCode  [remote]-----远端帧id:114到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:114到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:117, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:117 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第118帧快照
+NetCode  [remote]-----远端帧id:115到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:115到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:116到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:116到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:118, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:118 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第119帧快照
+NetCode  [local]-----添加本地帧id:119, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:119 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第120帧快照
+NetCode  [remote]-----远端帧id:117到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:117到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:118到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:118到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:120, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:120 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第121帧快照
+NetCode  [local]-----添加本地帧id:121, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:121 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第122帧快照
+NetCode  [remote]-----远端帧id:119到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:119到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:120到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:120到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:122, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:122 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第123帧快照
+NetCode  [local]-----添加本地帧id:123, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:123 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第124帧快照
+NetCode  [remote]-----远端帧id:121到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:121到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:122到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:122到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:124, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:124 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第125帧快照
+NetCode  [local]-----添加本地帧id:125, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:125 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第126帧快照
+NetCode  [local]-----添加本地帧id:126, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:126 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第127帧快照
+NetCode  [remote]-----远端帧id:123到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:123到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:124到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:124到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:127, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:127 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第128帧快照
+NetCode  [local]-----添加本地帧id:128, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:128 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第129帧快照
+NetCode  [remote]-----远端帧id:125到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:125到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:126到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:126到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:127到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:127到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:129, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:129 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第130帧快照
+NetCode  [local]-----添加本地帧id:130, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:130 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第131帧快照
+NetCode  [local]-----添加本地帧id:131, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:131 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第132帧快照
+NetCode  [remote]-----远端帧id:128到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:128到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:129到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:129到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:130到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:130到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:132, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:132 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第133帧快照
+NetCode  [remote]-----远端帧id:131到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:131到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:133, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:133 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第134帧快照
+NetCode  [remote]-----远端帧id:132到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:132到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:134, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:134 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第135帧快照
+NetCode  [remote]-----远端帧id:133到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:133到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:135, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:135 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第136帧快照
+NetCode  [local]-----添加本地帧id:136, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:136 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第137帧快照
+NetCode  [remote]-----远端帧id:134到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:134到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:137, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:137 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第138帧快照
+NetCode  [remote]-----远端帧id:135到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:135到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:138, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:138 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第139帧快照
+NetCode  [local]-----添加本地帧id:139, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:139 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第140帧快照
+NetCode  [remote]-----远端帧id:136到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:136到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:137到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:137到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:140, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:140 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第141帧快照
+NetCode  [remote]-----远端帧id:138到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:138到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:141, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:141 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第142帧快照
+NetCode  [remote]-----远端帧id:139到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:139到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:140到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:140到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:142, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:142 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第143帧快照
+NetCode  [remote]-----远端帧id:141到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:141到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:143, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:143 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第144帧快照
+NetCode  [remote]-----远端帧id:142到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:142到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:144, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:144 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第145帧快照
+NetCode  [remote]-----远端帧id:143到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:143到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:145, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:145 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第146帧快照
+NetCode  [remote]-----远端帧id:144到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:144到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:146, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:146 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第147帧快照
+NetCode  [remote]-----远端帧id:145到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:145到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:147, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:147 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第148帧快照
+NetCode  [remote]-----远端帧id:146到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:146到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:148, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:148 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第149帧快照
+NetCode  [remote]-----远端帧id:147到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:147到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:149, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:149 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第150帧快照
+NetCode  [remote]-----远端帧id:148到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:148到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:150, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:150 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第151帧快照
+NetCode  [remote]-----远端帧id:149到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:149到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:151, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:151 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第152帧快照
+NetCode  [local]-----添加本地帧id:152, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:152 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第153帧快照
+NetCode  [remote]-----远端帧id:150到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:150到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:151到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:151到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:153, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:153 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第154帧快照
+NetCode  [local]-----添加本地帧id:154, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:154 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第155帧快照
+NetCode  [remote]-----远端帧id:152到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:152到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:153到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:153到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:155, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:155 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第156帧快照
+NetCode  [local]-----添加本地帧id:156, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:156 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第157帧快照
+NetCode  [remote]-----远端帧id:154到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:154到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:157, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:157 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第158帧快照
+NetCode  [remote]-----远端帧id:155到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:155到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:156到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:156到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:158, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:158 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第159帧快照
+NetCode  [local]-----添加本地帧id:159, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:159 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第160帧快照
+NetCode  [remote]-----远端帧id:157到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:157到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:158到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:158到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:160, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:160 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第161帧快照
+NetCode  [local]-----添加本地帧id:161, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:161 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第162帧快照
+NetCode  [remote]-----远端帧id:159到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:159到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:160到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:160到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:162, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:162 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第163帧快照
+NetCode  [local]-----添加本地帧id:163, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:163 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第164帧快照
+NetCode  [remote]-----远端帧id:161到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:161到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:162到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:162到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:164, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:164 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第165帧快照
+NetCode  [local]-----添加本地帧id:165, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:165 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第166帧快照
+NetCode  [remote]-----远端帧id:163到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:163到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:164到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:164到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:166, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:166 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第167帧快照
+NetCode  [local]-----添加本地帧id:167, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:167 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第168帧快照
+NetCode  [remote]-----远端帧id:165到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:165到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:166到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:166到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:168, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:168 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第169帧快照
+NetCode  [local]-----添加本地帧id:169, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:169 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第170帧快照
+NetCode  [remote]-----远端帧id:167到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:167到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:168到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:168到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:170, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:170 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第171帧快照
+NetCode  [remote]-----远端帧id:169到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:169到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:171, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:171 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第172帧快照
+NetCode  [local]-----添加本地帧id:172, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:172 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第173帧快照
+NetCode  [remote]-----远端帧id:170到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:170到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:171到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:171到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:173, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:173 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第174帧快照
+NetCode  [local]-----添加本地帧id:174, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:174 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第175帧快照
+NetCode  [local]-----添加本地帧id:175, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:175 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第176帧快照
+NetCode  [remote]-----远端帧id:172到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:172到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:173到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:173到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:176, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:176 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第177帧快照
+NetCode  [local]-----添加本地帧id:177, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:177 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第178帧快照
+NetCode  [remote]-----远端帧id:174到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:174到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:175到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:175到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:176到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:176到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:178, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:178 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第179帧快照
+NetCode  [remote]-----远端帧id:177到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:177到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:179, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:179 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第180帧快照
+NetCode  [remote]-----远端帧id:178到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:178到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:180, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:180 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第181帧快照
+NetCode  [local]-----添加本地帧id:181, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:181 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第182帧快照
+NetCode  [remote]-----远端帧id:179到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:179到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:182, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:182 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第183帧快照
+NetCode  [remote]-----远端帧id:180到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:180到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:183, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:183 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第184帧快照
+NetCode  [local]-----添加本地帧id:184, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:184 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第185帧快照
+NetCode  [remote]-----远端帧id:181到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:181到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:182到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:182到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:185, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:185 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第186帧快照
+NetCode  [remote]-----远端帧id:183到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:183到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:184到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:184到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:186, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:186 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第187帧快照
+NetCode  [local]-----添加本地帧id:187, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:187 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第188帧快照
+NetCode  [remote]-----远端帧id:185到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:185到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:186到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:186到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:188, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:188 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第189帧快照
+NetCode  [local]-----添加本地帧id:189, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:189 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第190帧快照
+NetCode  [remote]-----远端帧id:187到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:187到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:188到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:188到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:190, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:190 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第191帧快照
+NetCode  [remote]-----远端帧id:189到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:189到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:191, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:191 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第192帧快照
+NetCode  [remote]-----远端帧id:190到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:190到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:192, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:192 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第193帧快照
+NetCode  [remote]-----远端帧id:191到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:191到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:192到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:192到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:193, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:193 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第194帧快照
+NetCode  [local]-----添加本地帧id:194, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:194 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第195帧快照
+NetCode  [local]-----添加本地帧id:195, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:195 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第196帧快照
+NetCode  [remote]-----远端帧id:193到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:193到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:196, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:196 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第197帧快照
+NetCode  [local]-----添加本地帧id:197, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:197 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第198帧快照
+NetCode  [local]-----添加本地帧id:198, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:198 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第199帧快照
+NetCode  [local]-----添加本地帧id:199, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:199 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第200帧快照
+NetCode  [remote]-----远端帧id:194到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:194到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:195到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:195到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:196到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:196到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:197到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:197到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:198到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:198到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:200, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:200 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第201帧快照
+NetCode  [remote]-----远端帧id:199到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:199到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:201, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:201 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第202帧快照
+NetCode  [remote]-----远端帧id:200到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:200到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:202, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:202 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第203帧快照
+NetCode  [remote]-----远端帧id:201到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:201到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:203, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:203 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第204帧快照
+NetCode  [remote]-----远端帧id:202到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:202到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:204, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:204 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第205帧快照
+NetCode  [remote]-----远端帧id:203到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:203到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:205, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:205 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第206帧快照
+NetCode  [remote]-----远端帧id:204到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:204到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:206, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:206 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第207帧快照
+NetCode  [remote]-----远端帧id:205到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:205到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:206到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:206到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:207, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:207 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第208帧快照
+NetCode  [remote]-----远端帧id:207到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:207到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:208, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:208 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第209帧快照
+NetCode  [local]-----添加本地帧id:209, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:209 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第210帧快照
+NetCode  [remote]-----远端帧id:208到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:208到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:210, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:210 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第211帧快照
+NetCode  [local]-----添加本地帧id:211, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:211 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第212帧快照
+NetCode  [remote]-----远端帧id:209到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:209到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:210到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:210到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:212, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:212 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第213帧快照
+NetCode  [local]-----添加本地帧id:213, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:213 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第214帧快照
+NetCode  [remote]-----远端帧id:211到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:211到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:212到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:212到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:214, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:214 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第215帧快照
+NetCode  [local]-----添加本地帧id:215, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:215 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第216帧快照
+NetCode  [remote]-----远端帧id:213到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:213到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:214到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:214到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:216, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:216 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第217帧快照
+NetCode  [local]-----添加本地帧id:217, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:217 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第218帧快照
+NetCode  [remote]-----远端帧id:215到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:215到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:218, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:218 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第219帧快照
+NetCode  [remote]-----远端帧id:216到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:216到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:217到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:217到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:219, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:219 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第220帧快照
+NetCode  [local]-----添加本地帧id:220, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:220 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第221帧快照
+NetCode  [remote]-----远端帧id:218到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:218到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:219到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:219到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:221, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:221 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第222帧快照
+NetCode  [local]-----添加本地帧id:222, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:222 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第223帧快照
+NetCode  [remote]-----远端帧id:220到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:220到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:221到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:221到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:223, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:223 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第224帧快照
+NetCode  [local]-----添加本地帧id:224, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:224 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第225帧快照
+NetCode  [remote]-----远端帧id:222到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:222到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:223到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:223到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:225, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:225 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第226帧快照
+NetCode  [local]-----添加本地帧id:226, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:226 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第227帧快照
+NetCode  [local]-----添加本地帧id:227, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:227 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第228帧快照
+NetCode  [remote]-----远端帧id:224到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:224到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:225到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:225到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:228, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:228 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第229帧快照
+NetCode  [local]-----添加本地帧id:229, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:229 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第230帧快照
+NetCode  [remote]-----远端帧id:226到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:226到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:227到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:227到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:228到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:228到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:230, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:230 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第231帧快照
+NetCode  [remote]-----远端帧id:229到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:229到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:231, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:231 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第232帧快照
+NetCode  [remote]-----远端帧id:230到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:230到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:232, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:232 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第233帧快照
+NetCode  [remote]-----远端帧id:231到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:231到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:233, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:233 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第234帧快照
+NetCode  [remote]-----远端帧id:232到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:232到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:234, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:234 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第235帧快照
+NetCode  [remote]-----远端帧id:233到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:233到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:235, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:235 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第236帧快照
+NetCode  [remote]-----远端帧id:234到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:234到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:236, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:236 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第237帧快照
+NetCode  [remote]-----远端帧id:235到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:235到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:237, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:237 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第238帧快照
+NetCode  [remote]-----远端帧id:236到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:236到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:238, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:238 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第239帧快照
+NetCode  [local]-----添加本地帧id:239, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:239 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第240帧快照
+NetCode  [remote]-----远端帧id:237到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:237到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:238到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:238到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:240, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:240 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第241帧快照
+NetCode  [remote]-----远端帧id:239到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:239到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:241, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:241 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第242帧快照
+NetCode  [local]-----添加本地帧id:242, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:242 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第243帧快照
+NetCode  [remote]-----远端帧id:240到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:240到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:241到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:241到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:243, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:243 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第244帧快照
+NetCode  [local]-----添加本地帧id:244, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:244 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第245帧快照
+NetCode  [remote]-----远端帧id:242到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:242到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:243到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:243到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:245, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:245 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第246帧快照
+NetCode  [local]-----添加本地帧id:246, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:246 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第247帧快照
+NetCode  [remote]-----远端帧id:244到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:244到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:247, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:247 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第248帧快照
+NetCode  [remote]-----远端帧id:245到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:245到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:246到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:246到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:248, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:248 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第249帧快照
+NetCode  [local]-----添加本地帧id:249, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:249 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第250帧快照
+NetCode  [remote]-----远端帧id:247到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:247到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:248到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:248到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:250, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:250 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第251帧快照
+NetCode  [local]-----添加本地帧id:251, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:251 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第252帧快照
+NetCode  [remote]-----远端帧id:249到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:249到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:252, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:252 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第253帧快照
+NetCode  [local]-----添加本地帧id:253, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:253 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第254帧快照
+NetCode  [remote]-----远端帧id:250到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:250到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:251到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:251到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:254, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:254 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第255帧快照
+NetCode  [local]-----添加本地帧id:255, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:255 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第256帧快照
+NetCode  [remote]-----远端帧id:252到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:252到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:253到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:253到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:254到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:254到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:256, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:256 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第257帧快照
+NetCode  [remote]-----远端帧id:255到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:255到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:257, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:257 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第258帧快照
+NetCode  [remote]-----远端帧id:256到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:256到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:258, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:258 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第259帧快照
+NetCode  [remote]-----远端帧id:257到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:257到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:259, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:259 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第260帧快照
+NetCode  [remote]-----远端帧id:258到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:258到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:259到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:259到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:260, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:260 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第261帧快照
+NetCode  [local]-----添加本地帧id:261, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:261 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第262帧快照
+NetCode  [remote]-----远端帧id:260到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:260到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:262, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:262 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第263帧快照
+NetCode  [local]-----添加本地帧id:263, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:263 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第264帧快照
+NetCode  [local]-----添加本地帧id:264, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:264 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第265帧快照
+NetCode  [remote]-----远端帧id:261到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:261到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:262到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:262到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:265, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:265 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第266帧快照
+NetCode  [local]-----添加本地帧id:266, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:266 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第267帧快照
+NetCode  [remote]-----远端帧id:263到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:263到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:264到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:264到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:267, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:267 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第268帧快照
+NetCode  [local]-----添加本地帧id:268, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:268 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第269帧快照
+NetCode  [remote]-----远端帧id:265到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:265到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:266到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:266到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:269, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:269 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第270帧快照
+NetCode  [local]-----添加本地帧id:270, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:270 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第271帧快照
+NetCode  [local]-----添加本地帧id:271, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:271 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第272帧快照
+NetCode  [local]-----添加本地帧id:272, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:272 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第273帧快照
+NetCode  [local]-----添加本地帧id:273, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:273 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第274帧快照
+NetCode  [local]-----添加本地帧id:274, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:274 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第275帧快照
+NetCode  [remote]-----远端帧id:267到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:267到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:268到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:268到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:269到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:269到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:270到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:270到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:271到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:271到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:272到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:272到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:275, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:275 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第276帧快照
+NetCode  [remote]-----远端帧id:273到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:273到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:276, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:276 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第277帧快照
+NetCode  [remote]-----远端帧id:274到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:274到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:277, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:277 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第278帧快照
+NetCode  [local]-----添加本地帧id:278, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:278 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第279帧快照
+NetCode  [remote]-----远端帧id:275到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:275到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:276到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:276到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:279, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:279 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第280帧快照
+NetCode  [local]-----添加本地帧id:280, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:280 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第281帧快照
+NetCode  [local]-----添加本地帧id:281, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:281 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第282帧快照
+NetCode  [remote]-----远端帧id:277到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:277到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:278到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:278到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:282, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:282 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第283帧快照
+NetCode  [remote]-----远端帧id:279到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:279到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:283, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:283 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第284帧快照
+NetCode  [remote]-----远端帧id:280到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:280到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:281到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:281到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:284, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:284 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第285帧快照
+NetCode  [local]-----添加本地帧id:285, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:285 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第286帧快照
+NetCode  [remote]-----远端帧id:282到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:282到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:283到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:283到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:286, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:286 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第287帧快照
+NetCode  [remote]-----远端帧id:284到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:284到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:287, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:287 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第288帧快照
+NetCode  [local]-----添加本地帧id:288, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:288 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第289帧快照
+NetCode  [remote]-----远端帧id:285到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:285到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:286到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:286到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:289, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:289 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第290帧快照
+NetCode  [local]-----添加本地帧id:290, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:290 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第291帧快照
+NetCode  [remote]-----远端帧id:287到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:287到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:291, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:291 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第292帧快照
+NetCode  [remote]-----远端帧id:288到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:288到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:292, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:292 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第293帧快照
+NetCode  [local]-----添加本地帧id:293, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:293 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第294帧快照
+NetCode  [remote]-----远端帧id:289到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:289到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:290到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:290到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:291到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:291到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:294, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:294 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第295帧快照
+NetCode  [remote]-----远端帧id:292到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:292到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:295, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:295 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第296帧快照
+NetCode  [local]-----添加本地帧id:296, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:296 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第297帧快照
+NetCode  [remote]-----远端帧id:293到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:293到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:294到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:294到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:297, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:297 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第298帧快照
+NetCode  [remote]-----远端帧id:295到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:295到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:296到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:296到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:298, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:298 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第299帧快照
+NetCode  [remote]-----远端帧id:297到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:297到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:299, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:299 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第300帧快照
+NetCode  [local]-----添加本地帧id:300, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:300 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第301帧快照
+NetCode  [local]-----添加本地帧id:301, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:301 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第302帧快照
+NetCode  [remote]-----远端帧id:298到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:298到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:302, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:302 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第303帧快照
+NetCode  [remote]-----远端帧id:299到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:299到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:300到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:300到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:303, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:303 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第304帧快照
+NetCode  [local]-----添加本地帧id:304, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:304 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第305帧快照
+NetCode  [local]-----添加本地帧id:305, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:305 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第306帧快照
+NetCode  [remote]-----远端帧id:301到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:301到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:302到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:302到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:306, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:306 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第307帧快照
+NetCode  [remote]-----远端帧id:303到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:303到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:304到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:304到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:307, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:307 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第308帧快照
+NetCode  [remote]-----远端帧id:305到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:305到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:306到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:306到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:308, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:308 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第309帧快照
+NetCode  [local]-----添加本地帧id:309, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:309 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第310帧快照
+NetCode  [remote]-----远端帧id:307到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:307到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:308到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:308到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:310, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:310 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第311帧快照
+NetCode  [local]-----添加本地帧id:311, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:311 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第312帧快照
+NetCode  [remote]-----远端帧id:309到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:309到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:312, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:312 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第313帧快照
+NetCode  [remote]-----远端帧id:310到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:310到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:311到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:311到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:313, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:313 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第314帧快照
+NetCode  [local]-----添加本地帧id:314, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:314 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第315帧快照
+NetCode  [remote]-----远端帧id:312到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:312到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:313到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:313到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:315, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:315 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第316帧快照
+NetCode  [local]-----添加本地帧id:316, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:316 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第317帧快照
+NetCode  [remote]-----远端帧id:314到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:314到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:315到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:315到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:317, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:317 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第318帧快照
+NetCode  [local]-----添加本地帧id:318, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:318 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第319帧快照
+NetCode  [local]-----添加本地帧id:319, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:319 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第320帧快照
+NetCode  [remote]-----远端帧id:316到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:316到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:317到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:317到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:320, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:320 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第321帧快照
+NetCode  [local]-----添加本地帧id:321, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:321 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第322帧快照
+NetCode  [remote]-----远端帧id:318到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:318到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:319到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:319到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:322, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:322 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第323帧快照
+NetCode  [local]-----添加本地帧id:323, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:323 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第324帧快照
+NetCode  [remote]-----远端帧id:320到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:320到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:321到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:321到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:324, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:324 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第325帧快照
+NetCode  [local]-----添加本地帧id:325, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:325 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第326帧快照
+NetCode  [local]-----添加本地帧id:326, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:326 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第327帧快照
+NetCode  [remote]-----远端帧id:322到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:322到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:323到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:323到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:324到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:324到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:327, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:327 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第328帧快照
+NetCode  [remote]-----远端帧id:325到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:325到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:326到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:326到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:328, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:328 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第329帧快照
+NetCode  [remote]-----远端帧id:327到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:327到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:329, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:329 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第330帧快照
+NetCode  [local]-----添加本地帧id:330, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:330 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第331帧快照
+NetCode  [local]-----添加本地帧id:331, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:331 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第332帧快照
+NetCode  [remote]-----远端帧id:328到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:328到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:329到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:329到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:330到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:330到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:332, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:332 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第333帧快照
+NetCode  [remote]-----远端帧id:331到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:331到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:333, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:333 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第334帧快照
+NetCode  [remote]-----远端帧id:332到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:332到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:334, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:334 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第335帧快照
+NetCode  [remote]-----远端帧id:333到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:333到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:335, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:335 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第336帧快照
+NetCode  [remote]-----远端帧id:334到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:334到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:336, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:336 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第337帧快照
+NetCode  [local]-----添加本地帧id:337, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:337 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第338帧快照
+NetCode  [remote]-----远端帧id:335到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:335到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:336到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:336到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:338, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:338 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第339帧快照
+NetCode  [local]-----添加本地帧id:339, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:339 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第340帧快照
+NetCode  [remote]-----远端帧id:337到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:337到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:338到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:338到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:340, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:340 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第341帧快照
+NetCode  [local]-----添加本地帧id:341, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:341 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第342帧快照
+NetCode  [remote]-----远端帧id:339到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:339到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:342, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:342 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第343帧快照
+NetCode  [remote]-----远端帧id:340到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:340到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:341到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:341到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:343, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:343 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第344帧快照
+NetCode  [local]-----添加本地帧id:344, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:344 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第345帧快照
+NetCode  [remote]-----远端帧id:342到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:342到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:343到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:343到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:345, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:345 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第346帧快照
+NetCode  [local]-----添加本地帧id:346, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:346 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第347帧快照
+NetCode  [remote]-----远端帧id:344到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:344到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:345到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:345到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:347, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:347 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第348帧快照
+NetCode  [local]-----添加本地帧id:348, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:348 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第349帧快照
+NetCode  [remote]-----远端帧id:346到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:346到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:349, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:349 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第350帧快照
+NetCode  [local]-----添加本地帧id:350, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:350 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第351帧快照
+NetCode  [remote]-----远端帧id:347到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:347到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:348到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:348到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:349到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:349到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:351, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:351 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第352帧快照
+NetCode  [local]-----添加本地帧id:352, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:352 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第353帧快照
+NetCode  [remote]-----远端帧id:350到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:350到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:351到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:351到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:353, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:353 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第354帧快照
+NetCode  [local]-----添加本地帧id:354, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:354 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第355帧快照
+NetCode  [remote]-----远端帧id:352到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:352到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:353到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:353到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:355, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:355 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第356帧快照
+NetCode  [local]-----添加本地帧id:356, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:356 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第357帧快照
+NetCode  [remote]-----远端帧id:354到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:354到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:357, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:357 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第358帧快照
+NetCode  [remote]-----远端帧id:355到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:355到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:356到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:356到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:358, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:358 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第359帧快照
+NetCode  [local]-----添加本地帧id:359, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:359 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第360帧快照
+NetCode  [remote]-----远端帧id:357到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:357到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:358到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:358到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:360, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:360 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第361帧快照
+NetCode  [local]-----添加本地帧id:361, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:361 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第362帧快照
+NetCode  [remote]-----远端帧id:359到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:359到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:360到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:360到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:362, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:362 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第363帧快照
+NetCode  [local]-----添加本地帧id:363, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:363 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第364帧快照
+NetCode  [local]-----添加本地帧id:364, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:364 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第365帧快照
+NetCode  [remote]-----远端帧id:361到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:361到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:362到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:362到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:363到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:363到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:365, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:365 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第366帧快照
+NetCode  [remote]-----远端帧id:364到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:364到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:366, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:366 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第367帧快照
+NetCode  [remote]-----远端帧id:365到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:365到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:367, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:367 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第368帧快照
+NetCode  [remote]-----远端帧id:366到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:366到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:368, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:368 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第369帧快照
+NetCode  [remote]-----远端帧id:367到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:367到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:369, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:369 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第370帧快照
+NetCode  [remote]-----远端帧id:368到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:368到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:370, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:370 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第371帧快照
+NetCode  [remote]-----远端帧id:369到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:369到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:371, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:371 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第372帧快照
+NetCode  [local]-----添加本地帧id:372, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:372 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第373帧快照
+NetCode  [remote]-----远端帧id:370到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:370到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:373, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:373 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第374帧快照
+NetCode  [remote]-----远端帧id:371到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:371到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:374, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:374 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第375帧快照
+NetCode  [remote]-----远端帧id:372到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:372到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:373到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:373到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:375, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:375 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第376帧快照
+NetCode  [local]-----添加本地帧id:376, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:376 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第377帧快照
+NetCode  [remote]-----远端帧id:374到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:374到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:375到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:375到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:377, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:377 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第378帧快照
+NetCode  [remote]-----远端帧id:376到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:376到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:378, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:378 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第379帧快照
+NetCode  [local]-----添加本地帧id:379, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:379 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第380帧快照
+NetCode  [remote]-----远端帧id:377到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:377到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:378到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:378到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:380, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:380 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第381帧快照
+NetCode  [local]-----添加本地帧id:381, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:381 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第382帧快照
+NetCode  [remote]-----远端帧id:379到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:379到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:382, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:382 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第383帧快照
+NetCode  [remote]-----远端帧id:380到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:380到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:381到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:381到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:383, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:383 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第384帧快照
+NetCode  [local]-----添加本地帧id:384, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:384 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第385帧快照
+NetCode  [remote]-----远端帧id:382到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:382到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:383到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:383到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:385, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:385 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第386帧快照
+NetCode  [local]-----添加本地帧id:386, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:386 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第387帧快照
+NetCode  [remote]-----远端帧id:384到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:384到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:385到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:385到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:387, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:387 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第388帧快照
+NetCode  [local]-----添加本地帧id:388, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:388 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第389帧快照
+NetCode  [remote]-----远端帧id:386到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:386到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:387到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:387到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:389, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:389 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第390帧快照
+NetCode  [local]-----添加本地帧id:390, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:390 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第391帧快照
+NetCode  [remote]-----远端帧id:388到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:388到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:389到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:389到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:391, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:391 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第392帧快照
+NetCode  [local]-----添加本地帧id:392, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:392 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第393帧快照
+NetCode  [remote]-----远端帧id:390到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:390到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:391到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:391到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:393, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:393 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第394帧快照
+NetCode  [local]-----添加本地帧id:394, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:394 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第395帧快照
+NetCode  [local]-----添加本地帧id:395, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:395 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第396帧快照
+NetCode  [remote]-----远端帧id:392到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:392到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:393到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:393到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:396, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:396 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第397帧快照
+NetCode  [local]-----添加本地帧id:397, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:397 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第398帧快照
+NetCode  [local]-----添加本地帧id:398, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:398 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第399帧快照
+NetCode  [remote]-----远端帧id:394到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:394到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:395到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:395到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:396到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:396到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:397到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:397到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:399, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:399 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第400帧快照
+NetCode  [local]-----添加本地帧id:400, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:400 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第401帧快照
+NetCode  [local]-----添加本地帧id:401, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:401 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第402帧快照
+NetCode  [remote]-----远端帧id:398到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:398到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:399到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:399到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:400到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:400到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:402, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:402 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第403帧快照
+NetCode  [local]-----添加本地帧id:403, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:403 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第404帧快照
+NetCode  [local]-----添加本地帧id:404, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:404 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第405帧快照
+NetCode  [remote]-----远端帧id:401到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:401到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:405, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:405 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第406帧快照
+NetCode  [remote]-----远端帧id:402到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:402到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:406, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:406 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第407帧快照
+NetCode  [remote]-----远端帧id:403到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:403到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:404到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:404到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:407, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:407 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第408帧快照
+NetCode  [local]-----添加本地帧id:408, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:408 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第409帧快照
+NetCode  [local]-----添加本地帧id:409, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:409 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第410帧快照
+NetCode  [remote]-----远端帧id:405到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:405到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:406到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:406到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:410, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:410 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第411帧快照
+NetCode  [local]-----添加本地帧id:411, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:411 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第412帧快照
+NetCode  [remote]-----远端帧id:407到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:407到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:408到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:408到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:409到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:409到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:412, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:412 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第413帧快照
+NetCode  [local]-----添加本地帧id:413, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:413 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第414帧快照
+NetCode  [local]-----添加本地帧id:414, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:414 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第415帧快照
+NetCode  [local]-----添加本地帧id:415, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:415 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第416帧快照
+NetCode  [local]-----添加本地帧id:416, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:416 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第417帧快照
+NetCode  [local]-----添加本地帧id:417, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:417 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第418帧快照
+NetCode  [remote]-----远端帧id:410到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:410到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:411到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:411到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:418, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:418 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第419帧快照
+NetCode  [remote]-----远端帧id:412到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:412到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:419, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:419 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第420帧快照
+NetCode  [local]-----添加本地帧id:420, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:420 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第421帧快照
+NetCode  [remote]-----远端帧id:413到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:413到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:421, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:421 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第422帧快照
+NetCode  [remote]-----远端帧id:414到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:414到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:415到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:415到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:416到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:416到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:417到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:417到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:418到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:418到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:422, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:422 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第423帧快照
+NetCode  [local]-----添加本地帧id:423, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:423 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第424帧快照
+NetCode  [remote]-----远端帧id:419到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:419到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:424, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:424 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第425帧快照
+NetCode  [remote]-----远端帧id:420到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:420到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:421到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:421到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:422到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:422到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:425, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:425 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第426帧快照
+NetCode  [remote]-----远端帧id:423到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:423到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:426, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:426 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第427帧快照
+NetCode  [remote]-----远端帧id:424到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:424到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:427, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:427 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第428帧快照
+NetCode  [local]-----添加本地帧id:428, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:428 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第429帧快照
+NetCode  [local]-----添加本地帧id:429, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:429 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第430帧快照
+NetCode  [local]-----添加本地帧id:430, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:430 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第431帧快照
+NetCode  [local]-----添加本地帧id:431, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:431 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第432帧快照
+NetCode  [remote]-----远端帧id:425到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:425到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:426到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:426到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:432, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:432 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第433帧快照
+NetCode  [remote]-----远端帧id:427到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:427到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:433, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:433 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第434帧快照
+NetCode  [remote]-----远端帧id:428到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:428到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:434, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:434 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第435帧快照
+NetCode  [local]-----添加本地帧id:435, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:435 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第436帧快照
+NetCode  [remote]-----远端帧id:429到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:429到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:430到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:430到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:436, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:436 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第437帧快照
+NetCode  [local]-----添加本地帧id:437, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:437 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第438帧快照
+NetCode  [remote]-----远端帧id:431到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:431到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:432到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:432到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:438, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:438 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第439帧快照
+NetCode  [remote]-----远端帧id:433到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:433到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:434到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:434到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:439, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:439 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第440帧快照
+NetCode  [remote]-----远端帧id:435到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:435到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:436到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:436到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:437到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:437到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:440, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:440 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第441帧快照
+NetCode  [local]-----添加本地帧id:441, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:441 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第442帧快照
+NetCode  [remote]-----远端帧id:438到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:438到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:442, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:442 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第443帧快照
+NetCode  [remote]-----远端帧id:439到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:439到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:443, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:443 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第444帧快照
+NetCode  [local]-----添加本地帧id:444, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:444 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第445帧快照
+NetCode  [remote]-----远端帧id:440到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:440到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:445, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:445 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第446帧快照
+NetCode  [local]-----添加本地帧id:446, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:446 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode
+NetCode  [save]-----保存第447帧快照
+NetCode  [remote]-----远端帧id:441到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:441到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:442到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:442到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:443到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:443到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [remote]-----远端帧id:444到达，准备判断是否预测成功
+NetCode  [remote]-----本地已经预测过且之前已预测的远端帧id:444到达, remoteFrame.frameId <= _predictFrame.frameId
+NetCode  [local]-----添加本地帧id:447, 数据:[0 0 0 0 -128 1 0 0 0 ], 并发送给远端
+NetCode
+NetCode  [fetch]-----获取帧id:447 远端帧获取方式为:使用远端上一帧的值
+NetCode  [fetch]-----帧数据 本地帧:[0 0 0 0 -128 1 0 0 0 ]
+NetCode  [fetch]-----帧数据 远端帧:[0 0 0 0 -128 1 0 0 0 ]

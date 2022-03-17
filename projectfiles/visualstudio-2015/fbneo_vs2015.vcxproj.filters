@@ -988,6 +988,9 @@
     <ClInclude Include="..\..\src\logic\utils\fmt\time.h">
       <Filter>logic\utils\fmt</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\logic\utils\string\StringConvert.h">
+      <Filter>logic\utils\string</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\burn\burn.cpp">
@@ -4287,6 +4290,9 @@
     <ClCompile Include="..\..\src\logic\utils\fmt\posix.cc">
       <Filter>logic\utils\fmt</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\logic\utils\string\StringConvert.cpp">
+      <Filter>logic\utils\string</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Burn">
@@ -4540,6 +4546,9 @@
     </Filter>
     <Filter Include="logic\utils\fmt">
       <UniqueIdentifier>{bb9708de-73fd-4bcd-983f-130f64fc50c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="logic\utils\string">
+      <UniqueIdentifier>{b79a7b46-9525-42ea-bd90-e7da88b043c1}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
