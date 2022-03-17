@@ -78,6 +78,7 @@ message InputFrame {
     uint32 playerId = 2;
     uint32 roomId = 3;
     bytes input = 4;
+    string uuid = 5;
 }
 
 message AutoMatch {

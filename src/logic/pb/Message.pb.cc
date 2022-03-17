@@ -113,6 +113,7 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT S2C_WaitGameStartDefaultTypeInt
 constexpr InputFrame::InputFrame(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
   : input_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , uuid_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
   , frameid_(0u)
   , playerid_(0u)
   , roomid_(0u){}
@@ -207,6 +208,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_Message_2eproto::offsets[] PRO
   PROTOBUF_FIELD_OFFSET(::pb::InputFrame, playerid_),
   PROTOBUF_FIELD_OFFSET(::pb::InputFrame, roomid_),
   PROTOBUF_FIELD_OFFSET(::pb::InputFrame, input_),
+  PROTOBUF_FIELD_OFFSET(::pb::InputFrame, uuid_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::pb::AutoMatch, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -223,7 +225,7 @@ static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOB
   { 41, -1, -1, sizeof(::pb::S2C_Start)},
   { 48, -1, -1, sizeof(::pb::S2C_WaitGameStart)},
   { 55, -1, -1, sizeof(::pb::InputFrame)},
-  { 65, -1, -1, sizeof(::pb::AutoMatch)},
+  { 66, -1, -1, sizeof(::pb::AutoMatch)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
@@ -248,22 +250,22 @@ const char descriptor_table_protodef_Message_2eproto[] PROTOBUF_SECTION_VARIABLE
   "\016\n\006roomId\030\003 \001(\r\"-\n\tC2S_Ready\022\016\n\006roomId\030\001"
   " \001(\r\022\020\n\010playerId\030\002 \001(\r\"#\n\tS2C_Start\022\026\n\004c"
   "ode\030\001 \001(\0162\010.pb.Code\"#\n\021S2C_WaitGameStart"
-  "\022\016\n\006roomId\030\001 \001(\r\"N\n\nInputFrame\022\017\n\007frameI"
+  "\022\016\n\006roomId\030\001 \001(\r\"\\\n\nInputFrame\022\017\n\007frameI"
   "d\030\001 \001(\r\022\020\n\010playerId\030\002 \001(\r\022\016\n\006roomId\030\003 \001("
-  "\r\022\r\n\005input\030\004 \001(\014\"\013\n\tAutoMatch*\251\002\n\002ID\022\014\n\010"
-  "ID_Begin\020\000\022\016\n\nID_Connect\020\001\022\021\n\rID_CreateR"
-  "oom\020\002\022\017\n\013ID_JoinRoom\020\003\022\014\n\010ID_Ready\020\004\022\014\n\010"
-  "ID_Start\020\005\022\014\n\010ID_Input\020\006\022\014\n\010ID_Frame\020\007\022\013"
-  "\n\007ID_PING\020\010\022\013\n\007ID_PONG\020\t\022\021\n\rID_StartInpu"
-  "t\020\n\022\017\n\013ID_EndInput\020\013\022\025\n\021ID_C2S_InputFram"
-  "e\020\014\022\025\n\021ID_S2C_InputFrame\020\r\022\030\n\024ID_S2C_Wai"
-  "tGameStart\020\016\022\021\n\rID_InputFrame\020\017\022\020\n\014ID_Au"
-  "toMatch\020\020*\022\n\004Code\022\n\n\006ERR_Ok\020\000B\005Z\003/pbb\006pr"
-  "oto3"
+  "\r\022\r\n\005input\030\004 \001(\014\022\014\n\004uuid\030\005 \001(\t\"\013\n\tAutoMa"
+  "tch*\251\002\n\002ID\022\014\n\010ID_Begin\020\000\022\016\n\nID_Connect\020\001"
+  "\022\021\n\rID_CreateRoom\020\002\022\017\n\013ID_JoinRoom\020\003\022\014\n\010"
+  "ID_Ready\020\004\022\014\n\010ID_Start\020\005\022\014\n\010ID_Input\020\006\022\014"
+  "\n\010ID_Frame\020\007\022\013\n\007ID_PING\020\010\022\013\n\007ID_PONG\020\t\022\021"
+  "\n\rID_StartInput\020\n\022\017\n\013ID_EndInput\020\013\022\025\n\021ID"
+  "_C2S_InputFrame\020\014\022\025\n\021ID_S2C_InputFrame\020\r"
+  "\022\030\n\024ID_S2C_WaitGameStart\020\016\022\021\n\rID_InputFr"
+  "ame\020\017\022\020\n\014ID_AutoMatch\020\020*\022\n\004Code\022\n\n\006ERR_O"
+  "k\020\000B\005Z\003/pbb\006proto3"
   ;
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_Message_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_Message_2eproto = {
-  false, false, 804, descriptor_table_protodef_Message_2eproto, "Message.proto", 
+  false, false, 818, descriptor_table_protodef_Message_2eproto, "Message.proto", 
   &descriptor_table_Message_2eproto_once, nullptr, 0, 9,
   schemas, file_default_instances, TableStruct_Message_2eproto::offsets,
   file_level_metadata_Message_2eproto, file_level_enum_descriptors_Message_2eproto, file_level_service_descriptors_Message_2eproto,
@@ -1795,6 +1797,11 @@ InputFrame::InputFrame(const InputFrame& from)
     input_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_input(), 
       GetArenaForAllocation());
   }
+  uuid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_uuid().empty()) {
+    uuid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_uuid(), 
+      GetArenaForAllocation());
+  }
   ::memcpy(&frameid_, &from.frameid_,
     static_cast<size_t>(reinterpret_cast<char*>(&roomid_) -
     reinterpret_cast<char*>(&frameid_)) + sizeof(roomid_));
@@ -1803,6 +1810,7 @@ InputFrame::InputFrame(const InputFrame& from)
 
 void InputFrame::SharedCtor() {
 input_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+uuid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
     reinterpret_cast<char*>(&frameid_) - reinterpret_cast<char*>(this)),
     0, static_cast<size_t>(reinterpret_cast<char*>(&roomid_) -
@@ -1819,6 +1827,7 @@ InputFrame::~InputFrame() {
 inline void InputFrame::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   input_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  uuid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 void InputFrame::ArenaDtor(void* object) {
@@ -1838,6 +1847,7 @@ void InputFrame::Clear() {
   (void) cached_has_bits;
 
   input_.ClearToEmpty();
+  uuid_.ClearToEmpty();
   ::memset(&frameid_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&roomid_) -
       reinterpret_cast<char*>(&frameid_)) + sizeof(roomid_));
@@ -1879,6 +1889,16 @@ const char* InputFrame::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
           auto str = _internal_mutable_input();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // string uuid = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+          auto str = _internal_mutable_uuid();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "pb.InputFrame.uuid"));
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1936,6 +1956,16 @@ failure:
         4, this->_internal_input(), target);
   }
 
+  // string uuid = 5;
+  if (!this->_internal_uuid().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_uuid().data(), static_cast<int>(this->_internal_uuid().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "pb.InputFrame.uuid");
+    target = stream->WriteStringMaybeAliased(
+        5, this->_internal_uuid(), target);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
@@ -1957,6 +1987,13 @@ size_t InputFrame::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_input());
+  }
+
+  // string uuid = 5;
+  if (!this->_internal_uuid().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_uuid());
   }
 
   // uint32 frameId = 1;
@@ -1999,6 +2036,9 @@ void InputFrame::MergeFrom(const InputFrame& from) {
   if (!from._internal_input().empty()) {
     _internal_set_input(from._internal_input());
   }
+  if (!from._internal_uuid().empty()) {
+    _internal_set_uuid(from._internal_uuid());
+  }
   if (from._internal_frameid() != 0) {
     _internal_set_frameid(from._internal_frameid());
   }
@@ -2031,6 +2071,11 @@ void InputFrame::InternalSwap(InputFrame* other) {
       &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
       &input_, lhs_arena,
       &other->input_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &uuid_, lhs_arena,
+      &other->uuid_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(InputFrame, roomid_)

@@ -1355,6 +1355,7 @@ class InputFrame final :
 
   enum : int {
     kInputFieldNumber = 4,
+    kUuidFieldNumber = 5,
     kFrameIdFieldNumber = 1,
     kPlayerIdFieldNumber = 2,
     kRoomIdFieldNumber = 3,
@@ -1371,6 +1372,20 @@ class InputFrame final :
   const std::string& _internal_input() const;
   inline PROTOBUF_ALWAYS_INLINE void _internal_set_input(const std::string& value);
   std::string* _internal_mutable_input();
+  public:
+
+  // string uuid = 5;
+  void clear_uuid();
+  const std::string& uuid() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_uuid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_uuid();
+  PROTOBUF_MUST_USE_RESULT std::string* release_uuid();
+  void set_allocated_uuid(std::string* uuid);
+  private:
+  const std::string& _internal_uuid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_uuid(const std::string& value);
+  std::string* _internal_mutable_uuid();
   public:
 
   // uint32 frameId = 1;
@@ -1408,6 +1423,7 @@ class InputFrame final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr input_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr uuid_;
   ::PROTOBUF_NAMESPACE_ID::uint32 frameid_;
   ::PROTOBUF_NAMESPACE_ID::uint32 playerid_;
   ::PROTOBUF_NAMESPACE_ID::uint32 roomid_;
@@ -1958,6 +1974,52 @@ inline void InputFrame::set_allocated_input(std::string* input) {
   input_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), input,
       GetArenaForAllocation());
   // @@protoc_insertion_point(field_set_allocated:pb.InputFrame.input)
+}
+
+// string uuid = 5;
+inline void InputFrame::clear_uuid() {
+  uuid_.ClearToEmpty();
+}
+inline const std::string& InputFrame::uuid() const {
+  // @@protoc_insertion_point(field_get:pb.InputFrame.uuid)
+  return _internal_uuid();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void InputFrame::set_uuid(ArgT0&& arg0, ArgT... args) {
+ 
+ uuid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:pb.InputFrame.uuid)
+}
+inline std::string* InputFrame::mutable_uuid() {
+  std::string* _s = _internal_mutable_uuid();
+  // @@protoc_insertion_point(field_mutable:pb.InputFrame.uuid)
+  return _s;
+}
+inline const std::string& InputFrame::_internal_uuid() const {
+  return uuid_.Get();
+}
+inline void InputFrame::_internal_set_uuid(const std::string& value) {
+  
+  uuid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* InputFrame::_internal_mutable_uuid() {
+  
+  return uuid_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* InputFrame::release_uuid() {
+  // @@protoc_insertion_point(field_release:pb.InputFrame.uuid)
+  return uuid_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+}
+inline void InputFrame::set_allocated_uuid(std::string* uuid) {
+  if (uuid != nullptr) {
+    
+  } else {
+    
+  }
+  uuid_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), uuid,
+      GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set_allocated:pb.InputFrame.uuid)
 }
 
 // -------------------------------------------------------------------
