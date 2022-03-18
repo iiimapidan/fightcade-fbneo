@@ -570,12 +570,12 @@ void NetCode::fetchFrame(int id, void* values) {
 	buffer.Cat((BYTE*)remote.data.data(), remote.data.size());
 
 	// 打印预测之后的帧
-	printLog(L"");
+	printLog(L"======================================================================================");
 	printLog(fmt::format(L"[fetch]-----获取帧id:{} 远端帧获取方式为:{} 预测的id:{}, 远端帧缓存数量为:{}", 
 		id, logFetchRemoteFrameType, _predictFrame.frameId, _remoteInputMap.size()));
 	printLog(fmt::format(L"[fetch]-----帧数据 本地帧:{} uuid:{}", a2w(local.uuid), formatFrameData(local)));
-	printLog(fmt::format(L"[fetch]-----帧数据 远端帧:{} uuid:{}", a2w(local.uuid), formatFrameData(remote)));
-	printLog(L"");
+	printLog(fmt::format(L"[fetch]-----帧数据 远端帧:{} uuid:{}", a2w(remote.uuid), formatFrameData(remote)));
+	printLog(L"======================================================================================");
 
 	unsigned char* buf = buffer.Ptr();
 	memcpy(values, buffer.Ptr(), buffer.Size());
@@ -598,9 +598,9 @@ bool NetCode::addLocalInput(char* values, int size, int players) {
 		InputData local;
 		local.frameId = _frameId;
 		local.data.resize(size);
+		local.uuid = generate();
 		memcpy(local.data.data(), values, size);
 		_localInputMap[_frameId] = local;
-		local.uuid = generate();
 
 		sendLocalInput(local);
 		printLog(fmt::format(L"[local]-----添加本地帧id:{}, uuid:{}, 数据:{}, 并发送给远端", _frameId, a2w(local.uuid), formatFrameData(local)));
