@@ -345,6 +345,7 @@
     <ClInclude Include="..\..\src\logic\NetCode.h" />
     <ClInclude Include="..\..\src\logic\pb\Message.pb.h" />
     <ClInclude Include="..\..\src\logic\Singleton.h" />
+    <ClInclude Include="..\..\src\logic\utils\crc\crc.h" />
     <ClInclude Include="..\..\src\logic\utils\fmt\format.h" />
     <ClInclude Include="..\..\src\logic\utils\fmt\ostream.h" />
     <ClInclude Include="..\..\src\logic\utils\fmt\posix.h" />

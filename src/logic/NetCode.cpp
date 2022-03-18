@@ -9,6 +9,7 @@
 #include "utils/fmt/format.h"
 #include "utils/string/StringConvert.h"
 #include "utils/log/loguru.hpp"
+#include "utils/crc/crc.h"
 #include "state.h"
 #include <tchar.h>
 #include "burner.h"
@@ -105,7 +106,8 @@ bool __cdecl netcode_load_game_state_callback(unsigned char* buffer, int len) {
 	return true;
 }
 
-bool __cdecl netcode_save_game_state_callback(unsigned char** buffer, int* len, int* checksum, int frame) {
+
+bool __cdecl netcode_save_game_state_callback(unsigned char** buffer, int* len, unsigned int* checksum, int frame) {
 	int payloadsize;
 
 	gAcbChecksum = 0;
@@ -127,12 +129,15 @@ bool __cdecl netcode_save_game_state_callback(unsigned char** buffer, int* len, 
 	data[5] = 0;
 
 	memcpy((*buffer) + ggpo_state_header_size, gAcbBuffer, payloadsize);
+
+	std::uint32_t crc = CRC::Calculate(data, *len, CRC::CRC_32());
+	*checksum = crc;
 	return false;
 }
 
 bool __cdecl netcode_advance_frame_callback(int flags) {
 	//nFramesEmulated--;
-	RunFrame(0, 0, 0);
+	RunFrame(1, 0, 0, true);
 	return true;
 }
 
@@ -604,7 +609,28 @@ void NetCode::fetchFrame(int id, void* values) {
 	printLog(L"fetch", fmt::format(L"帧数据 本地帧:{} uuid:{} name:{}", formatFrameData(local), a2w(local.uuid), a2w(local.inputName)));
 	printLog(L"fetch", fmt::format(L"帧数据 远端帧:{} uuid:{} name:{}", formatFrameData(remote), a2w(remote.uuid), a2w(remote.inputName)));
 	
-	printLog(L"input", fmt::format(L"local:{} remote:{}", formatFrameData(local), formatFrameData(remote)));
+	//printLog(L"input", fmt::format(L"local:{} remote:{}", formatFrameData(local), formatFrameData(remote)));
+
+	std::string localIds = "";
+	for (auto i : _localInputMap)
+	{
+		char r[25];
+		itoa(i.first, r, 10);
+		localIds += r;
+		localIds += " ";
+	}
+
+	std::string remoteIds = "";
+	for (auto i : _remoteInputMap) {
+		char r[25];
+		itoa(i.first, r, 10);
+		remoteIds += r;
+		remoteIds += " ";
+	}
+
+	printLog(L"cache", fmt::format(L"local:{}", a2w(localIds)));
+	printLog(L"cache", fmt::format(L"remote:{}", a2w(remoteIds)));
+
 
 	unsigned char* buf = buffer.Ptr();
 	memcpy(values, buffer.Ptr(), buffer.Size());
@@ -707,7 +733,7 @@ void NetCode::checkRollback() {
 			_firstPredictFrameId = -1;
 			_predictFrame.frameId = -1;
 
-			//_gameCallback->advance_frame(0);
+			_gameCallback->advance_frame(0);
 
 			_is_rollback = false;
 
@@ -726,7 +752,12 @@ void NetCode::saveCurrentFrameState() {
 		_gameCallback->save_game_state(&frameState.buf, &frameState.bufCounts, &frameState.checksum, frameState.frameId);
 		_savedFrame[_frameId] = frameState;
 
-		printLog(L"save", fmt::format(L"保存第{}帧快照", _frameId));
+		printLog(L"save", fmt::format(L"保存第{}帧快照, checksum:{}", _frameId, frameState.checksum));
+
+		for (auto i : _savedFrame)
+		{
+			printLog(L"checksum", fmt::format(L"第{}帧快照，checksum:{}", i.first, i.second.checksum));
+		}
 	}
 }
 

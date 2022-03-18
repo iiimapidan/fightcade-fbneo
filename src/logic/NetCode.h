@@ -41,7 +41,7 @@ typedef struct _SavedFrame {
 	unsigned char* buf;
 	int bufCounts;
 	int frameId; 
-	int checksum;
+	std::uint32_t checksum;
 }SavedFrame;
 
 class IPlayEvent {
@@ -54,7 +54,7 @@ typedef struct _IGameCallback {
 	bool(__cdecl* begin_game)(char* game);
 	void(__cdecl* free_buffer)(void* buffer);
 	bool(__cdecl* load_game_state)(unsigned char* buffer, int len);
-	bool(__cdecl* save_game_state)(unsigned char** buffer, int* len, int* checksum, int frame);
+	bool(__cdecl* save_game_state)(unsigned char** buffer, int* len, unsigned int* checksum, int frame);
 	bool(__cdecl* advance_frame)(int flags);
 }IGameCallback;
 
@@ -139,5 +139,5 @@ typedef SingletonClass<NetCode> NetCodeManager;
 bool __cdecl netcode_begin_game_callback(char* name);
 void __cdecl netcode_free_buffer_callback(void* buffer);
 bool __cdecl netcode_load_game_state_callback(unsigned char* buffer, int len);
-bool __cdecl netcode_save_game_state_callback(unsigned char** buffer, int* len, int* checksum, int frame);
+bool __cdecl netcode_save_game_state_callback(unsigned char** buffer, int* len, unsigned int* checksum, int frame);
 bool __cdecl netcode_advance_frame_callback(int flags);

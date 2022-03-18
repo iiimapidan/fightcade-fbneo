@@ -187,7 +187,7 @@ void RunaheadLoadState()
 
 // With or without sound, run one frame.
 // If bDraw is true, it's the last frame before we are up to date, and so we should draw the screen
-int RunFrame(int bDraw, int bPause, int bInput)
+int RunFrame(int bDraw, int bPause, int bInput, bool runFrameOnly)
 {
 	if (!bDrvOkay) {
 		return 1;
@@ -199,7 +199,7 @@ int RunFrame(int bDraw, int bPause, int bInput)
 		nFramesEmulated++;
 		nCurrentFrame++;
 
-		if (kNetGame) {
+		if (kNetGame && runFrameOnly == false) {
 			if (bInput) {
 				GetInput(true);						// Update inputs
 				VidDisplayInputs(0, 0);
@@ -233,21 +233,21 @@ int RunFrame(int bDraw, int bPause, int bInput)
 			}
 		}
 
-		if (kNetLua) {
-			CallRegisteredLuaFunctions(LUACALL_BEFOREEMULATION); //TODO: find proper place
-			if (FBA_LuaUsingJoypad()) {
-				FBA_LuaReadJoypad();
-			}
-		}
+		//if (kNetLua) {
+		//	CallRegisteredLuaFunctions(LUACALL_BEFOREEMULATION); //TODO: find proper place
+		//	if (FBA_LuaUsingJoypad()) {
+		//		FBA_LuaReadJoypad();
+		//	}
+		//}
 
-		if (nReplayStatus == 1) {
-			RecordInput();					  	// Write input to file
-		}
+		//if (nReplayStatus == 1) {
+		//	RecordInput();					  	// Write input to file
+		//}
 
 		NetCodeManager::GetInstance()->increaseFrame();
 
 		// Render frame with video or audio
-		if (bDraw) {
+		if (bDraw || runFrameOnly) {
 			if (nVidRunahead > 0 && nVidRunahead <= 3 && !kNetSpectator) {
 				// Runahead frames, first frame is audio only
 				pBurnDraw = NULL;
@@ -278,9 +278,9 @@ int RunFrame(int bDraw, int bPause, int bInput)
 			BurnDrvFrame();
 		}
 
-		if (kNetGame) {
-			QuarkIncrementFrame();
-		}
+		//if (kNetGame) {
+		//	QuarkIncrementFrame();
+		//}
 
 		DetectorUpdate();
 
@@ -309,7 +309,7 @@ int RunIdle()
 	}
 
 	auto currentTick = GetTickCount();
-	if (currentTick - lastTick >= 500)
+	if (currentTick - lastTick >= 33)
 	{
 		NetCodeManager::GetInstance()->checkRollback();
 		RunFrame(1, 0, 1);

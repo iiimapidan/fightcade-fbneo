@@ -994,6 +994,9 @@
     <ClInclude Include="..\..\src\logic\utils\log\loguru.hpp">
       <Filter>logic\utils\log</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\logic\utils\crc\crc.h">
+      <Filter>logic\utils\crc</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\burn\burn.cpp">
@@ -4558,6 +4561,9 @@
     </Filter>
     <Filter Include="logic\utils\log">
       <UniqueIdentifier>{317d900c-8bce-4729-940f-0314c8f1ecee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="logic\utils\crc">
+      <UniqueIdentifier>{7e0b7624-ebb9-418d-aeb0-f931b83b8b7b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
