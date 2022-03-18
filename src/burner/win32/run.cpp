@@ -309,7 +309,7 @@ int RunIdle()
 	}
 
 	auto currentTick = GetTickCount();
-	if (currentTick - lastTick >= 16)
+	if (currentTick - lastTick >= 500)
 	{
 		NetCodeManager::GetInstance()->checkRollback();
 		RunFrame(1, 0, 1);

@@ -72,7 +72,7 @@ int NetworkInitInput()
 int NetworkGetInput(bool syncOnly)
 {
 	int i, j, k;
-
+	std::string inputName;
 	struct BurnInputInfo bii;
 	memset(&bii, 0, sizeof(bii));
 
@@ -84,6 +84,9 @@ int NetworkGetInput(bool syncOnly)
 		BurnDrvGetInputInfo(&bii, i + nPlayerOffset[0]);
 		if (*bii.pVal && bii.nType == BIT_DIGITAL) {
 			nControls[j >> 3] |= (1 << (j & 7));
+
+			inputName += bii.szName;
+			inputName += ",";
 		}
 	}
 	for (i = 0; i < nCommonInputs; i++, j++) {
@@ -127,7 +130,7 @@ int NetworkGetInput(bool syncOnly)
 		//	return 1;
 		//}
 
-		if (NetCodeManager::GetInstance()->getNetInput(nControls, k, 2, syncOnly) == false)
+		if (NetCodeManager::GetInstance()->getNetInput(nControls, k, 2, syncOnly, inputName) == false)
 		{
 			return 1;
 		}

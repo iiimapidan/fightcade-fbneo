@@ -22,6 +22,7 @@ enum ID {
     ID_S2C_WaitGameStart = 14;
     ID_InputFrame = 15;
     ID_AutoMatch = 16;
+    ID_Log = 17;
 }
 
 // 错误码
@@ -79,7 +80,16 @@ message InputFrame {
     uint32 roomId = 3;
     bytes input = 4;
     string uuid = 5;
+    string name = 6;
 }
 
 message AutoMatch {
+}
+
+
+message LogMsg {
+    uint32 playerId = 1;
+    uint32 roomId = 2;
+    string method = 3;
+    string context = 4;
 }

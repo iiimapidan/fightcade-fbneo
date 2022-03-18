@@ -6,6 +6,7 @@
 #include <map>
 #include "Singleton.h"
 #include "hv/tcpclient.h"
+#include "hv/requests.h"
 #include "pb/Message.pb.h"
 
 
@@ -32,6 +33,7 @@ typedef struct _InputData {
 	int frameId;
 	std::vector<char> data;
 	std::string uuid;
+	std::string inputName;
 }InputData;
 
 
@@ -70,12 +72,12 @@ public:
 
 	void increaseFrame();
 
-	bool getNetInput(void* values, int size, int players, bool syncOnly);
+	bool getNetInput(void* values, int size, int players, bool syncOnly, std::string inputName);
 
 	void receiveRemoteFrame(const InputData& remoteFrame);
 	void checkRollback();
 
-	void printLog(const std::wstring& log);
+	void printLog(const std::wstring& method, const std::wstring& log);
 
 private:
 	bool connectServer();
@@ -85,10 +87,11 @@ private:
 	void createRoom();
 	void joinRoom(::google::protobuf::uint32 roomId);
 	void autoMatch();
+	void sendLog(const std::wstring& method, const std::wstring& log);
 
 	void sendLocalInput(const InputData& input);
 	void fetchFrame(int id, void* values);
-	bool addLocalInput(char* values, int size, int players);
+	bool addLocalInput(char* values, int size, int players, std::string inputName);
 	void addRemoteInput();
 
 	void saveCurrentFrameState();
