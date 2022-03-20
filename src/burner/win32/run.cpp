@@ -199,7 +199,7 @@ int RunFrame(int bDraw, int bPause, int bInput, bool runFrameOnly)
 		nFramesEmulated++;
 		nCurrentFrame++;
 
-		if (kNetGame && runFrameOnly == false) {
+		if (kNetGame) {
 			if (bInput) {
 				GetInput(true);						// Update inputs
 				VidDisplayInputs(0, 0);
@@ -244,10 +244,9 @@ int RunFrame(int bDraw, int bPause, int bInput, bool runFrameOnly)
 		//	RecordInput();					  	// Write input to file
 		//}
 
-		NetCodeManager::GetInstance()->increaseFrame();
 
 		// Render frame with video or audio
-		if (bDraw || runFrameOnly) {
+		if (bDraw) {
 			if (nVidRunahead > 0 && nVidRunahead <= 3 && !kNetSpectator) {
 				// Runahead frames, first frame is audio only
 				pBurnDraw = NULL;
@@ -278,9 +277,13 @@ int RunFrame(int bDraw, int bPause, int bInput, bool runFrameOnly)
 			BurnDrvFrame();
 		}
 
+
 		//if (kNetGame) {
 		//	QuarkIncrementFrame();
 		//}
+
+		if (kNetGame) {
+		}
 
 		DetectorUpdate();
 
@@ -301,34 +304,74 @@ int RunFrame(int bDraw, int bPause, int bInput, bool runFrameOnly)
 	return 0;
 }
 
+
 DWORD lastTick = 0;
-int RunIdle()
-{
+int RunIdle() {
 	if (bAudPlaying) {
 		AudSoundCheck();
 	}
 
-	auto currentTick = GetTickCount();
-	if (currentTick - lastTick >= 33)
-	{
-		NetCodeManager::GetInstance()->checkRollback();
-		RunFrame(1, 0, 1);
-		lastTick = GetTickCount();
+	if (kNetGame) {
+		auto currentTick = GetTickCount();
+		if (currentTick - lastTick >= 16) {
+			NetCodeManager::GetInstance()->checkRollback();
+
+			RunFrame(1, 0, 1);
+
+			NetCodeManager::GetInstance()->increaseFrame();
+
+
+			lastTick = GetTickCount();
+		}
 	}
 
+	if (kNetGame) {				    // End-frame
+		VidPaint(3);
+	}
 
 	// render
-	nFramesRendered++;
-	VidPaint(3);
+	//nFramesRendered++;
 
 	// fps
-	if (nDoFPS < nFramesRendered) {
-		DisplayFPS();
-		nDoFPS = nFramesRendered + 30;
-	}
+	//if (nDoFPS < nFramesRendered) {
+	//	DisplayFPS();
+	//	nDoFPS = nFramesRendered + 30;
+	//}
 
 	return 0;
 }
+
+//int RunIdle()
+//{
+//	if (bAudPlaying) {
+//		AudSoundCheck();
+//	}
+//
+//	auto currentTick = GetTickCount();
+//	if (currentTick - lastTick >= 16)
+//	{
+//		NetCodeManager::GetInstance()->checkRollback();
+//
+//		RunFrame(1, 0, 1);
+//
+//		NetCodeManager::GetInstance()->increaseFrame();
+//
+//		lastTick = GetTickCount();
+//	}
+//
+//
+//	// render
+//	nFramesRendered++;
+//	VidPaint(3);
+//
+//	// fps
+//	if (nDoFPS < nFramesRendered) {
+//		DisplayFPS();
+//		nDoFPS = nFramesRendered + 30;
+//	}
+//
+//	return 0;
+//}
 
 int RunReset()
 {

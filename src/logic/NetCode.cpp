@@ -137,7 +137,8 @@ bool __cdecl netcode_save_game_state_callback(unsigned char** buffer, int* len, 
 
 bool __cdecl netcode_advance_frame_callback(int flags) {
 	//nFramesEmulated--;
-	RunFrame(1, 0, 0, true);
+	//RunFrame(1, 0, 0, true);
+	//BurnDrvFrame();
 	return true;
 }
 
@@ -203,6 +204,8 @@ void NetCode::increaseFrame() {
 	if (_is_rollback == false) {
 		addRemoteInput();
 	}
+
+	checkRollback();
 }
 
 bool NetCode::getNetInput(void* values, int size, int players, bool syncOnly, std::string inputName) {
@@ -633,7 +636,8 @@ void NetCode::fetchFrame(int id, void* values) {
 
 
 	unsigned char* buf = buffer.Ptr();
-	memcpy(values, buffer.Ptr(), buffer.Size());
+	auto bufLen = buffer.Size();
+	memcpy(values, buf, bufLen);
 }
 
 bool NetCode::addLocalInput(char* values, int size, int players, std::string inputName) {
