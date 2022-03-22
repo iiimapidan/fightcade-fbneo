@@ -79,6 +79,12 @@ public:
 
 	void printLog(const std::wstring& method, const std::wstring& log);
 
+	static void objSendLog(NetCode* obj, const std::wstring& method, const std::wstring& log);
+	void sendLog(const std::wstring& method, const std::wstring& log);
+	static std::wstring formatFrameData(const InputData& inputFrame);
+
+	int getFrameId();
+
 private:
 	bool connectServer();
 	void createConsole();
@@ -87,7 +93,7 @@ private:
 	void createRoom();
 	void joinRoom(::google::protobuf::uint32 roomId);
 	void autoMatch();
-	void sendLog(const std::wstring& method, const std::wstring& log);
+
 
 	void sendLocalInput(const InputData& input);
 	void fetchFrame(int id, void* values);
@@ -98,7 +104,6 @@ private:
 
 	int cmpInputData(const InputData& input1, const InputData& input2);
 
-	std::wstring formatFrameData(const InputData& inputFrame);
 
 	std::string generate();
 

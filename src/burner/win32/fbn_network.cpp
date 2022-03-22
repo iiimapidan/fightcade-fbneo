@@ -1,5 +1,7 @@
 #include "burner.h"
 #include "../logic/NetCode.h"
+#include "../logic/utils/fmt/format.h"
+#include "../logic/utils/string/StringConvert.h"
 
 const int MAXPLAYER = 4;
 static int nPlayerInputs[MAXPLAYER], nCommonInputs, nDIPInputs;
@@ -79,14 +81,15 @@ int NetworkGetInput(bool syncOnly)
 	// Initialize controls to 0
 	memset(nControls, 0, INPUTSIZE);
 
+
 	// Pack all DIP switches + common controls + player 1 controls
 	for (i = 0, j = 0; i < nPlayerInputs[0]; i++, j++) {
 		BurnDrvGetInputInfo(&bii, i + nPlayerOffset[0]);
 		if (*bii.pVal && bii.nType == BIT_DIGITAL) {
 			nControls[j >> 3] |= (1 << (j & 7));
 
-			inputName += bii.szName;
-			inputName += ",";
+			//inputName += bii.szName;
+			//inputName += ",";
 		}
 	}
 	for (i = 0; i < nCommonInputs; i++, j++) {
@@ -136,12 +139,43 @@ int NetworkGetInput(bool syncOnly)
 		}
 	}
 
+	// Ö´ÐÐÖ¡
+	auto local = fmt::format("local [{} {} {} {} {} {} {} {} {}]", 
+		nControls[0],
+		nControls[1],
+		nControls[2],
+		nControls[3],
+		nControls[4],
+		nControls[5],
+		nControls[6],
+		nControls[7],
+		nControls[8]);
+
+	auto remote = fmt::format("remote [{} {} {} {} {} {} {} {} {}]",
+		nControls[9 + 0],
+		nControls[9 + 1],
+		nControls[9 + 2],
+		nControls[9 + 3],
+		nControls[9 + 4],
+		nControls[9 + 5],
+		nControls[9 + 6],
+		nControls[9 + 7],
+		nControls[9 + 8]);
+
+	auto frameId = NetCodeManager::GetInstance()->getFrameId();
+	NetCodeManager::GetInstance()->sendLog(L"exec", fmt::format(L"Ö´ÐÐframe:{}", frameId));
+	NetCodeManager::GetInstance()->sendLog(L"exec", a2w(local));
+	NetCodeManager::GetInstance()->sendLog(L"exec", a2w(remote));
+
 	// Decode Player 1 input block
 	for (i = 0, j = 0; i < nPlayerInputs[0]; i++, j++) {
 		BurnDrvGetInputInfo(&bii, i + nPlayerOffset[0]);
 		if (bii.nType == BIT_DIGITAL) {
 			if (nControls[j >> 3] & (1 << (j & 7))) {
 				*bii.pVal = 0x01;
+
+				inputName += bii.szName;
+				inputName += ",";
 			} else {
 				*bii.pVal = 0x00;
 			}
@@ -182,6 +216,9 @@ int NetworkGetInput(bool syncOnly)
 				if (bii.nType == BIT_DIGITAL) {
 					if (nControls[j >> 3] & (1 << (j & 7))) {
 						*bii.pVal = 0x01;
+
+						inputName += bii.szName;
+						inputName += ",";
 					} else {
 						*bii.pVal = 0x00;
 					}
@@ -222,6 +259,8 @@ int NetworkGetInput(bool syncOnly)
 #endif
 		}
 	}
+
+	NetCodeManager::GetInstance()->sendLog(L"exec", a2w(inputName));
 	
 	return 0;
 }
