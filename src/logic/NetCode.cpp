@@ -804,6 +804,10 @@ std::string NetCode::generate() {
 
 void NetCode::receiveRemoteFrame(const InputData& remoteFrame) {
 	_remoteInputNetCacheQueue.push(remoteFrame);
+	if (remoteFrame.data[0] == 1) {
+		int i = 0;
+		++i;
+	}
 
 	// ±£¥Ê‘∂∂À÷°
 	//auto it = _remoteInputMap.find(remoteFrame.frameId);

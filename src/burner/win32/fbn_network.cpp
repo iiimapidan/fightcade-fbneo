@@ -88,10 +88,11 @@ int NetworkGetInput(bool syncOnly)
 		if (*bii.pVal && bii.nType == BIT_DIGITAL) {
 			nControls[j >> 3] |= (1 << (j & 7));
 
-			//inputName += bii.szName;
-			//inputName += ",";
+			inputName += bii.szName;
+			inputName += ",";
 		}
 	}
+	inputName = "";
 	for (i = 0; i < nCommonInputs; i++, j++) {
 		BurnDrvGetInputInfo(&bii, i + nCommonOffset);
 		bool allow_reset = !strcmp(BurnDrvGetTextA(DRV_NAME), "sf2hf") && kNetVersion >= NET_VERSION_RESET_SF2HF;
