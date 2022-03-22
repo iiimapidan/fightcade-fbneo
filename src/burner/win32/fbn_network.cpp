@@ -133,7 +133,7 @@ int NetworkGetInput(bool syncOnly)
 		//	return 1;
 		//}
 
-		if (NetCodeManager::GetInstance()->getNetInput(nControls, k, 2, syncOnly, inputName) == false)
+		if (NetCodeManager::GetInstance()->getNetInput(nControls, k, 2) == false)
 		{
 			return 1;
 		}

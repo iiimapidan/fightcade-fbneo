@@ -206,19 +206,11 @@ void NetCode::increaseFrame() {
 	}
 }
 
-bool NetCode::getNetInput(void* values, int size, int players, bool syncOnly, std::string inputName) {
-	if (syncOnly == false) {
-		if (addLocalInput((char*)values, size, players, inputName)) {
-			fetchFrame(_frameId, values);
-			return true;
-		}
-	} else {
+bool NetCode::getNetInput(void* values, int size, int players) {
+	if (addLocalInput((char*)values, size, players)) {
 		fetchFrame(_frameId, values);
 		return true;
 	}
-
-
-	return false;
 }
 
 
@@ -644,7 +636,7 @@ void NetCode::fetchFrame(int id, void* values) {
 	memcpy(values, buf, bufLen);
 }
 
-bool NetCode::addLocalInput(char* values, int size, int players, std::string inputName) {
+bool NetCode::addLocalInput(char* values, int size, int players) {
 	if (_is_rollback) {
 		printLog(L"local", fmt::format(L"正在回滚，本地添加第{}帧失败", _frameId));
 		return false;
@@ -662,7 +654,6 @@ bool NetCode::addLocalInput(char* values, int size, int players, std::string inp
 		local.frameId = _frameId;
 		local.data.resize(size);
 		local.uuid = generate();
-		local.inputName = inputName;
 		memcpy(local.data.data(), values, size);
 		_localInputMap[_frameId] = local;
 

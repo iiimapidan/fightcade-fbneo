@@ -72,7 +72,7 @@ public:
 
 	void increaseFrame();
 
-	bool getNetInput(void* values, int size, int players, bool syncOnly, std::string inputName);
+	bool getNetInput(void* values, int size, int players);
 
 	void receiveRemoteFrame(const InputData& remoteFrame);
 	void checkRollback();
@@ -97,7 +97,7 @@ private:
 
 	void sendLocalInput(const InputData& input);
 	void fetchFrame(int id, void* values);
-	bool addLocalInput(char* values, int size, int players, std::string inputName);
+	bool addLocalInput(char* values, int size, int players);
 	void addRemoteInput();
 
 	void saveCurrentFrameState();
