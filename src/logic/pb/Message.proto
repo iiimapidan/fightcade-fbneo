@@ -5,82 +5,82 @@ option go_package = "/pb";
 // ----MsgType-----BodyLen------Body------
 // 消息ID
 enum ID {
-    ID_Begin = 0;
-    ID_Connect = 1;
-    ID_CreateRoom = 2;
-    ID_JoinRoom = 3;
-    ID_Ready = 4;
-    ID_Start = 5;
-    ID_Input = 6;
-	ID_Frame = 7;
-	ID_PING = 8;
-	ID_PONG = 9;
-	ID_StartInput = 10;
-	ID_EndInput = 11;
-    ID_C2S_InputFrame = 12;
-    ID_S2C_InputFrame = 13;
-    ID_S2C_WaitGameStart = 14;
-    ID_InputFrame = 15;
-    ID_AutoMatch = 16;
-    ID_Log = 17;
+  ID_Begin = 0;
+  ID_Connect = 1;
+  ID_CreateRoom = 2;
+  ID_JoinRoom = 3;
+  ID_Ready = 4;
+  ID_Start = 5;
+  ID_Input = 6;
+  ID_Frame = 7;
+  ID_PING = 8;
+  ID_PONG = 9;
+  ID_StartInput = 10;
+  ID_EndInput = 11;
+  ID_C2S_InputFrame = 12;
+  ID_S2C_InputFrame = 13;
+  ID_S2C_WaitGameStart = 14;
+  ID_InputFrame = 15;
+  ID_AutoMatch = 16;
+  ID_Log = 17;
 }
 
 // 错误码
 enum Code {
-    ERR_Ok = 0;
+  ERR_Ok = 0;
 }
 
 // 客户端创建房间请求
 message C2S_CreateRoom {
-    string roomName = 1;
+  string roomName = 1;
 }
 
 // 服务端返回创建房间结果
 message S2C_CreateRoom {
-    Code code = 1;
-    uint32 roomId = 2;
-    uint32 playerId = 3;
+  Code code = 1;
+  uint32 roomId = 2;
+  uint32 playerId = 3;
 }
 
 
 // 客户端加入房间请求
 message C2S_JoinRoom {
-    uint32 roomId = 1;
-    uint32 playerId = 2;
+  uint32 roomId = 1;
+  uint32 playerId = 2;
 }
 
 // 服务端返回加入房间结果
 message S2C_JoinRoom {
-    Code code = 1;
-    uint32 playerId = 2;
-    uint32 roomId = 3;
+  Code code = 1;
+  uint32 playerId = 2;
+  uint32 roomId = 3;
 }
 
 
 // 客户端准备请求
 message C2S_Ready {
-    uint32 roomId = 1;
-    uint32 playerId = 2;
+  uint32 roomId = 1;
+  uint32 playerId = 2;
 }
 
 
 // 服务端回复开始
 message S2C_Start {
-    Code code = 1;
+  Code code = 1;
 }
 
 // 服务的通知等待游戏开始
 message S2C_WaitGameStart {
-    uint32 roomId = 1;
+  uint32 roomId = 1;
 }
 
 message InputFrame {
-    uint32 frameId = 1;
-    uint32 playerId = 2;
-    uint32 roomId = 3;
-    bytes input = 4;
-    string uuid = 5;
-    string name = 6;
+  uint32 frameId = 1;
+  uint32 playerId = 2;
+  uint32 roomId = 3;
+  bytes input = 4;
+  string uuid = 5;
+  string name = 6;
 }
 
 message AutoMatch {
@@ -88,8 +88,8 @@ message AutoMatch {
 
 
 message LogMsg {
-    uint32 playerId = 1;
-    uint32 roomId = 2;
-    string method = 3;
-    string context = 4;
+  uint32 playerId = 1;
+  uint32 roomId = 2;
+  string method = 3;
+  string context = 4;
 }

@@ -23,7 +23,6 @@
 typedef struct _MsgHead {
 	uint32_t body_len;
 	uint32_t id;
-	uint64_t timestamp;
 	BYTE* body[0];
 }MessageHead;
 
@@ -154,7 +153,7 @@ NetCode::~NetCode()
 bool NetCode::init()
 {
 	// 初始化log
-	loguru::add_file("everything.log", loguru::Append, loguru::Verbosity_INFO);
+	//loguru::add_file("everything.log", loguru::Append, loguru::Verbosity_INFO);
 
 	_predictFrame.frameId = -1;
 	_predictFrame.data.resize(9);
@@ -216,10 +215,10 @@ bool NetCode::getNetInput(void* values, int size, int players) {
 
 void NetCode::printLog(const std::wstring& method, const std::wstring& log) {
 	std::wstring logW = fmt::format(L"NetCode {}------ {}\r\n", method, log);
-	std::wstring* p = new std::wstring(logW);
+	//std::wstring* p = new std::wstring(logW);
 	//PostThreadMessage(_threadId, WM_PRINT_LOG, (WPARAM)p, 0);
 
-	sendLog(method, log);
+	//sendLog(method, log);
 }
 
 bool NetCode::connectServer()
@@ -506,9 +505,10 @@ void NetCode::sendLog(const std::wstring& method, const std::wstring& log) {
 	body.set_roomid(_roomId);
 	body.set_method(w2u(method));
 	body.set_context(w2u(log));
+	
 
 	MessageHead head;
-	head.id = pb::ID::ID_Log;
+	head.id = pb::ID_Log;
 	head.body_len = body.ByteSize();
 
 	CBufferPtr buffer;
@@ -608,8 +608,6 @@ void NetCode::fetchFrame(int id, void* values) {
 	printLog(L"fetch", fmt::format(L"帧数据 本地帧:{} uuid:{} name:{}", formatFrameData(local), a2w(local.uuid), a2w(local.inputName)));
 	printLog(L"fetch", fmt::format(L"帧数据 远端帧:{} uuid:{} name:{}", formatFrameData(remote), a2w(remote.uuid), a2w(remote.inputName)));
 	
-	//printLog(L"input", fmt::format(L"local:{} remote:{}", formatFrameData(local), formatFrameData(remote)));
-
 	std::string localIds = "";
 	for (auto i : _localInputMap)
 	{
@@ -804,25 +802,4 @@ std::string NetCode::generate() {
 
 void NetCode::receiveRemoteFrame(const InputData& remoteFrame) {
 	_remoteInputNetCacheQueue.push(remoteFrame);
-	if (remoteFrame.data[0] == 1) {
-		int i = 0;
-		++i;
-	}
-
-	// 保存远端帧
-	//auto it = _remoteInputMap.find(remoteFrame.frameId);
-	//if (it == _remoteInputMap.end()) {
-	//	printLog(fmt::format(L"[remote]收到远端帧 id:{}", remoteFrame.frameId));
-	//	_remoteInputMap[remoteFrame.frameId] = remoteFrame;
-	//}
-
-
-	//if (_predictFrame.frameId >= 0) {
-	//	if (cmpInputData(remoteFrame, _predictFrame) != 0) {
-	//		printLog(fmt::format(L"[predict]远端帧id:{}预测失败，打回滚标记", remoteFrame.frameId));
-	//		_firstPredictFrameId = remoteFrame.frameId;
-	//	} else {
-	//		printLog(fmt::format(L"[predict]远端帧id:{}预测成功", remoteFrame.frameId));
-	//	}
-	//}
 }

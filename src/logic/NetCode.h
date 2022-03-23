@@ -84,6 +84,7 @@ public:
 	static std::wstring formatFrameData(const InputData& inputFrame);
 
 	int getFrameId();
+	void sendLocalInput(const InputData& input);
 
 private:
 	bool connectServer();
@@ -95,7 +96,6 @@ private:
 	void autoMatch();
 
 
-	void sendLocalInput(const InputData& input);
 	void fetchFrame(int id, void* values);
 	bool addLocalInput(char* values, int size, int players);
 	void addRemoteInput();

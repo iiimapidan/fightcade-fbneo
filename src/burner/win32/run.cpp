@@ -314,6 +314,22 @@ int RunIdle() {
 	if (kNetGame) {
 		auto currentTick = GetTickCount();
 		if (currentTick - lastTick >= 16) {
+			//NetCodeManager::GetInstance()->printLog(L"test", L"ÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄã");
+			//NetCodeManager::GetInstance()->printLog(L"test", L"ÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄã");
+			//NetCodeManager::GetInstance()->printLog(L"test", L"ÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄã");
+			//NetCodeManager::GetInstance()->printLog(L"test", L"ÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄã");
+			//NetCodeManager::GetInstance()->printLog(L"test", L"ÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄã");
+
+			//InputData local;
+			//NetCodeManager::GetInstance()->sendLocalInput(local);
+			//NetCodeManager::GetInstance()->sendLocalInput(local);
+			//NetCodeManager::GetInstance()->sendLocalInput(local);
+			//NetCodeManager::GetInstance()->sendLocalInput(local);
+			//NetCodeManager::GetInstance()->sendLocalInput(local);
+			//NetCodeManager::GetInstance()->sendLocalInput(local);
+			//NetCodeManager::GetInstance()->sendLocalInput(local);
+			//NetCodeManager::GetInstance()->sendLocalInput(local);
+
 			NetCodeManager::GetInstance()->checkRollback();
 
 			RunFrame(1, 0, 1);
