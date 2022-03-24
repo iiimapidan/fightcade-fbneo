@@ -1563,9 +1563,9 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(DXSDK_DIR)Lib\x86;..\..\src\dep\ggpo\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(DXSDK_DIR)Lib\x86;..\..\src\dep\ggpo\lib;..\..\src\dep\hp-socket-5.8.7-lib-win\Lib\HPSocket\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ShowProgress>NotSet</ShowProgress>
-      <AdditionalDependencies>user32.lib;gdi32.lib;comdlg32.lib;comctl32.lib;shell32.lib;winmm.lib;advapi32.lib;setupapi.lib;vfw32.lib;wininet.lib;ggponet.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>user32.lib;gdi32.lib;comdlg32.lib;comctl32.lib;shell32.lib;winmm.lib;advapi32.lib;setupapi.lib;vfw32.lib;wininet.lib;ggponet.lib;ws2_32.lib;HPSocket_UD.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
       <SubSystem>Windows</SubSystem>
       <IgnoreSpecificDefaultLibraries>winspool.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib</IgnoreSpecificDefaultLibraries>

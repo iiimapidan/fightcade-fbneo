@@ -9,6 +9,8 @@
 #include "hv/requests.h"
 #include "pb/Message.pb.h"
 
+#include "../dep/hp-socket-5.8.7-lib-win/Include/HPSocket/SocketInterface.h"
+#include "../dep/hp-socket-5.8.7-lib-win/Include/HPSocket/HPSocket.h"
 
 
 #define WM_CREATE_CONSOLE		(WM_USER + 1)
@@ -58,7 +60,7 @@ typedef struct _IGameCallback {
 	bool(__cdecl* advance_frame)(int flags);
 }IGameCallback;
 
-class NetCode {
+class NetCode : public CTcpPullClientListener {
 public:
 	NetCode();
 	~NetCode();
@@ -107,8 +109,22 @@ private:
 
 	std::string generate();
 
+
+protected:
+	virtual EnHandleResult OnPrepareConnect(ITcpClient* pSender, CONNID dwConnID, SOCKET socket);
+	virtual EnHandleResult OnConnect(ITcpClient* pSender, CONNID dwConnID);
+	virtual EnHandleResult OnHandShake(ITcpClient* pSender, CONNID dwConnID);
+	virtual EnHandleResult OnReceive(ITcpClient* pSender, CONNID dwConnID, int iLength);
+	virtual EnHandleResult OnSend(ITcpClient* pSender, CONNID dwConnID, const BYTE* pData, int iLength);
+	virtual EnHandleResult OnReceive(ITcpClient* pSender, CONNID dwConnID, const BYTE* pData, int iLength);
+	virtual EnHandleResult OnClose(ITcpClient* pSender, CONNID dwConnID, EnSocketOperation enOperation, int iErrorCode);
+
 private:
-	hv::TcpClient _client;
+	//hv::TcpClient _client;
+	//hv::TcpClient _logClient;
+	CTcpPullClientPtr _client;
+	CTcpPullClientPtr _logClient;
+	std::vector<BYTE> buffer;
 
 	DWORD _threadId = 0;
 	HANDLE _eventThreadStarted = NULL;

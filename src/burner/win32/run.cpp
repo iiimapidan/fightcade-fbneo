@@ -311,7 +311,7 @@ int RunIdle() {
 		AudSoundCheck();
 	}
 
-	if (kNetGame) {
+	if (kNetGame/* || 1*/) {
 		auto currentTick = GetTickCount();
 		if (currentTick - lastTick >= 16) {
 			//NetCodeManager::GetInstance()->printLog(L"test", L"你i好你你i好你你i好你你i好你你i好你你i好你你i好你你i好你你i好你你i好你");

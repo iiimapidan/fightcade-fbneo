@@ -142,6 +142,8 @@ bool __cdecl netcode_advance_frame_callback(int flags) {
 }
 
 NetCode::NetCode()
+	: _client(this)
+	, _logClient(this)
 {
 	_eventGameStarted = CreateEvent(NULL, FALSE, FALSE, NULL);
 }
@@ -188,7 +190,7 @@ void NetCode::sendGameReady() {
 
 	buffer.Cat(body_buffer, body_buffer.Size());
 
-	_client.send(buffer.Ptr(), buffer.Size());
+	_client->Send(buffer.Ptr(), buffer.Size());
 }
 
 void NetCode::waitGameStarted() {
@@ -218,118 +220,119 @@ void NetCode::printLog(const std::wstring& method, const std::wstring& log) {
 	//std::wstring* p = new std::wstring(logW);
 	//PostThreadMessage(_threadId, WM_PRINT_LOG, (WPARAM)p, 0);
 
-	//sendLog(method, log);
+	sendLog(method, log);
 }
 
 bool NetCode::connectServer()
 {
-	auto ret = _client.createsocket(26668, "121.5.160.222");
-	if (ret < 0) {
-		return false;
-	}
+	_client->Start(L"121.5.160.222", 26668);
+	//unpack_setting_t unpack_setting;
+	//memset(&unpack_setting, 0, sizeof(unpack_setting_t));
+	//unpack_setting.mode = UNPACK_BY_LENGTH_FIELD;
+	//unpack_setting.package_max_length = DEFAULT_PACKAGE_MAX_LENGTH;
+	//unpack_setting.body_offset = sizeof(MessageHead);
+	//unpack_setting.length_field_offset = sizeof(uint32_t);
+	//unpack_setting.length_field_bytes = 4;
+	//unpack_setting.length_field_coding = ENCODE_BY_LITTEL_ENDIAN;
 
-	unpack_setting_t unpack_setting;
-	memset(&unpack_setting, 0, sizeof(unpack_setting_t));
-	unpack_setting.mode = UNPACK_BY_LENGTH_FIELD;
-	unpack_setting.package_max_length = DEFAULT_PACKAGE_MAX_LENGTH;
-	unpack_setting.body_offset = sizeof(MessageHead);
-	unpack_setting.length_field_offset = 0;
-	unpack_setting.length_field_bytes = 4;
-	unpack_setting.length_field_coding = ENCODE_BY_LITTEL_ENDIAN;
-	_client.setUnpack(&unpack_setting);
+	//auto ret = _client.createsocket(26668, "121.5.160.222");
+	//if (ret < 0) {
+	//	return false;
+	//}
 
-	_client.onConnection = [this](const hv::SocketChannelPtr& channel) {
-		if (channel->isConnected()) {
-			PostThreadMessage(_threadId, WM_CONNECTED_SERVER, 0, 0);
-			//PostThreadMessage(_threadId, WM_CREATE_OR_JOIN_ROOM, 0, 0);
-			PostThreadMessage(_threadId, WM_AUTO_MATCH, 0, 0);
-		}
-	};
+	//_client.setUnpack(&unpack_setting);
 
-	_client.onMessage = [this](const hv::SocketChannelPtr& channel, hv::Buffer* buf) {
-		MessageHead* head = (MessageHead*)buf->data();
+	//_client.onConnection = [this](const hv::SocketChannelPtr& channel) {
+	//	if (channel->isConnected()) {
+	//		PostThreadMessage(_threadId, WM_CONNECTED_SERVER, 0, 0);
+	//		//PostThreadMessage(_threadId, WM_CREATE_OR_JOIN_ROOM, 0, 0);
+	//		PostThreadMessage(_threadId, WM_AUTO_MATCH, 0, 0);
+	//	}
+	//};
 
-		const int head_len = sizeof(MessageHead);
-		const int data_len = head_len + head->body_len;
+	//_client.onMessage = [this](const hv::SocketChannelPtr& channel, hv::Buffer* buf) {
+	//	MessageHead* head = (MessageHead*)buf->data();
 
-		if (buf->size() < data_len)
-		{
-			return;
-		}
-
-		switch (head->id) {
-		case pb::ID::ID_CreateRoom:
-		{
-			pb::S2C_CreateRoom response;
-			response.ParseFromArray(head->body, head->body_len);
-			_roomId = response.roomid();
-			_playId = response.playerid();
-			PostThreadMessage(_threadId, WM_CREATED_ROOM, 0, 0);
-			break;
-		}
-
-		case pb::ID_JoinRoom:
-		{
-			pb::S2C_JoinRoom response;
-			response.ParseFromArray(head->body, head->body_len);
-			_roomId = response.roomid();
-			_playId = response.playerid();
-			PostThreadMessage(_threadId, WM_JOINED_ROOM, 0, 0);
-			break;
-		}
-
-		case pb::ID_S2C_WaitGameStart:
-		{
-			PostThreadMessage(_threadId, WM_WAIT_GAME_START, 0, 0);
-
-			// 通知游戏准备开始
-			if (_playEvent)
-			{
-				_playEvent->onStartGame();
-			}
-
-			PostThreadMessage(_threadId, WM_GAME_STARTED, 0, 0);
-
-			break;
-		}
-
-		case pb::ID_Start:
-		{
-			//if (_eventGameStarted)
-			//{
-			//	::SetEvent(_eventGameStarted);
-			//}
-			//PostThreadMessage(_threadId, WM_GAME_STARTED, 0, 0);
-			break;
-		}
-
-		case pb::ID_InputFrame: 
-		{
-			pb::InputFrame response;
-			response.ParseFromArray(head->body, head->body_len);
-			if (_playEvent)
-			{
-				InputData input;
-				input.frameId = response.frameid();
-				input.data.resize(response.input().size());
-				input.data.assign(response.input().begin(), response.input().end());
-				input.uuid = response.uuid();
-				input.inputName = response.name();
-				_playEvent->onReceiveRemoteFrame(input);
-			}
-
-			break;
-		}
+	//	const int head_len = sizeof(MessageHead);
+	//	const int data_len = head_len + head->body_len;
 
 
+	//	switch (head->id) {
+	//	case pb::ID::ID_CreateRoom:
+	//	{
+	//		pb::S2C_CreateRoom response;
+	//		response.ParseFromArray(head->body, head->body_len);
+	//		_roomId = response.roomid();
+	//		_playId = response.playerid();
+	//		PostThreadMessage(_threadId, WM_CREATED_ROOM, 0, 0);
+	//		break;
+	//	}
+
+	//	case pb::ID_JoinRoom:
+	//	{
+	//		pb::S2C_JoinRoom response;
+	//		response.ParseFromArray(head->body, head->body_len);
+	//		_roomId = response.roomid();
+	//		_playId = response.playerid();
+	//		PostThreadMessage(_threadId, WM_JOINED_ROOM, 0, 0);
+	//		break;
+	//	}
+
+	//	case pb::ID_S2C_WaitGameStart:
+	//	{
+	//		PostThreadMessage(_threadId, WM_WAIT_GAME_START, 0, 0);
+
+	//		// 通知游戏准备开始
+	//		if (_playEvent)
+	//		{
+	//			_playEvent->onStartGame();
+	//		}
+
+	//		PostThreadMessage(_threadId, WM_GAME_STARTED, 0, 0);
+
+	//		break;
+	//	}
+
+	//	case pb::ID_Start:
+	//	{
+	//		//if (_eventGameStarted)
+	//		//{
+	//		//	::SetEvent(_eventGameStarted);
+	//		//}
+	//		//PostThreadMessage(_threadId, WM_GAME_STARTED, 0, 0);
+	//		break;
+	//	}
+
+	//	case pb::ID_InputFrame: 
+	//	{
+	//		pb::InputFrame response;
+	//		response.ParseFromArray(head->body, head->body_len);
+	//		if (_playEvent)
+	//		{
+	//			InputData input;
+	//			input.frameId = response.frameid();
+	//			input.data.resize(response.input().size());
+	//			input.data.assign(response.input().begin(), response.input().end());
+	//			input.uuid = response.uuid();
+	//			input.inputName = response.name();
+	//			_playEvent->onReceiveRemoteFrame(input);
+	//		}
+
+	//		break;
+	//	}
+	//	}
+	//};
+
+	//_client.start();
 
 
+	//ret = _logClient.createsocket(26669, "121.5.160.222");
+	//if (ret < 0) {
+	//	return false;
+	//}
 
-
-		}
-	};
-
-	_client.start();
+	//_logClient.setUnpack(&unpack_setting);
+	//_logClient.start();
 
 	return true;
 }
@@ -460,7 +463,7 @@ void NetCode::createRoom() {
 
 	buffer.Cat(body_buffer, body_buffer.Size());
 
-	_client.send(buffer.Ptr(), buffer.Size());
+	_client->Send(buffer.Ptr(), buffer.Size());
 }
 
 void NetCode::joinRoom(::google::protobuf::uint32 roomId) {
@@ -479,7 +482,7 @@ void NetCode::joinRoom(::google::protobuf::uint32 roomId) {
 
 	buffer.Cat(body_buffer, body_buffer.Size());
 
-	_client.send(buffer.Ptr(), buffer.Size());
+	_client->Send(buffer.Ptr(), buffer.Size());
 }
 
 void NetCode::autoMatch() {
@@ -490,7 +493,7 @@ void NetCode::autoMatch() {
 	CBufferPtr buffer;
 	buffer.Cat((BYTE*)&head, sizeof(head));
 
-	_client.send(buffer.Ptr(), buffer.Size());
+	_client->Send(buffer.Ptr(), buffer.Size());
 }
 
 void NetCode::objSendLog(NetCode* obj, const std::wstring& method, const std::wstring& log) {
@@ -519,7 +522,7 @@ void NetCode::sendLog(const std::wstring& method, const std::wstring& log) {
 
 	buffer.Cat(body_buffer, body_buffer.Size());
 
-	_client.send(buffer.Ptr(), buffer.Size());
+	_logClient->Send(buffer.Ptr(), buffer.Size());
 }
 
 void NetCode::sendLocalInput(const InputData& input) {
@@ -539,6 +542,12 @@ void NetCode::sendLocalInput(const InputData& input) {
 	head.id = pb::ID::ID_InputFrame;
 	head.body_len = body.ByteSize();
 
+	if (head.body_len > 1000)
+	{
+		int i = 0;
+		++i;
+	}
+
 	CBufferPtr buffer;
 	buffer.Cat((BYTE*)&head, sizeof(head));
 
@@ -547,7 +556,7 @@ void NetCode::sendLocalInput(const InputData& input) {
 
 	buffer.Cat(body_buffer, body_buffer.Size());
 
-	_client.send(buffer.Ptr(), buffer.Size());
+	_client->Send(buffer.Ptr(), buffer.Size());
 }
 
 void NetCode::fetchFrame(int id, void* values) {
@@ -802,4 +811,125 @@ std::string NetCode::generate() {
 
 void NetCode::receiveRemoteFrame(const InputData& remoteFrame) {
 	_remoteInputNetCacheQueue.push(remoteFrame);
+}
+
+EnHandleResult NetCode::OnPrepareConnect(ITcpClient* pSender, CONNID dwConnID, SOCKET socket) {
+	return HR_IGNORE;
+}
+
+bool g_run = false;
+EnHandleResult NetCode::OnConnect(ITcpClient* pSender, CONNID dwConnID) {
+	if (g_run == false)
+	{
+		PostThreadMessage(_threadId, WM_CONNECTED_SERVER, 0, 0);
+		//PostThreadMessage(_threadId, WM_CREATE_OR_JOIN_ROOM, 0, 0);
+		PostThreadMessage(_threadId, WM_AUTO_MATCH, 0, 0);
+
+		g_run = true;
+
+		_logClient->Start(L"121.5.160.222", 26669);
+
+	}
+
+	return HR_IGNORE;
+}
+
+EnHandleResult NetCode::OnHandShake(ITcpClient* pSender, CONNID dwConnID) {
+	return HR_IGNORE;
+}
+
+EnHandleResult NetCode::OnReceive(ITcpClient* pSender, CONNID dwConnID, int iLength) {
+	int read = 0;
+	const int head_len = sizeof(MessageHead);
+	MessageHead head;
+
+	do {
+		if (FR_OK == _client->Fetch((BYTE*)&head, head_len)) {
+			if (head.body_len > 0) {
+				buffer.resize(head.body_len, 0);
+				if (FR_OK == _client->Fetch(buffer.data(), head.body_len)) {
+					read += head.body_len;
+				} else {
+					break;
+				}
+			}
+
+			switch (head.id) {
+			case pb::ID::ID_CreateRoom:
+			{
+				pb::S2C_CreateRoom response;
+				response.ParseFromArray(head.body, head.body_len);
+				_roomId = response.roomid();
+				_playId = response.playerid();
+				PostThreadMessage(_threadId, WM_CREATED_ROOM, 0, 0);
+				break;
+			}
+
+			case pb::ID_JoinRoom:
+			{
+				pb::S2C_JoinRoom response;
+				response.ParseFromArray(head.body, head.body_len);
+				_roomId = response.roomid();
+				_playId = response.playerid();
+				PostThreadMessage(_threadId, WM_JOINED_ROOM, 0, 0);
+				break;
+			}
+
+			case pb::ID_S2C_WaitGameStart:
+			{
+				PostThreadMessage(_threadId, WM_WAIT_GAME_START, 0, 0);
+
+				// 通知游戏准备开始
+				if (_playEvent)
+				{
+					_playEvent->onStartGame();
+				}
+
+				PostThreadMessage(_threadId, WM_GAME_STARTED, 0, 0);
+
+				break;
+			}
+
+			case pb::ID_Start:
+			{
+				break;
+			}
+
+			case pb::ID_InputFrame:
+			{
+				pb::InputFrame response;
+				response.ParseFromArray(head.body, head.body_len);
+				if (_playEvent) {
+					InputData input;
+					input.frameId = response.frameid();
+					input.data.resize(response.input().size());
+					input.data.assign(response.input().begin(), response.input().end());
+					input.uuid = response.uuid();
+					input.inputName = response.name();
+					_playEvent->onReceiveRemoteFrame(input);
+				}
+
+				break;
+			}
+			}
+		} else {
+			break;
+		}
+	} while (read < iLength);
+
+	buffer.clear();
+
+	return HR_IGNORE;
+}
+
+EnHandleResult NetCode::OnReceive(ITcpClient* pSender, CONNID dwConnID, const BYTE* pData, int iLength) {
+	return HR_IGNORE;
+}
+
+EnHandleResult NetCode::OnClose(ITcpClient* pSender, CONNID dwConnID, EnSocketOperation enOperation, int iErrorCode) {
+	return HR_IGNORE;
+}
+
+EnHandleResult NetCode::OnSend(ITcpClient* pSender, CONNID dwConnID, const BYTE* pData, int iLength) {
+	return HR_IGNORE;
 }
