@@ -35,6 +35,13 @@ typedef struct _MsgHead {
 
 #define BUSINESS_ID_PRINT_LOG 1
 
+
+#ifdef CONNECT_WORK_SERVER
+#define SERVER "192.168.42.243"
+#else
+#define SERVER "192.168.50.69"
+#endif
+
 typedef struct _LogData {
 	wchar_t tag[256];
 	wchar_t context[4096];
@@ -239,7 +246,7 @@ bool NetCode::connectServer()
 	unpack_setting.length_field_bytes = 4;
 	unpack_setting.length_field_coding = ENCODE_BY_LITTEL_ENDIAN;
 
-	auto ret = _client.createsocket(26668, "192.168.42.143");
+	auto ret = _client.createsocket(26668, SERVER);
 	if (ret < 0) {
 		return false;
 	}
@@ -319,7 +326,7 @@ bool NetCode::connectServer()
 	_client.start();
 
 
-	ret = _logClient.createsocket(26669, "192.168.42.143");
+	ret = _logClient.createsocket(26669, SERVER);
 	if (ret < 0) {
 		return false;
 	}
@@ -595,7 +602,7 @@ void NetCode::sendLocalInput(const InputData& input) {
 
 void NetCode::fetchRemoteInput()
 {
-	if (_is_rollback = false)
+	if (_is_rollback == false)
 	{
 		addRemoteInput();
 	}
@@ -680,9 +687,9 @@ void NetCode::fetchFrame(int id, void* values) {
 	printLog(L"cache", fmt::format(L"remote:{}", a2w(remoteIds)));
 
 
-	//unsigned char* buf = buffer.Ptr();
-	//auto bufLen = buffer.Size();
-	//memcpy(values, buf, bufLen);
+	unsigned char* buf = buffer.Ptr();
+	auto bufLen = buffer.Size();
+	memcpy(values, buf, bufLen);
 }
 
 bool NetCode::addLocalInput(char* values, int size, int players) {
@@ -872,7 +879,7 @@ std::string NetCode::generate() {
 void NetCode::httpPost(const std::string& data) {
 	std::string start = "\n{\n";
 	std::string method = "\"method\": \"POST\",\n";
-	std::string url = "\"url\": \"http://192.168.42.143:9999/log\",\n";
+	std::string url = fmt::format("\"url\": \"http://{}:9999/log\",\n", SERVER);
 	std::string headers = "\"headers\": { \"Content-Type\": \"application/json\"},\n";
 	std::string body = fmt::format("\"body\":{}\n", data);
 	std::string end = "}\n";
