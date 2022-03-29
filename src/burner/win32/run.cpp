@@ -277,28 +277,15 @@ int RunFrame(int bDraw, int bPause, int bInput, bool runFrameOnly)
 			BurnDrvFrame();
 		}
 
+		NetCodeManager::GetInstance()->increaseFrame();
 
 		//if (kNetGame) {
 		//	QuarkIncrementFrame();
 		//}
 
-		if (kNetGame) {
-		}
 
 		DetectorUpdate();
 
-		if (kNetLua) {
-			FBA_LuaFrameBoundary();
-			CallRegisteredLuaFunctions(LUACALL_AFTEREMULATION); // TODO: find proper place
-		}
-
-#ifdef INCLUDE_AVI_RECORDING
-		if (nAviStatus) {
-			if (AviRecordFrame(bDraw)) {
-				AviStop();
-			}
-		}
-#endif
 	}
 
 	return 0;
@@ -314,28 +301,9 @@ int RunIdle() {
 	if (kNetGame) {
 		auto currentTick = GetTickCount();
 		if (currentTick - lastTick >= 16) {
-			//NetCodeManager::GetInstance()->printLog(L"test", L"ÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄã");
-			//NetCodeManager::GetInstance()->printLog(L"test", L"ÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄã");
-			//NetCodeManager::GetInstance()->printLog(L"test", L"ÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄã");
-			//NetCodeManager::GetInstance()->printLog(L"test", L"ÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄã");
-			//NetCodeManager::GetInstance()->printLog(L"test", L"ÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄãÄãiºÃÄã");
-
-			//InputData local;
-			//NetCodeManager::GetInstance()->sendLocalInput(local);
-			//NetCodeManager::GetInstance()->sendLocalInput(local);
-			//NetCodeManager::GetInstance()->sendLocalInput(local);
-			//NetCodeManager::GetInstance()->sendLocalInput(local);
-			//NetCodeManager::GetInstance()->sendLocalInput(local);
-			//NetCodeManager::GetInstance()->sendLocalInput(local);
-			//NetCodeManager::GetInstance()->sendLocalInput(local);
-			//NetCodeManager::GetInstance()->sendLocalInput(local);
-
+			NetCodeManager::GetInstance()->fetchRemoteInput();
 			NetCodeManager::GetInstance()->checkRollback();
-
 			RunFrame(1, 0, 1);
-
-			NetCodeManager::GetInstance()->increaseFrame();
-
 
 			lastTick = GetTickCount();
 		}
@@ -345,49 +313,8 @@ int RunIdle() {
 		VidPaint(3);
 	}
 
-	// render
-	//nFramesRendered++;
-
-	// fps
-	//if (nDoFPS < nFramesRendered) {
-	//	DisplayFPS();
-	//	nDoFPS = nFramesRendered + 30;
-	//}
-
 	return 0;
 }
-
-//int RunIdle()
-//{
-//	if (bAudPlaying) {
-//		AudSoundCheck();
-//	}
-//
-//	auto currentTick = GetTickCount();
-//	if (currentTick - lastTick >= 16)
-//	{
-//		NetCodeManager::GetInstance()->checkRollback();
-//
-//		RunFrame(1, 0, 1);
-//
-//		NetCodeManager::GetInstance()->increaseFrame();
-//
-//		lastTick = GetTickCount();
-//	}
-//
-//
-//	// render
-//	nFramesRendered++;
-//	VidPaint(3);
-//
-//	// fps
-//	if (nDoFPS < nFramesRendered) {
-//		DisplayFPS();
-//		nDoFPS = nFramesRendered + 30;
-//	}
-//
-//	return 0;
-//}
 
 int RunReset()
 {

@@ -20,7 +20,7 @@
 #define WM_GAME_STARTED			(WM_USER + 7)
 #define WM_AUTO_MATCH			(WM_USER + 8)
 #define WM_PRINT_LOG			(WM_USER + 9)
-
+#define WM_ADD_LOG				(WM_USER + 10)
 
 #define WM_RUN_NET_GAME			(WM_USER + 1000 + 1)
 #define WM_RECEIVE_REMOTE_FRAME (WM_USER + 1000 + 2)
@@ -43,6 +43,14 @@ typedef struct _SavedFrame {
 	int frameId; 
 	std::uint32_t checksum;
 }SavedFrame;
+
+
+typedef struct _LogMsg {
+	unsigned int logIndex;
+	std::wstring method;
+	std::wstring log;
+}LogMsg;
+
 
 class IPlayEvent {
 public:
@@ -86,6 +94,8 @@ public:
 	int getFrameId();
 	void sendLocalInput(const InputData& input);
 
+	void fetchRemoteInput();
+
 private:
 	bool connectServer();
 	void createConsole();
@@ -104,8 +114,11 @@ private:
 
 	int cmpInputData(const InputData& input1, const InputData& input2);
 
+	LRESULT onCopyData(WPARAM w, LPARAM l);
 
 	std::string generate();
+
+	void httpPost(const std::string& data);
 
 
 private:
@@ -141,6 +154,7 @@ private:
 	bool _is_rollback = false;
 
 	IGameCallback* _gameCallback = NULL;
+	unsigned int _logIndex = 0;
 };
 
 typedef SingletonClass<NetCode> NetCodeManager;

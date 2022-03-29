@@ -4,12 +4,16 @@
 #include <sstream>
 #include <string>
 
+#include "hv/axios.h"
+#include "json/json.h"
+
 #include "bufferptr.h"
 #include "InstanceWindow.h"
 #include "utils/fmt/format.h"
 #include "utils/string/StringConvert.h"
 #include "utils/log/loguru.hpp"
 #include "utils/crc/crc.h"
+#include "utils/callback/callback.h"
 #include "state.h"
 #include <tchar.h>
 #include "burner.h"
@@ -29,7 +33,13 @@ typedef struct _MsgHead {
 
 #pragma pack()
 
+#define BUSINESS_ID_PRINT_LOG 1
 
+typedef struct _LogData {
+	wchar_t tag[256];
+	wchar_t context[4096];
+	int playerId;
+}LogData;
 
 static char gAcbBuffer[16 * 1024 * 1024];
 static char* gAcbScanPointer;
@@ -152,8 +162,9 @@ NetCode::~NetCode()
 
 bool NetCode::init()
 {
-	// 初始化log
-	//loguru::add_file("everything.log", loguru::Append, loguru::Verbosity_INFO);
+	InstanceWindowManager::GetInstance()->Init(L"Instace_Logic");
+
+	InstanceWindowManager::GetInstance()->RegisterWindowCallback(WM_COPYDATA, CALLBACK_2(NetCode::onCopyData, this));
 
 	_predictFrame.frameId = -1;
 	_predictFrame.data.resize(9);
@@ -199,10 +210,6 @@ void NetCode::waitGameStarted() {
 void NetCode::increaseFrame() {
 	saveCurrentFrameState();
 	_frameId++;
-
-	if (_is_rollback == false) {
-		addRemoteInput();
-	}
 }
 
 bool NetCode::getNetInput(void* values, int size, int players) {
@@ -232,7 +239,7 @@ bool NetCode::connectServer()
 	unpack_setting.length_field_bytes = 4;
 	unpack_setting.length_field_coding = ENCODE_BY_LITTEL_ENDIAN;
 
-	auto ret = _client.createsocket(26668, "192.168.42.242");
+	auto ret = _client.createsocket(26668, "192.168.42.143");
 	if (ret < 0) {
 		return false;
 	}
@@ -242,7 +249,6 @@ bool NetCode::connectServer()
 	_client.onConnection = [this](const hv::SocketChannelPtr& channel) {
 		if (channel->isConnected()) {
 			PostThreadMessage(_threadId, WM_CONNECTED_SERVER, 0, 0);
-			//PostThreadMessage(_threadId, WM_CREATE_OR_JOIN_ROOM, 0, 0);
 			PostThreadMessage(_threadId, WM_AUTO_MATCH, 0, 0);
 		}
 	};
@@ -313,7 +319,7 @@ bool NetCode::connectServer()
 	_client.start();
 
 
-	ret = _logClient.createsocket(26669, "192.168.42.242");
+	ret = _logClient.createsocket(26669, "192.168.42.143");
 	if (ret < 0) {
 		return false;
 	}
@@ -348,8 +354,39 @@ DWORD WINAPI NetCode::consoleThread(void* pParam) {
 
 	SetEvent(pThis->_eventThreadStarted);
 
+	std::vector<LogMsg> logMsgList;
+
 	while (GetMessage(&msg, 0, 0, 0)) {
 		switch (msg.message) {
+		case WM_ADD_LOG:
+		{
+			LogMsg* data = (LogMsg*)msg.wParam;
+			logMsgList.push_back(*data);
+
+			if (logMsgList.size() == 500)
+			{
+				Json::FastWriter writer;
+				Json::Value result;
+				for (auto it = logMsgList.begin(); it != logMsgList.end(); ++it)
+				{
+					Json::Value val;
+					val["logIndex"] = it->logIndex;
+					val["tag"] = w2u(it->method);
+					val["context"] = w2u(it->log);
+					val["roomId"] = pThis->_roomId;
+					val["playerId"] = pThis->_playId;
+
+					result.append(val);
+				}
+
+				logMsgList.clear();
+
+				pThis->httpPost(writer.write(result));
+			}
+
+			break;
+		}
+
 		case WM_AUTO_MATCH:
 		{
 			printf("自动匹配比赛......\r\n");
@@ -484,32 +521,42 @@ void NetCode::autoMatch() {
 }
 
 void NetCode::objSendLog(NetCode* obj, const std::wstring& method, const std::wstring& log) {
-	if (obj) {
-		obj->sendLog(method, log);
-	}
+	//if (obj) {
+	//	obj->sendLog(method, log);
+	//}
 }
 
 void NetCode::sendLog(const std::wstring& method, const std::wstring& log) {
-	pb::LogMsg body;
-	body.set_playerid(_playId);
-	body.set_roomid(_roomId);
-	body.set_method(w2u(method));
-	body.set_context(w2u(log));
-	
+	//pb::LogMsg body;
+	//body.set_playerid(_playId);
+	//body.set_roomid(_roomId);
+	//body.set_method(w2u(method));
+	//body.set_context(w2u(log));
+	//
 
-	MessageHead head;
-	head.id = pb::ID_Log;
-	head.body_len = body.ByteSize();
+	//MessageHead head;
+	//head.id = pb::ID_Log;
+	//head.body_len = body.ByteSize();
 
-	CBufferPtr buffer;
-	buffer.Cat((BYTE*)&head, sizeof(head));
+	//CBufferPtr buffer;
+	//buffer.Cat((BYTE*)&head, sizeof(head));
 
-	CBufferPtr body_buffer(body.ByteSize());
-	body.SerializeToArray(body_buffer.Ptr(), body.ByteSize());
+	//CBufferPtr body_buffer(body.ByteSize());
+	//body.SerializeToArray(body_buffer.Ptr(), body.ByteSize());
 
-	buffer.Cat(body_buffer, body_buffer.Size());
+	//buffer.Cat(body_buffer, body_buffer.Size());
 
-	_logClient.send(buffer.Ptr(), buffer.Size());
+	//_logClient.send(buffer.Ptr(), buffer.Size());
+
+	LogMsg* msg = new LogMsg;
+	msg->logIndex = _logIndex;
+	msg->method = method;
+	msg->log = log;
+
+	::PostThreadMessage(_threadId, WM_ADD_LOG, (WPARAM)msg, 0);
+
+	_logIndex += 1;
+
 }
 
 void NetCode::sendLocalInput(const InputData& input) {
@@ -544,6 +591,14 @@ void NetCode::sendLocalInput(const InputData& input) {
 	buffer.Cat(body_buffer, body_buffer.Size());
 
 	_client.send(buffer.Ptr(), buffer.Size());
+}
+
+void NetCode::fetchRemoteInput()
+{
+	if (_is_rollback = false)
+	{
+		addRemoteInput();
+	}
 }
 
 void NetCode::fetchFrame(int id, void* values) {
@@ -625,9 +680,9 @@ void NetCode::fetchFrame(int id, void* values) {
 	printLog(L"cache", fmt::format(L"remote:{}", a2w(remoteIds)));
 
 
-	unsigned char* buf = buffer.Ptr();
-	auto bufLen = buffer.Size();
-	memcpy(values, buf, bufLen);
+	//unsigned char* buf = buffer.Ptr();
+	//auto bufLen = buffer.Size();
+	//memcpy(values, buf, bufLen);
 }
 
 bool NetCode::addLocalInput(char* values, int size, int players) {
@@ -706,6 +761,7 @@ void NetCode::addRemoteInput() {
 }
 
 void NetCode::checkRollback() {
+	return;
 	if (_firstPredictFrameId != -1) {
 
 		// 查找错误帧id的上一帧快照
@@ -758,6 +814,23 @@ int NetCode::cmpInputData(const InputData& input1, const InputData& input2) {
 	return memcmp(input1.data.data(), input2.data.data(), input1.data.size());
 }
 
+LRESULT NetCode::onCopyData(WPARAM w, LPARAM l) {
+	COPYDATASTRUCT* pCopyData = reinterpret_cast<COPYDATASTRUCT*>(l);
+	if (pCopyData)
+	{
+		if (pCopyData->dwData == BUSINESS_ID_PRINT_LOG)
+		{
+			LogData* p = (LogData*)pCopyData->lpData;
+			_roomId = 99;
+			_playId = p->playerId;
+			printLog(p->tag, p->context);
+		}
+		pCopyData->lpData;
+	}
+
+	return 0L;
+}
+
 std::wstring NetCode::formatFrameData(const InputData& inputFrame) {
 	std::string fmtLog;
 	fmtLog = "[";
@@ -794,6 +867,32 @@ std::string NetCode::generate() {
 		guid.Data4[6], guid.Data4[7]);
 
 	return std::move(std::string(buf));
+}
+
+void NetCode::httpPost(const std::string& data) {
+	std::string start = "\n{\n";
+	std::string method = "\"method\": \"POST\",\n";
+	std::string url = "\"url\": \"http://192.168.42.143:9999/log\",\n";
+	std::string headers = "\"headers\": { \"Content-Type\": \"application/json\"},\n";
+	std::string body = fmt::format("\"body\":{}\n", data);
+	std::string end = "}\n";
+
+	std::string request_data;
+	request_data += start;
+	request_data += method;
+	request_data += url;
+	request_data += headers;
+	request_data += body;
+	request_data += end;
+
+	do
+	{
+		auto resp = axios::axios(request_data.c_str());
+		if (resp != nullptr)
+		{
+			break;
+		}
+	} while (true);
 }
 
 void NetCode::receiveRemoteFrame(const InputData& remoteFrame) {

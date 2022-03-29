@@ -997,6 +997,9 @@
     <ClInclude Include="..\..\src\logic\utils\crc\crc.h">
       <Filter>logic\utils\crc</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\logic\utils\callback\callback.h">
+      <Filter>logic\utils\callback</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\burn\burn.cpp">
@@ -4564,6 +4567,9 @@
     </Filter>
     <Filter Include="logic\utils\crc">
       <UniqueIdentifier>{7e0b7624-ebb9-418d-aeb0-f931b83b8b7b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="logic\utils\callback">
+      <UniqueIdentifier>{526d6772-fc45-478f-b047-07a1ab4ec134}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
