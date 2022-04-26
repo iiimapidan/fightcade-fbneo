@@ -35,9 +35,10 @@ typedef struct _MsgHead {
 
 #define BUSINESS_ID_PRINT_LOG 1
 
+#define CONNECT_WORK_SERVER 1
 
 #ifdef CONNECT_WORK_SERVER
-#define SERVER "192.168.42.243"
+#define SERVER "192.168.42.143"
 #else
 #define SERVER "192.168.50.69"
 #endif
@@ -373,6 +374,7 @@ DWORD WINAPI NetCode::consoleThread(void* pParam) {
 			if (logMsgList.size() == 500)
 			{
 				Json::FastWriter writer;
+				Json::Value root;
 				Json::Value result;
 				for (auto it = logMsgList.begin(); it != logMsgList.end(); ++it)
 				{
@@ -386,10 +388,13 @@ DWORD WINAPI NetCode::consoleThread(void* pParam) {
 					result.append(val);
 				}
 
+				root["collectIndex"] = 0;
+				root["arr"] = result;
 				logMsgList.clear();
 
-				pThis->httpPost(writer.write(result));
+				pThis->httpPost(writer.write(root));
 			}
+			delete data;
 
 			break;
 		}
