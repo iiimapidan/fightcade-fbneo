@@ -141,11 +141,12 @@ private:
 	HANDLE _eventGameStarted = NULL;
 
 	std::map<int, SavedFrame> _savedFrame;
+	const int max_saved_frame = 500;
 
-	std::map<int, int> _savedFrameValue;
 
 	std::map<int, InputData> _localInputMap;
 	std::map<int, InputData> _remoteInputMap;
+	const int max_input_counts = 500;
 
 	std::queue<InputData> _remoteInputNetCacheQueue;
 
