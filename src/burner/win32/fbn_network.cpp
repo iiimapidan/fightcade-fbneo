@@ -134,7 +134,7 @@ int NetworkGetInput(bool syncOnly)
 		//	return 1;
 		//}
 
-		if (NetCodeManager::GetInstance()->getNetInput(nControls, k, 2) == false)
+		if (NetCodeManager::GetInstance()->getNetInput(nControls, k, 2, syncOnly) == false)
 		{
 			return 1;
 		}
@@ -164,9 +164,7 @@ int NetworkGetInput(bool syncOnly)
 		nControls[9 + 8]);
 
 	auto frameId = NetCodeManager::GetInstance()->getFrameId();
-	NetCodeManager::GetInstance()->sendLog(L"exec", fmt::format(L"Ö´ÐÐframe:{}", frameId));
-	NetCodeManager::GetInstance()->sendLog(L"exec", a2w(local));
-	NetCodeManager::GetInstance()->sendLog(L"exec", a2w(remote));
+	NetCodeManager::GetInstance()->sendLog(L"exec", fmt::format(L"Ö´ÐÐframe:{} {} {}", frameId, a2w(local), a2w(remote)));
 
 	// Decode Player 1 input block
 	for (i = 0, j = 0; i < nPlayerInputs[0]; i++, j++) {
@@ -261,7 +259,7 @@ int NetworkGetInput(bool syncOnly)
 		}
 	}
 
-	NetCodeManager::GetInstance()->sendLog(L"exec", a2w(inputName));
+	//NetCodeManager::GetInstance()->sendLog(L"exec", a2w(inputName));
 	
 	return 0;
 }

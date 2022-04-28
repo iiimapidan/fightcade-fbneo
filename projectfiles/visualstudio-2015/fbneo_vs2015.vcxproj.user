@@ -6,9 +6,9 @@
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
     <LocalDebuggerCommandArguments>
     </LocalDebuggerCommandArguments>
-    <RemoteDebuggerCommand>C:\Users\Administrator\Desktop\bin\build\fcadefbneod.exe</RemoteDebuggerCommand>
-    <RemoteDebuggerWorkingDirectory>C:\Users\Administrator\Desktop\bin\build</RemoteDebuggerWorkingDirectory>
-    <RemoteDebuggerServerName>192.168.46.179</RemoteDebuggerServerName>
+    <RemoteDebuggerCommand>C:\bin\jieji2\fcadefbneod.exe</RemoteDebuggerCommand>
+    <RemoteDebuggerWorkingDirectory>C:\bin\jieji2</RemoteDebuggerWorkingDirectory>
+    <RemoteDebuggerServerName>192.168.42.248</RemoteDebuggerServerName>
     <RemoteDebuggerConnection>RemoteWithoutAuthentication</RemoteDebuggerConnection>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -17,5 +17,8 @@
     <LocalDebuggerCommandArguments>
     </LocalDebuggerCommandArguments>
     <LocalDebuggerWorkingDirectory>..\..\build</LocalDebuggerWorkingDirectory>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ShowAllFiles>true</ShowAllFiles>
   </PropertyGroup>
 </Project>

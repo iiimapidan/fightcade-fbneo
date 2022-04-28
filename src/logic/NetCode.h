@@ -80,10 +80,11 @@ public:
 
 	void increaseFrame();
 
-	bool getNetInput(void* values, int size, int players);
+	bool getNetInput(void* values, int size, int players, bool only_fetch);
 
 	void receiveRemoteFrame(const InputData& remoteFrame);
 	void checkRollback();
+	int findSavedFrameIndex(int frame);
 
 	void printLog(const std::wstring& method, const std::wstring& log);
 
@@ -108,7 +109,6 @@ private:
 
 	void fetchFrame(int id, void* values);
 	bool addLocalInput(char* values, int size, int players);
-	void addRemoteInput();
 
 	void saveCurrentFrameState();
 
